@@ -1,0 +1,914 @@
+/* =========================================================
+   RESET GENERAL
+========================================================= */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #eae7e4;
+  background: linear-gradient(to bottom, #f5f3ef, #f0ede8);
+  color: #3f5146;
+}
+
+/* Contenedor central */
+.container {
+  width: min(1150px, 100% - 3rem);
+  margin: 0 auto;
+}
+
+
+
+
+
+/* ============================
+   NAVBAR — DOS BLOQUES
+============================ */
+
+.site-header {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* LOS DOS BLOQUES EN UNA SOLA LÍNEA */
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* BLOQUES REDONDEADOS */
+.nav-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f3f2f0;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0px 4px 12px rgba(47, 82, 72, 0.15);
+}
+
+/* BLOQUE IZQUIERDO */
+.nav-left {
+  padding-right: 26px;
+}
+
+.logo-img {
+  height: 32px;
+}
+
+/* MENÚ */
+.main-nav {
+  display: flex;
+  gap: 6px;
+}
+
+.nav-btn {
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: transparent;
+  color: #3f5146;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: 0.25s ease;
+}
+
+.nav-btn:hover {
+  background: #2e7a69;
+  color: white;
+}
+
+.nav-btn--active {
+  background: #5f9f8e;
+  color: white;
+}
+
+/* BLOQUE DERECHO */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* SELECTOR IDIOMA */
+.lang-wrapper {
+  position: relative;
+}
+
+.lang-select {
+  background: transparent;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #3f5146;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.25s ease;
+}
+
+.lang-select:hover {
+  background: #2e7a69;
+  color: white;
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  background: #f3f2f0;
+  width: 110%;
+  border-radius: 14px;
+  padding: 8px 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease;
+  z-index: 1000;
+}
+
+.lang-wrapper.active .lang-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-dropdown li {
+  padding: 10px 14px;
+  font-weight: 600;
+  color: #3f5146;
+  cursor: pointer;
+}
+
+.lang-dropdown li:hover {
+  background: #2e7a69;
+  color: white;
+}
+
+/* ENTRAR */
+.login-btn {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: transparent;
+  font-weight: 600;
+  color: #3f5146;
+  transition: 0.25s ease;
+  text-decoration: none;
+}
+
+.login-btn:hover {
+  background: #2e7a69;
+  color: white;
+}
+
+/* CTA */
+.cta-btn {
+  padding: 10px 20px;
+  background: #2e7a69;
+  color: white;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0px 4px 10px rgba(46, 122, 105, 0.25);
+  transition: 0.25s ease;
+}
+
+.cta-btn:hover {
+  background: #266a5b;
+  transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+
+/* CONTENEDOR */
+.ac-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 150px;
+    text-align: center;
+}
+
+/* TÍTULO */
+.ac-title {
+    background: #0A8A69;
+    color: white;
+    font-size: 26px;
+    padding: 20px 60px;
+    border-radius: 18px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* COLUMNAS */
+.ac-columns {
+    display: flex;
+    justify-content: center;
+    gap: 140px;
+    margin-top: 20px;
+}
+
+/* CAJAS */
+.ac-box {
+    text-align: left;
+}
+
+/* SUBTÍTULOS */
+.ac-subtitle {
+    background: #0A8A69;
+    color: white;
+    padding: 18px 60px;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* LISTA */
+.ac-list {
+    font-size: 20px;
+    line-height: 1.9;
+    margin-left: 20px;
+}
+
+/* RESPONSIVE (opcional) */
+@media (max-width: 900px) {
+    .ac-columns {
+        flex-direction: column;
+        gap: 60px;
+    }
+    .ac-box {
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sección completa */
+.ac-seccion {
+    margin-top: 50px;
+    padding-left: 40px;
+}
+
+/* Título verde */
+.ac-subtitle-green {
+    background: #0A8A69;
+    color: white;
+    display: inline-block;
+    padding: 18px 60px;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Lista superior */
+.ac-list {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* Contenedor de las tres flechas */
+.ac-row {
+    display: flex;
+    gap: 120px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+/* FLECHAS */
+.ac-arrow-box {
+    width: 260px;
+    height: 95px;
+    background: #A5D6CC;
+    clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ac-arrow-text {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Textos debajo de cada flecha */
+.ac-row-texts {
+    display: flex;
+    gap: 120px;
+    margin-top: 10px;
+}
+
+.ac-column-text ul {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor general */
+.new-client-section {
+    margin-top: 60px;
+    padding-left: 40px;
+}
+
+/* Título verde centrado */
+.subtitle-green {
+    background: #0A8A69;
+    color: white;
+    display: inline-block;
+    padding: 18px 70px;
+    border-radius: 18px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Fila de flechas */
+.arrow-row {
+    display: flex;
+    gap: 120px;
+    margin-top: 40px;
+}
+
+/* Flechas */
+.arrow-box {
+    width: 240px;
+    height: 110px;
+    background: #A5D6CC;
+    clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+}
+
+/* Texto dentro de la flecha */
+.arrow-text {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.arrow-small {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor principal */
+.tienda-section {
+    margin-top: 60px;
+    padding-left: 40px;
+}
+
+/* Título verde */
+.title-green {
+    background: #0A8A69;
+    color: white;
+    display: inline-block;
+    padding: 18px 80px;
+    border-radius: 18px;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Nota superior */
+.tienda-note {
+    font-size: 20px;
+    margin: 10px 0 50px 0;
+    font-weight: 600;
+}
+
+/* Columnas */
+.tienda-columns {
+    display: flex;
+    gap: 120px;
+}
+
+/* Encabezado verde menta */
+.tienda-header {
+    background: #86C7BA;
+    color: white;
+    padding: 18px 40px;
+    border-radius: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+    width: 260px;
+}
+
+/* Tarjetas de extras */
+.extra-card {
+    background: #F6D090;
+    width: 260px;
+    padding: 25px 25px;
+    margin-bottom: 25px;
+    border-radius: 18px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor principal */
+.extras-generales {
+    margin-top: 40px;
+    padding-left: 60px;
+}
+
+/* Filas */
+.extras-row {
+    display: flex;
+    gap: 200px;
+    margin-bottom: 60px;
+}
+
+/* Cajas beige */
+.extra-box {
+    background: #F8D18A;
+    padding: 28px 40px;
+    width: 260px;
+    border-radius: 18px;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Títulos verdes */
+.titulo-verde {
+    background: #4DAF9A;
+    color: white;
+    padding: 16px 40px;
+    border-radius: 14px;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    margin-left: 60px;
+}
+
+/* Filas con cajas */
+.fila-extras {
+    display: flex;
+    gap: 80px;
+    margin-left: 60px;
+    margin-bottom: 60px;
+}
+
+/* Cajas beige */
+.extra-box {
+    background: #F8D18A;
+    padding: 26px 36px;
+    border-radius: 16px;
+    font-size: 20px;
+    width: 260px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   FOOTER VISITIA — Premium
+========================================================= */
+
+.visitia-footer {
+  background: #1e2926;
+  /* Verde oscuro Visitia */
+  color: #f5f3f0;
+  padding: 60px 0 30px;
+  margin-top: 90px;
+  border-radius: 30px 30px 0 0;
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-col {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li {
+  margin-bottom: 10px;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+.footer-title {
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 14px !important;
+  font-size: 1rem;
+  opacity: 1;
+}
+
+/* Hover elegante */
+.footer-col li:hover {
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* Línea inferior */
+.footer-bottom {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================
+   BASE
+============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+body {
+  background: #f5f4f2;
+  color: #1e2926;
+}
+
+.container {
+  width: min(1150px, 100% - 3rem);
+  margin: 0 auto;
+}
+
+/* ============================
+   TITULO PRINCIPAL
+============================ */
+.ac-container {
+  margin-top: 150px;
+  text-align: center;
+}
+
+.ac-title {
+  font-size: 32px;
+  background: #1d7a67;
+  padding: 18px 48px;
+  border-radius: 20px;
+  color: white;
+  display: inline-block;
+  font-weight: 700;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.12);
+}
+
+/* ============================
+   LOGIN + REGISTRO
+============================ */
+.ac-columns {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.ac-card {
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  width: 380px;
+  box-shadow: 0px 4px 14px rgba(0,0,0,0.08);
+}
+
+.ac-card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1d7a67;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.ac-list {
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+/* ============================
+   SECCIONES
+============================ */
+.ac-section {
+  margin: 80px auto;
+  width: min(1150px, 100% - 3rem);
+}
+
+.ac-section-title {
+  display: inline-block;
+  background: #1d7a67;
+  padding: 14px 32px;
+  color: white;
+  border-radius: 16px;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+/* ============================
+   GRID GENERAL
+============================ */
+.ac-3grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 28px;
+}
+
+.ac-4grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 28px;
+}
+
+.ac-2grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 28px;
+}
+
+/* ============================
+   MINI CARDS
+============================ */
+.ac-mini-card,
+.ac-step-card,
+.ac-shop-card {
+  background: white;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 14px rgba(0,0,0,0.08);
+}
+
+.ac-mini-card h3 {
+  font-size: 20px;
+  color: #1d7a67;
+  margin-bottom: 10px;
+}
+
+.ac-mini-card p {
+  font-size: 15px;
+  opacity: 0.75;
+}
+
+/* ============================
+   STEPS
+============================ */
+.ac-step-number {
+  background: #1d7a67;
+  color: white;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* ============================
+   TIENDA
+============================ */
+.ac-shop-header {
+  font-size: 18px;
+  font-weight: 700;
+  background: #1e2926;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+.ac-extra-item {
+  background: #e8efe9;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 17px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+/* ============================
+   EXTRAS GENERALES
+============================ */
+.ac-extra-box {
+  background: white;
+  margin-top: 20px;
+  padding: 28px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0px 4px 14px rgba(0,0,0,0.08);
+}
+
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 900px) {
+  .ac-4grid { grid-template-columns: 1fr 1fr; }
+  .ac-3grid { grid-template-columns: 1fr; }
+  .ac-2grid { grid-template-columns: 1fr; }
+  .ac-columns { flex-direction: column; align-items: center; }
+}

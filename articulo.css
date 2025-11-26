@@ -1,0 +1,227 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fcfcfc;
+  color: #2a2a2a;
+  line-height: 1.8;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo img {
+  height: 28px;
+}
+
+/* Encabezado del artículo */
+.article-header {
+  background-color: #f3fdf6;
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.article-header h1 {
+  font-size: 2.6rem;
+  color: #2f7a4f;
+  margin-bottom: 1rem;
+}
+
+.article-date {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+/* Imagen destacada */
+.article-image {
+  display: block;
+  margin: 2rem auto;
+  max-width: 52%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Contenido */
+.article-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  color: #2a2a2a;
+}
+
+.article-content h2 {
+  font-size: 1.6rem;
+  color: #2f7a4f;
+  margin: 2rem 0 1rem;
+}
+
+.article-content p {
+  margin-bottom: 1.4rem;
+  font-size: 1rem;
+}
+
+.article-content ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-content li {
+  margin-bottom: 0.8rem;
+}
+
+blockquote {
+  background-color: #e8f8ec;
+  border-left: 4px solid #3cae6d;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #2f7a4f;
+  border-radius: 6px;
+}
+
+/* CTA botón */
+.call-to-action {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.btn-primary {
+  background-color: #2f7a4f;
+  color: white;
+  padding: 0.9rem 1.7rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #3cae6d;
+}
+
+/* Footer */
+/* Footer General */
+.footer {
+  width: 100%;
+  padding: 50px 0;
+  font-family: "Helvetica", "Arial", sans-serif;
+  background-color: transparent;
+  color: #3f5146;
+  transition: color 0.5s ease, background 0.5s ease;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0 80px;
+}
+
+.footer-left {
+  flex: 1;
+  max-width: 300px;
+  margin-right: 10px;
+}
+
+.footer-left p {
+  font-size: 16px;
+  color: #3f5146;
+}
+
+.subscribe-btn {
+  margin-top: 12px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #2e7a69;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background: #3f5146;
+  transform: translateY(-2px);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
+  flex: 2;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-column h4 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #2e7a69;
+}
+
+.footer-column a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #3f5146;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #cba38f;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid rgba(63, 81, 70, 0.2);
+  padding-top: 30px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #3f5146;
+}
+
+.tnl-logo {
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-bottom: 3px;
+  transition: filter 0.5s ease;
+}
+
+.tnl {
+  margin-left: 3px;
+  font-weight: bold;
+  color: #2e7a69;
+}

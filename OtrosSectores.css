@@ -1,0 +1,784 @@
+/* =========================================================
+   RESET GENERAL
+========================================================= */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #eae7e4;
+  background: linear-gradient(to bottom, #f5f3ef, #f0ede8);
+  color: #3f5146;
+}
+
+/* Contenedor central */
+.container {
+  width: min(1150px, 100% - 3rem);
+  margin: 0 auto;
+}
+
+
+
+
+
+/* ============================
+   NAVBAR — DOS BLOQUES
+============================ */
+
+.site-header {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* LOS DOS BLOQUES EN UNA SOLA LÍNEA */
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* BLOQUES REDONDEADOS */
+.nav-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f3f2f0;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0px 4px 12px rgba(47, 82, 72, 0.15);
+}
+
+/* BLOQUE IZQUIERDO */
+.nav-left {
+  padding-right: 26px;
+}
+
+.logo-img {
+  height: 32px;
+}
+
+/* MENÚ */
+.main-nav {
+  display: flex;
+  gap: 6px;
+}
+
+.nav-btn {
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: transparent;
+  color: #3f5146;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: 0.25s ease;
+}
+
+.nav-btn:hover {
+  background: #2e7a69;
+  color: white;
+}
+
+.nav-btn--active {
+  background: #5f9f8e;
+  color: white;
+}
+
+/* BLOQUE DERECHO */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* SELECTOR IDIOMA */
+.lang-wrapper {
+  position: relative;
+}
+
+.lang-select {
+  background: transparent;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #3f5146;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.25s ease;
+}
+
+.lang-select:hover {
+  background: #2e7a69;
+  color: white;
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  background: #f3f2f0;
+  width: 110%;
+  border-radius: 14px;
+  padding: 8px 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease;
+  z-index: 1000;
+}
+
+.lang-wrapper.active .lang-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-dropdown li {
+  padding: 10px 14px;
+  font-weight: 600;
+  color: #3f5146;
+  cursor: pointer;
+}
+
+.lang-dropdown li:hover {
+  background: #2e7a69;
+  color: white;
+}
+
+/* ENTRAR */
+.login-btn {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: transparent;
+  font-weight: 600;
+  color: #3f5146;
+  transition: 0.25s ease;
+  text-decoration: none;
+}
+
+.login-btn:hover {
+  background: #2e7a69;
+  color: white;
+}
+
+/* CTA */
+.cta-btn {
+  padding: 10px 20px;
+  background: #2e7a69;
+  color: white;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0px 4px 10px rgba(46, 122, 105, 0.25);
+  transition: 0.25s ease;
+}
+
+.cta-btn:hover {
+  background: #266a5b;
+  transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+/* ================================
+   BOTONERA SUPERIOR
+================================ */
+.top-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 150px 0 20px 0;
+    gap: 20px;
+}
+
+.top-btn {
+    background: #007C5A;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.top-btn:hover {
+    background: #005E44;
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+.hero-others {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.hero-others .hero-sub {
+    color: #333;
+    margin-top: 15px;
+    font-size: 19px;
+}
+
+/* ================================
+   BOTONES GENERALES
+================================ */
+.btn-green {
+    background: #007C5A;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-green.big {
+    padding: 15px 40px;
+    font-size: 18px;
+}
+
+.btn-yellow {
+    background: #FFC557;
+    color: #222;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-yellow.big {
+    padding: 15px 40px;
+    font-size: 18px;
+}
+
+.center {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* ================================
+   TARJETAS SECTOR (idénticas a la imagen)
+================================ */
+.three-column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.sector-card {
+    background: #E9F3EF;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.06);
+}
+
+.section-title.small {
+    background: #007C5A;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 12px;
+    display: inline-block;
+    font-size: 19px;
+    margin-bottom: 22px;
+}
+
+.sector-card ul {
+    padding-left: 20px;
+}
+
+.sector-card li {
+    margin-bottom: 14px;
+    font-size: 15.5px;
+}
+
+.orange-link {
+    color: #FF7A00;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.link-blue {
+    color: #2B79E6;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.link-blue:hover {
+    text-decoration: underline;
+}
+
+/* Botón grande */
+.btn-yellow.big {
+    background: #FFC557;
+    padding: 16px 48px;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* ================================
+   VIDEO BOX
+================================ */
+.video-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.video-box.large {
+    width: 100%;
+    background: #CFE0F5;
+    border-radius: 22px;
+    padding: 25px;
+    height: 260px;
+}
+
+.video-label {
+    font-size: 14px;
+    color: #5A86B4;
+}
+
+.play-circle {
+    width: 70px;
+    height: 70px;
+    background: #80A9FF;
+    border-radius: 50%;
+    margin: 22px auto;
+}
+
+/* ================================
+   MÓDULOS PEQUEÑOS: PROYECTO A MEDIDA / FAQ
+================================ */
+.section-mini {
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+.section-mini h3 {
+    background: #007C5A;
+    color: white;
+    padding: 10px 25px;
+    display: inline-block;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.section-mini ul {
+    padding-left: 20px;
+}
+
+.section-mini li {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+/* =========================================================
+   FOOTER VISITIA — Premium
+========================================================= */
+
+.visitia-footer {
+  background: #1e2926;
+  /* Verde oscuro Visitia */
+  color: #f5f3f0;
+  padding: 60px 0 30px;
+  margin-top: 90px;
+  border-radius: 30px 30px 0 0;
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-col {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li {
+  margin-bottom: 10px;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+.footer-title {
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 14px !important;
+  font-size: 1rem;
+  opacity: 1;
+}
+
+/* Hover elegante */
+.footer-col li:hover {
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* Línea inferior */
+.footer-bottom {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 20px;
+}
+
+
+
+
+
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+    .three-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   RESET GENERAL
+========================================================= */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(to bottom, #f5f3ef, #ece9e4);
+  color: #1e2926;
+}
+
+.container {
+  width: min(1150px, 100% - 3rem);
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+
+
+
+
+/* =========================================================
+   NAVBAR — SE RESPETA
+========================================================= */
+/* (NO SE MODIFICA NADA DEL NAVBAR) */
+
+
+
+
+
+/* =========================================================
+   BOTONERA SUPERIOR
+========================================================= */
+.top-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 150px 0 40px;
+}
+
+.top-btn {
+  padding: 12px 28px;
+  background: #1d7a67;
+  color: white;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+  text-decoration: none;
+}
+
+.top-btn:hover {
+  background: #166353;
+  transform: translateY(-2px);
+}
+
+
+
+/* =========================================================
+   HERO SECUNDARIO
+========================================================= */
+.hero-others {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-others .hero-sub {
+  margin-top: 16px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+
+
+/* =========================================================
+   BOTONES GENERALES
+========================================================= */
+.btn-green {
+  padding: 12px 32px;
+  background: #1d7a67;
+  color: white;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.25s ease;
+  display: inline-block;
+}
+
+.btn-green:hover {
+  background: #166353;
+  transform: translateY(-2px);
+}
+
+.btn-green.big {
+  padding: 16px 40px;
+  font-size: 1.1rem;
+}
+
+.btn-yellow {
+  padding: 12px 32px;
+  background: #f8c242;
+  color: #1b1b1b;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.btn-yellow:hover {
+  transform: translateY(-2px);
+}
+
+.btn-yellow.big {
+  padding: 16px 40px;
+  font-size: 1.1rem;
+}
+
+.center {
+  text-align: center;
+  margin: 40px 0 60px;
+}
+
+
+
+/* =========================================================
+   TARJETAS — 3 COLUMNAS
+========================================================= */
+.three-column {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+  margin: 40px 0 60px;
+}
+
+.sector-card {
+  background: white;
+  padding: 28px;
+  border-radius: 22px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.section-title.small {
+  background: #1d7a67;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 14px;
+  width: fit-content;
+  margin-bottom: 20px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.sector-card ul {
+  padding-left: 20px;
+}
+
+.sector-card li {
+  margin-bottom: 14px;
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
+.orange-link {
+  color: #d67a00;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.link-blue {
+  color: #1a5ed8;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+
+/* =========================================================
+   VIDEO SECTION
+========================================================= */
+.video-section {
+  margin: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.video-box.large {
+  width: 100%;
+  padding: 40px;
+  background: #1e2926;
+  border-radius: 26px;
+  text-align: center;
+  color: #f5f3ef;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.video-label {
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+.play-circle {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: 2px solid #ffffff60;
+  background: #ffffff15;
+  margin: 0 auto;
+  position: relative;
+}
+
+.play-circle::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 32px;
+  border-style: solid;
+  border-width: 15px 0 15px 24px;
+  border-color: transparent transparent transparent white;
+}
+
+
+
+/* =========================================================
+   SECCIONES MINI
+========================================================= */
+.section-mini {
+  margin: 60px 0;
+}
+
+.section-mini .section-title {
+  background: #1d7a67;
+  padding: 12px 26px;
+  border-radius: 14px;
+  font-size: 20px;
+  width: fit-content;
+  color: white;
+  margin-bottom: 18px;
+}
+
+.section-mini ul {
+  padding-left: 20px;
+}
+
+.section-mini li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+
+
+/* =========================================================
+   FOOTER — SE RESPETA
+========================================================= */
+/* (NO SE MODIFICA NADA DEL FOOTER) */
+
+
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 900px) {
+
+  .three-column {
+    grid-template-columns: 1fr;
+  }
+
+  .video-box.large {
+    padding: 25px;
+  }
+
+  .play-circle {
+    width: 65px;
+    height: 65px;
+  }
+
+  .play-circle::before {
+    top: 20px;
+    left: 26px;
+    border-width: 12px 0 12px 18px;
+  }
+}

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visitia · Inmobiliarias</title>
+  <link rel="stylesheet" href="SolucionesInmobiliarias.css" />
+  <link rel="icon" type="image/png" href="Logo.png" />
+</head>
+<body class="fade-in">
+<!-- ================= HEADER / NAVBAR ================= -->
+  <header class="site-header" data-reveal="fade-down">
+    <div class="container nav-wrapper">
+      <!-- BOTÓN HAMBURGUESA (solo móviles) -->
+      <div class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span><span></span><span></span>
+      </div>
+
+      <!-- BLOQUE IZQUIERDO -->
+      <div class="nav-block nav-left">
+        <img src="LogoEmpty.png" class="logo-img" />
+
+        <nav class="main-nav" id="mainNav">
+          <a href="index.html" class="nav-btn">Inicio</a>
+          <a href="SolucionesInmobiliarias.html" class="nav-btn nav-btn--active">Inmobiliarias</a>
+          <a href="ObraNueva.html" class="nav-btn">Obra nueva</a>
+          <a href="OtrosSectores.html" class="nav-btn">Otros sectores</a>
+          <a href="AreaCliente.html" class="nav-btn">Área cliente</a>
+          <a href="blog.html" class="nav-btn">Blog</a>
+        </nav>
+      </div>
+
+      <!-- BLOQUE DERECHO -->
+      <!-- nav-block -->
+      <div class="nav-right" id="navRight">
+        <div class="lang-wrapper">
+          <div class="lang-select">ES <span class="chevron">▼</span></div>
+          <ul class="lang-dropdown">
+            <li>ES</li>
+            <li>EN</li>
+          </ul>
+        </div>
+
+        <a href="#" class="login-btn">Entrar</a>
+        <a href="#" class="cta-btn">Pruébalo gratis</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+
+    <!-- HERO / CABECERA INMOBILIARIAS -->
+    <section class="hero-inmo">
+      <div class="hero-inmo-left">
+        <h1 class="hero-pill">Visitia para inmobiliarias</h1>
+        <p class="hero-subtitle">
+          Impulsa tus ventas y gana eficiencia con Visitia.
+        </p>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS + ICONOS -->
+    <section class="benefits-section">
+      <div class="benefits-left">
+        <div class="benefits-grid">
+          <div class="benefit-card">Hasta un 60% menos de visitas presenciales</div>
+          <div class="benefit-card">Mejora un 30% la tasa de conversión</div>
+          <div class="benefit-card">Más propietarios interesados en confiarte su vivienda</div>
+          <div class="benefit-card">Facilidad para las ventas internacionales</div>
+          <div class="benefit-card">Mejora la experiencia de tus clientes</div>
+          <div class="benefit-card">Cuenta con las soluciones más vanguardistas del mercado</div>
+        </div>
+      </div>
+
+      <div class="benefits-right">
+        <div class="icons-box">
+          <!-- aquí pondrás tu imagen de iconos -->
+          <span class="icons-placeholder">Zona de iconos</span>
+        </div>
+        <p class="icons-note">
+          Poner estos iconos para ir al texto de la izquierda.
+        </p>
+      </div>
+    </section>
+
+    <!-- PASOS + CARRUSEL -->
+    <section class="steps-section">
+      <h2>En Visitia no queremos que te quedes atrás</h2>
+
+      <div class="steps-layout">
+        <div class="steps-column">
+          <p class="steps-intro">
+            Crea tu propio tour 360 en tiempo récord.<br />
+            Sigue estos sencillos pasos:
+          </p>
+
+          <div class="steps-grid">
+            <div class="step-card">
+              <span class="step-number">1.</span>
+              <span class="step-title">Compra la cámara 360</span>
+              <a href="#" class="step-link">Enlace a la recomendación de cámara para comprar</a>
+            </div>
+            <div class="step-card">
+              <span class="step-number">2.</span>
+              <span class="step-title">Aprende a usarla</span>
+              <a href="#" class="step-link">Enlace al tutorial de la cámara</a>
+            </div>
+            <div class="step-card">
+              <span class="step-number">3.</span>
+              <span class="step-title">Sube las fotos 360 a nuestra plataforma</span>
+              <a href="#" class="step-link">Enlace al tutorial de la subida</a>
+            </div>
+            <div class="step-card">
+              <span class="step-number">4.</span>
+              <span class="step-title">Consigue 3 tours 360 gratuitos</span>
+              <a href="#" class="step-link">Enlace a la prueba gratis</a>
+            </div>
+            <div class="step-card">
+              <span class="step-number">5.</span>
+              <span class="step-title">Prueba con nuestro home staging con IA</span>
+              <a href="#" class="step-link">Enlace a la prueba gratis</a>
+            </div>
+            <div class="step-card">
+              <span class="step-number">6.</span>
+              <span class="step-title">Contrata tu suscripción mensual</span>
+              <a href="#" class="step-link">Enlace a los precios (lo de abajo)</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-column">
+          <div class="video-panel">
+            <p class="video-caption">Carrusel de imágenes</p>
+            <button class="play-button" aria-label="Reproducir vídeo"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-discover">
+        <div class="cta-discover-box">
+          <p>
+            ¿Buscas algo más innovador? Descubre nuestros tours en 3D y Realidad Virtual.
+          </p>
+          <a href="#" class="cta-discover-link">Enlace a los planes Pro y RV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANES Y PRECIOS -->
+    <section class="pricing-section">
+      <span class="section-mini">Sección de precios</span>
+      <h2>Innova con nosotros y diferénciate del resto</h2>
+
+      <div class="plans-bar">
+        <span class="plans-pill">Nuestros planes</span>
+      </div>
+
+      <div class="plans-grid">
+        <!-- FREE -->
+        <article class="plan-card plan-free">
+          <div class="plan-header">
+            <span class="plan-tag">FREE 0€</span>
+            <p class="plan-sub">Ideal para probar Visitia</p>
+          </div>
+          <ul class="plan-features">
+            <li>Crea tours virtuales inmediatos subiendo tus fotos 360</li>
+            <li>Home staging con IA instantáneo</li>
+          </ul>
+          <p class="plan-note">Tus 3 primeros tours sin coste</p>
+          <button class="plan-btn plan-btn-yellow">Pruébalo gratis</button>
+        </article>
+
+        <!-- BÁSICO -->
+        <article class="plan-card plan-basic">
+          <div class="plan-header">
+            <span class="plan-name">BÁSICO</span>
+            <span class="plan-price">19,95€/mes</span>
+          </div>
+          <p class="plan-sub">El más recomendado para empezar</p>
+          <ul class="plan-features">
+            <li>Tours 360 inmediatos</li>
+            <li>Mejora del plano</li>
+            <li>Home staging con IA instantáneo</li>
+          </ul>
+          <div class="plan-highlight">
+            Incluye integración del tour en tu web y vídeo del tour.
+          </div>
+          <p class="plan-note">Incluye 50 tours activos*<br />*Cancela cuando quieras</p>
+          <button class="plan-btn">Suscríbete</button>
+        </article>
+
+        <!-- PRO -->
+        <article class="plan-card plan-pro">
+          <div class="plan-header">
+            <span class="plan-name">PRO</span>
+            <span class="plan-price">59,95€/mes</span>
+          </div>
+          <p class="plan-sub">Para destacar tus proyectos</p>
+          <ul class="plan-features">
+            <li>Tour inmersivo 360 en el software Visitia</li>
+            <li>Fotos 360 integradas + mapas 3D</li>
+            <li>Extras: visita online guiada en tiempo real</li>
+          </ul>
+          <div class="plan-highlight">
+            Incluye todas las funciones del plan básico.
+          </div>
+          <p class="plan-note">Incluye 75 tours activos*<br />*Cancela cuando quieras</p>
+          <button class="plan-btn">Suscríbete</button>
+        </article>
+
+        <!-- REALIDAD VIRTUAL -->
+        <article class="plan-card plan-vr">
+          <div class="plan-header">
+            <span class="plan-name">REALIDAD VIRTUAL</span>
+            <span class="plan-price">99,95€/mes</span>
+          </div>
+          <p class="plan-sub">Para una experiencia inmersiva</p>
+          <ul class="plan-features">
+            <li>Tour 360 en el software Visitia para Realidad Virtual</li>
+            <li>Fotos 360 integradas + mapas 3D</li>
+            <li>Compatible con Realidad Virtual y Aumentada</li>
+          </ul>
+          <div class="plan-highlight">
+            Incluye acceso al plan básico y al plan pro.
+          </div>
+          <p class="plan-note">Incluye 75 tours activos*</p>
+          <button class="plan-btn">Suscríbete</button>
+        </article>
+      </div>
+
+      <!-- TABLA COMPARATIVA -->
+      <div class="comparison-table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Compara nuestros planes</th>
+              <th>FREE</th>
+              <th>BÁSICO</th>
+              <th>PRO</th>
+              <th>REALIDAD VIRTUAL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tour 360</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Home staging con IA</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Mejora del plano</td>
+              <td>✗</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Integración del tour en la web</td>
+              <td>✗</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Vídeo resumen del tour</td>
+              <td>✗</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Mapas 3D de la ciudad</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Tour 360 Realidad Virtual y Aumentada</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Visita virtual guiada</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Firma virtual parte visita</td>
+              <td>✗</td>
+              <td>✗</td>
+              <td>+29,95€/agente mes</td>
+              <td>+29,95€/agente mes</td>
+            </tr>
+            <tr>
+              <td>Nº propiedades activas</td>
+              <td>3</td>
+              <td>50</td>
+              <td>75</td>
+              <td>75</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PLAN BÁSICO -->
+    <section class="plan-detail-section">
+      <div class="plan-detail-header">
+        <span class="pill-title">PLAN BÁSICO: Nuestro tour 360 básico</span>
+        <span class="section-mini">Sección prueba</span>
+      </div>
+
+      <div class="plan-detail-layout">
+        <div class="plan-detail-text">
+          <p>
+            Obtén tu tour 360 de forma inmediata: sube las fotos y recibe al momento el tour completo,
+            un vídeo resumen automático y el código para integrarlo en tu web.
+          </p>
+          <p>
+            Puedes subir y optimizar el plano de la propiedad, añadiendo <strong>puntos interactivos</strong> que
+            conectan cada foto con su ubicación en el inmueble.
+          </p>
+          <p>
+            Además, mejora la presentación de tus espacios con nuestro home staging con Inteligencia Artificial,
+            que te permite <strong>decorar las imágenes 360</strong> al instante.
+          </p>
+        </div>
+
+        <div class="plan-detail-video">
+          <div class="video-panel">
+            <p class="video-caption">
+              Previsualización de página de registro y prueba gratis tour 360 y home staging con IA
+            </p>
+            <button class="play-button"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="steps-row-heading">Para crear tu primer tour solo tienes que:</div>
+      <div class="steps-row">
+        <div class="step-card soft">
+          <span class="step-number">1.</span>
+          <span class="step-title">Compra la cámara 360</span>
+          <a href="#" class="step-link">Enlace a la recomendación de cámara para comprar</a>
+        </div>
+        <div class="step-card soft">
+          <span class="step-number">2.</span>
+          <span class="step-title">Aprende a usarla</span>
+          <a href="#" class="step-link">Enlace al tutorial de la cámara</a>
+        </div>
+        <div class="step-card soft">
+          <span class="step-number">3.</span>
+          <span class="step-title">Sube las fotos 360 a nuestra plataforma</span>
+          <a href="#" class="step-link">Enlace al tutorial de la subida</a>
+        </div>
+      </div>
+
+      <div class="plan-detail-cta">
+        <button class="plan-btn plan-btn-yellow">Prueba gratis</button>
+      </div>
+    </section>
+
+    <!-- PLAN PRO -->
+    <section class="plan-detail-section">
+      <div class="plan-detail-header">
+        <span class="pill-title">PLAN PRO: Tour 360 con mapas 3D</span>
+        <span class="section-mini">Sección nuestros planes</span>
+      </div>
+
+      <div class="plan-detail-layout">
+        <div class="plan-detail-text">
+          <p><strong>Tour inmersivo:</strong> da un salto más allá del tour 360 tradicional.</p>
+          <ul>
+            <li>Creamos un <strong>mapa 3D personalizado</strong> de la zona que te interese.</li>
+            <li>Integramos en él las fotos 360 de cada propiedad, de forma ordenada y visual.</li>
+            <li>Podrás ofrecer a tus clientes una <strong>visita virtual guiada</strong>, recorriendo juntos el mapa y las viviendas.</li>
+            <li>Incluye <strong>parte de visita virtual</strong> para registrar qué propiedades ha visto cada cliente.</li>
+          </ul>
+        </div>
+
+        <div class="plan-detail-video">
+          <div class="video-panel">
+            <p class="video-caption">Vídeo representativo de Plan Pro (tu mundo Visitia)</p>
+            <button class="play-button"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="steps-row-heading">Pasos a seguir</div>
+      <div class="steps-row">
+        <div class="step-card soft-green">
+          <span class="step-number">1.</span>
+          <span class="step-title">Compra la cámara 360 y realiza las fotos de la propiedad</span>
+          <a href="#" class="step-link">Enlace a tutoriales cámara</a>
+        </div>
+        <div class="step-card soft-green">
+          <span class="step-number">2.</span>
+          <span class="step-title">Sube las fotos 360 y el plano a Visitia</span>
+          <a href="#" class="step-link">Enlace a subida de fotos</a>
+        </div>
+        <div class="step-card soft-green">
+          <span class="step-number">3.</span>
+          <span class="step-title">Delimita en el mapa la zona de tu interés</span>
+          <a href="#" class="step-link">Tutorial delimitar mapa</a>
+        </div>
+      </div>
+
+      <div class="plan-detail-cta">
+        <button class="plan-btn">Suscríbete</button>
+      </div>
+    </section>
+
+    <!-- PLAN REALIDAD VIRTUAL -->
+    <section class="plan-detail-section">
+      <div class="plan-detail-header">
+        <span class="pill-title">PLAN REALIDAD VIRTUAL: Tour 360 en Realidad Virtual</span>
+        <span class="section-mini">Sección nuestros planes</span>
+      </div>
+
+      <div class="plan-detail-layout vr-layout">
+        <div class="vr-text-blocks">
+          <div class="vr-block">
+            <p>1. Permite a tus clientes visualizar su vivienda de una forma inmersiva y real.</p>
+          </div>
+          <div class="vr-block">
+            <p>2. Amplía tu mercado: permite a tus clientes explorar propiedades en cualquier parte del mundo.</p>
+          </div>
+          <div class="vr-block">
+            <p>3. Destaca frente a la competencia. Apuesta por el futuro.</p>
+          </div>
+        </div>
+        <div class="plan-detail-video">
+          <div class="video-panel">
+            <p class="video-caption">Vídeo representativo de Plan RV</p>
+            <button class="play-button"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="steps-row-heading split">
+        <span>Pasos a seguir</span>
+        <span>Somos futuro</span>
+      </div>
+
+      <div class="steps-row">
+        <div class="step-card soft-green">
+          <span class="step-number">1.</span>
+          <span class="step-title">Compra las gafas de RV</span>
+          <a href="#" class="step-link">Enlace a tutorial compra gafas</a>
+        </div>
+        <div class="step-card soft-green">
+          <span class="step-number">2.</span>
+          <span class="step-title">Instala en las gafas nuestro software</span>
+          <a href="#" class="step-link">Enlace a configuración gafas RV</a>
+        </div>
+        <div class="step-card soft-green">
+          <span class="step-number">3.</span>
+          <span class="step-title">Compra la cámara 360 y realiza las fotos de la propiedad</span>
+          <a href="#" class="step-link">Enlace a tutoriales cámara</a>
+        </div>
+        <div class="step-card soft-green">
+          <span class="step-number">4.</span>
+          <span class="step-title">Sube las fotos 360 a Visitia</span>
+          <a href="#" class="step-link">Enlace a subida de fotos</a>
+        </div>
+      </div>
+
+      <p class="vr-footer-text">
+        No te quedes con la tecnología del presente. Te ayudamos a implementar la tecnología del futuro.
+      </p>
+
+      <div class="plan-detail-cta">
+        <button class="plan-btn">Más información</button>
+      </div>
+    </section>
+
+    <!-- TUTORIALES -->
+    <section class="tutorials-section">
+      <div class="tutorials-header">
+        <span class="pill-title">Tutoriales</span>
+        <span class="section-mini">Sección tutoriales</span>
+      </div>
+      <p class="tutorials-note">
+        Son un PDF (presentación) con indicaciones. Si pinchan en cada uno se les remite a un PDF.<br />
+        Para acceder a los tutoriales tienen que registrarse. Cada tutorial → un vídeo a previsualizar.
+      </p>
+
+      <div class="tutorial-block">
+        <h3>Cámara</h3>
+        <div class="tutorial-grid">
+          <div class="tutorial-card">1. Compra de la cámara 360</div>
+          <div class="tutorial-card">2. Configuración de la cámara 360</div>
+          <div class="tutorial-card">3. Descarga de fotos 360</div>
+        </div>
+      </div>
+
+      <div class="tutorial-block">
+        <h3>Plan Free y Plan Básico</h3>
+        <div class="tutorial-grid">
+          <div class="tutorial-card">1. Subida de fotos 360 y plano a Visitia</div>
+          <div class="tutorial-card">2. Creación de tour virtual</div>
+          <div class="tutorial-card">3. Aprende a usar nuestra herramienta de home staging (fotos y plano)</div>
+          <div class="tutorial-card">4. Vídeo del tour e integración en página web</div>
+        </div>
+      </div>
+
+      <div class="tutorial-block">
+        <h3>Plan Pro</h3>
+        <div class="tutorial-grid">
+          <div class="tutorial-card">1. Subida de fotos 360 y plano a Visitia</div>
+          <div class="tutorial-card">2. Creación de tour virtual</div>
+          <div class="tutorial-card">3. Publicación del tour en Visitia Pro</div>
+          <div class="tutorial-card">4. Delimitación del mapa</div>
+          <div class="tutorial-card">5. Aprende a usar nuestra herramienta de home staging (fotos y plano)</div>
+        </div>
+      </div>
+
+      <div class="tutorial-block">
+        <h3>Plan Realidad Virtual</h3>
+        <div class="tutorial-grid">
+          <div class="tutorial-card">1. Compra de las gafas de Realidad Virtual</div>
+          <div class="tutorial-card">2. Configuración de las gafas RV</div>
+          <div class="tutorial-card">3. Subida de fotos 360 y plano a Visitia</div>
+          <div class="tutorial-card">4. Publicación del tour en las gafas RV</div>
+          <div class="tutorial-card">5. Delimitación del mapa</div>
+          <div class="tutorial-card">6. Aprende a usar nuestra herramienta de home staging (fotos y plano)</div>
+          <div class="tutorial-card">7. Diferencias entre Realidad Virtual y Realidad Aumentada</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTO A MEDIDA / FAQ -->
+    <section class="custom-project-section">
+      <div class="custom-block">
+        <span class="pill-title">Proyecto a medida</span>
+        <ul>
+          <li>Adaptamos nuestro software a tus necesidades específicas.</li>
+          <li><strong>Contáctanos</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="custom-block">
+        <span class="pill-title">Preguntas frecuentes</span>
+        <p class="faq-note">
+          Remisión a las preguntas frecuentes de la página de inicio.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER SIMPLE ================= -->
+    <footer id="blog" class="visitia-footer">
+      <div class="container footer-inner">
+        <ul class="footer-col" data-reveal="fade-up">
+          <li class="footer-title">Suscríbete a la newsletter</li>
+          <li>Pago protegido</li>
+        </ul>
+
+        <ul class="footer-col" data-reveal="fade-up">
+          <li class="footer-title">Consulta nuestro blog</li>
+          <li>LinkedIn</li>
+        </ul>
+
+        <ul class="footer-col" data-reveal="fade-up">
+          <li class="footer-title">Política privacidad</li>
+          <li>ZYONIA SL</li>
+        </ul>
+
+        <ul class="footer-col" data-reveal="fade-up">
+          <li class="footer-title">Acuerdo de licencia</li>
+          <li>Acuerdo de hosting</li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        © 2025 Visitia — Plataforma inmersiva para profesionales
+      </div>
+    </footer>
+
+  <script>
+    // pequeño toggle para móvil, igual que en la landing
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    }
+
+    // efecto fade-in como en la landing
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('visible');
+    });
+  </script>
+</body>
+</html>
