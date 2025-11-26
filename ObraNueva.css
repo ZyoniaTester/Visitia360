@@ -65,7 +65,8 @@ body {
 }
 
 .logo-img {
-  height: 32px;
+  height: 25px;
+  margin-bottom: 5px;
 }
 
 /* MENÚ */
@@ -968,3 +969,4 @@ body {
     top: 18px;
   }
 }
+
