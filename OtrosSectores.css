@@ -65,7 +65,8 @@ body {
 }
 
 .logo-img {
-  height: 32px;
+  height: 25px;
+  margin-bottom: 5px;
 }
 
 /* MENÚ */
@@ -782,3 +783,4 @@ body {
     border-width: 12px 0 12px 18px;
   }
 }
+
