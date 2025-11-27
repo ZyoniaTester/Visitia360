@@ -9,16 +9,22 @@
 </head>
 <body>
 <!-- ================= HEADER / NAVBAR ================= -->
-  <header class="site-header" data-reveal="fade-down">
+  <header class="site-header double-nav" data-reveal="fade-down">
+
+  <!-- =====================
+       PISO SUPERIOR (NAV PRINCIPAL)
+  ====================== -->
+  <div class="top-nav">
     <div class="container nav-wrapper">
-      <!-- BOTÓN HAMBURGUESA (solo móviles) -->
+
+      <!-- BOTÓN HAMBURGUESA -->
       <div class="mobile-menu-btn" id="mobileMenuBtn">
         <span></span><span></span><span></span>
       </div>
 
       <!-- BLOQUE IZQUIERDO -->
       <div class="nav-block nav-left">
-        <img src="Visitia.png" class="logo-img" />
+        <img src="LogoEmpty.png" class="logo-img" />
 
         <nav class="main-nav" id="mainNav">
           <a href="index.html" class="nav-btn">Inicio</a>
@@ -31,7 +37,6 @@
       </div>
 
       <!-- BLOQUE DERECHO -->
-      <!-- nav-block -->
       <div class="nav-right" id="navRight">
         <div class="lang-wrapper">
           <div class="lang-select">ES <span class="chevron">▼</span></div>
@@ -44,161 +49,226 @@
         <a href="#" class="login-btn">Entrar</a>
         <a href="#" class="cta-btn">Pruébalo gratis</a>
       </div>
+
     </div>
-  </header>
+  </div>
+
+  <!-- =====================
+       PISO INFERIOR (SUBNAV)
+  ====================== -->
+  <div class="bottom-subnav">
+    <div class="container subnav-wrapper">
+      <a href="#promotoras" class="subnav-link">Promotoras</a>
+      <a href="#estudiosarquitectura" class="subnav-link">Estudios de arquitectura</a>
+      <a href="#reformas" class="subnav-link">Reformas</a>
+      <a href="#interiorismo" class="subnav-link">Interiorismo</a>
+      <a href="#proyectomedida" class="subnav-link">Proyecto a medida</a>
+    </div>
+  </div>
+
+</header>
 
 <div class="container">
-<!-- BOTONERA SUPERIOR DE SECCIONES -->
-<section class="top-buttons">
-    <a class="top-btn">Promotoras</a>
-    <a class="top-btn">Estudios de arquitectura</a>
-    <a class="top-btn">Reformas</a>
-    <a class="top-btn">Interiorismo</a>
-</section>
+
+
+
+
+
+
 
 <!-- HERO -->
 <section class="section-hero">
-    <h2 class="section-title">VISITIA PARA OBRA NUEVA</h2>
-    <p class="hero-sub">Obra Nueva con Visitia: <strong>transforma planos en experiencias que venden</strong></p>
 
-    <div class="hero-grid">
-        <div class="hero-left card-green-light">
-            <ul>
-                <li><strong>Tours 360 y experiencias inmersivas</strong></li>
-                <li>Visitar virtualmente jardines, zonas comunes, piscinas e interiores como si ya existieran.</li>
-                <li>Visualizar online o en Realidad Virtual cada vivienda en múltiples estilos.</li>
-                <li>Entender el proyecto y tomar decisiones más rápido.</li>
-            </ul>
-            <p>
-                Visitia convierte cada proyecto en una experiencia interactiva que 
-                <strong>acelera la captación</strong>, 
-                <strong>impulsa las ventas</strong> y 
-                <strong>reduce la incertidumbre del comprador</strong>.
-            </p>
+  <h2 class="section-title modern">VISITIA PARA OBRA NUEVA</h2>
+
+  <p class="hero-sub">
+    Obra Nueva con Visitia: <strong>transforma planos en experiencias que venden</strong>
+  </p>
+
+  <div class="hero-grid">
+
+    <!-- TEXTO IZQUIERDA -->
+    <div class="hero-left card-green-light">
+
+  <p>
+    Con nuestros <strong>tours 360 y experiencias inmersivas</strong>, 
+    tus clientes podrán:
+  </p>
+
+  <ul>
+    <li>
+      Visitar virtualmente zonas comunes, jardines, piscinas y espacios 
+      interiores como si ya existieran.
+    </li>
+    <li>
+      Visualizar <strong>online o en Realidad Virtual</strong> cada 
+      vivienda amueblada en múltiples estilos.
+    </li>
+    <li>
+      Entender el proyecto, emocionarse y tomar una decisión de compra 
+      más rápido.
+    </li>
+  </ul>
+
+  <p>
+    Visitia convierte cada proyecto en una experiencia interactiva que 
+    <strong>acelera la captación</strong>, 
+    <strong>impulsa las ventas</strong> y 
+    <strong>reduce la incertidumbre del comprador</strong>.
+  </p>
+
+</div>
+
+
+    <!-- CARRUSEL DERECHA -->
+    <div class="hero-right">
+
+      <div class="video-box image-carousel">
+
+        <div class="carousel-track">
+          <img src="A1.jpg" class="carousel-img active">
+          <img src="A2.jpg" class="carousel-img">
+          <img src="A3.jpg" class="carousel-img">
         </div>
 
-        <div class="hero-right video-box">
-            <p class="video-label">• Carrusel de imágenes</p>
-            <div class="play-circle"></div>
-        </div>
+      </div>
+
+      <!-- FRASE SOLO DEBAJO DEL CARRUSEL -->
+      <div class="hero-footer-text under-carousel">
+        <span>Vende antes de construir</span>
+        <span>Transmite más seguridad e ilusión al comprador</span>
+        <span>Capta más clientes</span>
+      </div>
+
     </div>
 
-    <div class="hero-footer-text">
-        Vende antes de construir<br>
-        Transmite más seguridad e ilusión al comprador<br>
-        Capta más clientes
-    </div>
+  </div>
+
 </section>
 
-<!-- PROMOTORAS -->
-<section class="section-block">
-    <h3 class="section-title">PROMOTORAS</h3>
 
-    <div class="two-col">
-        <div class="card-green-light">
 
-            <p>
-                Visitia te permite mostrar el edificio terminado y los espacios comunes antes de que existan,
-                <strong>evitando así la necesidad de crear un piso piloto</strong>.
-            </p>
 
-            <ul>
-                <li>
-                    Puedes integrar <strong>renders ya existentes</strong> en nuestro software
-                    para crear un <strong>tour 360 al instante</strong> ⏱️.
-                </li>
-                <li>
-                    También podrás cambiar el estilo del tour y decorar los espacios con nuestro
-                    <strong>home staging con IA</strong> 😮‍💨.
-                </li>
-            </ul>
 
-            <a class="btn-yellow">Contáctanos</a>
 
-            <p>
-                Para obra nueva, recomendamos especialmente nuestros
-                <strong>tours inmersivos en Realidad Virtual y Aumentada</strong>.
-                También disponible en formato online.
-                <span class="link">(enlace al formulario)</span>
-            </p>
 
-            <p>
-                Con nosotros, también puedes crear <strong>renders interactivos desde 0</strong> 🏡.
-                Contáctanos <span class="link">(enlace al formulario)</span>.
-            </p>
 
-            <a class="btn-green">PROYECTO A MEDIDA</a>
+
+
+<!-- PROMOTORAS — FULL WIDTH REDISEÑADA -->
+<section class="promotoras-band">
+
+  <div class="container promotoras-layout reverse">
+
+    <!-- VIDEO A LA IZQUIERDA -->
+    <div class="promotoras-visual">
+      <div class="promotoras-video">
+
+        <!-- SIMULACIÓN DE VIDEO -->
+        <video muted loop preload="auto" poster="preview.jpg"></video>
+
+        <div class="video-overlay">
+          <div class="play-btn"></div>
         </div>
 
-        <div class="video-box">
-            <p class="video-label">
-                • Vídeo piso obra nueva y explicación tema integración renders
-            </p>
-            <div class="play-circle"></div>
-        </div>
+      </div>
     </div>
+
+    <!-- CAJA DE TEXTO A LA DERECHA -->
+    <div class="promotoras-glass-card">
+
+      <h3 class="promotoras-title">PROMOTORAS</h3>
+
+      <p class="promotoras-lead">
+        Visitia te permite mostrar el edificio terminado antes de que exista,
+        <strong>eliminando por completo la necesidad de un piso piloto</strong>.
+      </p>
+
+      <ul class="promotoras-features">
+        <li><strong>Renders existentes → Tour 360 inmediato</strong> ⏱️</li>
+        <li><strong>Home staging con IA en tiempo real</strong> 😮‍💨</li>
+        <li><strong>Visualización en web, VR y AR</strong></li>
+      </ul>
+
+      <p class="promotoras-impact">
+        Visitia convierte cada proyecto en una experiencia interactiva que
+        <strong>acelera la captación, impulsa las ventas y reduce la incertidumbre del comprador</strong>.
+      </p>
+
+      <div class="promotoras-actions">
+        <a class="btn-yellow">Contáctanos</a>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
-<!-- ESTUDIOS DE ARQUITECTURA / REFORMAS -->
-<section class="section-double">
+
+
+
+
+
+
+
+<!-- ESTUDIOS DE ARQUITECTURA / REFORMAS — EDITORIAL -->
+<section class="section-double editorial-double">
     
     <!-- ESTUDIOS DE ARQUITECTURA -->
-    <div class="double-card">
-        <h3 class="section-title small">ESTUDIOS DE ARQUITECTURA</h3>
+    <div class="double-card editorial-card architecture">
 
-        <ul>
+        <div class="editorial-header">
+            <span class="editorial-tag">PLAN PRO</span>
+            <h3 class="editorial-title">Estudios de<br>Arquitectura</h3>
+            <span class="editorial-sub">Mapas 3D Interactivos</span>
+        </div>
+
+        <ul class="editorial-list">
             <li>
-                Con Visitia puedes <strong>integrar renders ya existentes</strong> en nuestro software
-                para crear un <strong>tour 360 al instante</strong> ⏱️.
+                Integra <strong>renders existentes</strong> y crea un
+                <strong>tour 360 al instante</strong>.
             </li>
-
             <li>
-                También ofrecemos todo tipo de experiencias inmersivas
-                <strong>online y en Realidad Virtual o Aumentada</strong> 💻.
+                Experiencias inmersivas <strong>online, VR y AR</strong>.
             </li>
-
             <li>
-                Además, nuestra herramienta de <strong>home staging</strong> 😮‍💨
-                realiza modificaciones al instante sobre una foto o render 360.
+                <strong>Home staging con IA</strong> en tiempo real.
                 <span class="orange-link">Prueba gratis aquí</span>
-                <span class="link">(remisión a prueba gratis de inmobiliarias)</span>.
+                <span class="link">(remisión inmobiliarias)</span>.
             </li>
-
             <li>
-                Ofrecemos todo tipo de <strong>proyectos a medida</strong>.
-                Contáctanos para más información.
+                Desarrollo completo de <strong>proyectos a medida</strong>.
             </li>
         </ul>
+
     </div>
 
-
     <!-- REFORMAS E INTERIORISMO -->
-    <div class="double-card">
-        <h3 class="section-title small">REFORMAS E INTERIORISMO</h3>
+    <div class="double-card editorial-card reforms">
 
-        <ul>
+        <div class="editorial-header">
+            <span class="editorial-tag">PLAN PRO</span>
+            <h3 class="editorial-title">Reformas &<br>Interiorismo</h3>
+            <span class="editorial-sub">Visualización antes de ejecutar</span>
+        </div>
+
+        <ul class="editorial-list">
             <li>
-                Nuestra herramienta de <strong>home staging</strong> es especialmente útil
-                para proyectos de reforma y diseño 😮‍💨.
-                Realiza modificaciones al instante sobre una foto o render 360.
-                <span class="orange-link">Prueba gratis aquí</span>
-                <span class="link">(remisión a prueba gratis de inmobiliarias)</span>.
+                Home staging con IA para <strong>diseño y reforma</strong>.
+                <span class="orange-link">Prueba gratis aquí</span>.
             </li>
-
             <li>
-                Ayuda a tus clientes a <strong>previsualizar un proyecto antes de realizarlo</strong>.
-                Con Visitia podrás mostrarles <strong>tours virtuales con variaciones</strong> 🛠️.
+                <strong>Previsualiza proyectos completos</strong> antes de construir.
             </li>
-
             <li>
-                Realizamos <strong>proyectos a medida y experiencias inmersivas</strong>,
-                online y en Realidad Virtual o Aumentada 💻.
+                Variantes de diseño con <strong>tours virtuales dinámicos</strong>.
             </li>
-
             <li>
-                Contáctanos para más información.
+                Proyectos inmersivos <strong>online, VR y AR</strong>.
             </li>
         </ul>
+
     </div>
 
 </section>
@@ -208,21 +278,48 @@
     <a class="btn-yellow big">Contáctanos</a>
 </div>
 
-<!-- PROYECTO A MEDIDA -->
-<section class="section-mini">
-    <h3 class="section-title">PROYECTO A MEDIDA</h3>
-    <ul>
-        <li>Adaptamos nuestro software a tus necesidades específicas.</li>
-        <li><strong>Contáctanos</strong></li>
-    </ul>
-</section>
 
-<!-- FAQ REMISIÓN -->
-<section class="section-mini">
-    <h3 class="section-title">PREGUNTAS FRECUENTES</h3>
-    <p class="link-blue">• Remisión a las preguntas frecuentes de la página de inicio</p>
+
+
+
+
+
+
+
+
+<!-- PROYECTO A MEDIDA / FAQ -->
+<section class="custom-project-section">
+
+  <!-- PROYECTO A MEDIDA -->
+  <div class="custom-block featured">
+    <span class="pill-title">Proyecto a medida</span>
+
+    <div class="custom-card">
+      <p>
+        Si estás buscando una <strong>manera impactante</strong> de difundir tu proyecto,
+        podemos ayudarte. Al ser nuestro software completamente personalizable,
+        es una herramienta ideal para publicar nuevos desarrollos o proyectos ya existentes.
+      </p>
+
+      <a href="contacto.html" class="custom-cta">
+        Más información
+      </a>
+
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="custom-block">
+    <!-- <span class="pill-title">Preguntas frecuentes</span> -->
+
+    <div class="custom-card simple">
+      <a href="index.html#faq" class="faq-link">
+        Preguntas frecuentes
+      </a>
+    </div>
+  </div>
+
 </section>
-</div>
 
 
 <!-- ================= FOOTER SIMPLE ================= -->
@@ -254,6 +351,6 @@
       </div>
     </footer>
 
+    <script src="CarruselObraNueva.js"></script>
 </body>
 </html>
-

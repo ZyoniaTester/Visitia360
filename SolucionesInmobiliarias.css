@@ -30,6 +30,108 @@ body {
 
 
 
+
+
+/* ===============================
+   NAV DOBLE — VISITIA
+=============================== */
+
+.double-nav {
+  width: 100%;
+  position: relative;
+  z-index: 1200;
+}
+
+/* ===============================
+   PISO SUPERIOR (YA EXISTENTE)
+=============================== */
+
+.top-nav {
+  /*background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(14px);*/
+  border-radius: 999px;
+  margin: 18px auto 6px auto;
+  width: 96%;
+  /*box-shadow:
+    0 10px 26px rgba(0,0,0,0.10);*/
+}
+
+/* ===============================
+   PISO INFERIOR (SUBNAV)
+=============================== */
+
+.bottom-subnav {
+  width: 100%;
+  margin-top: 8px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.subnav-wrapper {
+  /*backdrop-filter: blur(12px);*/
+  border-radius: 999px;
+  padding: 10px 28px;
+  display: flex;
+  gap: 22px;
+}
+
+/* Links inferior */
+.subnav-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2b3f3a;
+  text-decoration: none;
+  position: relative;
+  transition: 0.25s ease;
+}
+
+/* Hover underline */
+.subnav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #1d7a67, #6fdac0);
+  border-radius: 99px;
+  transition: 0.25s ease;
+}
+
+.subnav-link:hover::after {
+  width: 100%;
+}
+
+.subnav-link:hover {
+  color: #0f2f28;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media (max-width: 900px) {
+
+  .bottom-subnav {
+    display: none; /* ocultamos el subnav en móvil */
+  }
+
+  .top-nav {
+    border-radius: 0;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 /* ============================
    NAVBAR — DOS BLOQUES
 ============================ */
@@ -65,8 +167,7 @@ body {
 }
 
 .logo-img {
-  height: 25px;
-  margin-bottom: 5px;
+  height: 32px;
 }
 
 /* MENÚ */
@@ -262,63 +363,118 @@ body {
   text-transform: uppercase;
 }
 
-/* BENEFICIOS */
-.benefits-section {
-  display: grid;
-  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.2fr);
-  gap: 40px;
-  align-items: flex-start;
-  margin-bottom: 60px;
-}
 
-.benefits-left h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   BENEFICIOS 3 x 2 PERFECTO
+=============================== */
+
+.benefits-section {
+  width: 100%;
+  margin-bottom: 90px;
 }
 
 .benefits-grid {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 16px 20px;
+  grid-template-columns: repeat(3, 1fr); /* ← AQUÍ ESTÁ LA CLAVE */
+  gap: 32px;
 }
 
+/* TARJETA */
 .benefit-card {
-  background: #f8c97b;
-  padding: 14px 18px;
-  border-radius: 16px;
-  font-size: 14px;
-  line-height: 1.4;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-/* ICONOS */
-.benefits-right {
+  background: #ffffff;
+  padding: 40px 28px 36px;
+  border-radius: 26px;
+  text-align: center;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+  transition: 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.icons-box {
-  width: 100%;
-  min-height: 220px;
-  border-radius: 22px;
-  background: #f8f0e5;
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.18);
+}
+
+/* ICONO SUPERIOR */
+.benefit-icon {
+  width: 64px;
+  height: 64px;
+  background: #0f2e25;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px dashed rgba(0, 0, 0, 0.08);
-}
-.icons-placeholder {
-  font-size: 14px;
-  color: #777;
+  margin-bottom: 18px;
 }
 
-.icons-note {
-  margin-top: 8px;
-  font-size: 12px;
-  color: #3a76d1;
-  font-style: italic;
+.benefit-icon img {
+  width: 30px;
 }
+
+/* TEXTO */
+.benefit-card p {
+  margin: 0;
+  font-size: 15.5px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #142822;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media (max-width: 900px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 x 3 en móvil */
+  }
+}
+
+@media (max-width: 520px) {
+  .benefits-grid {
+    grid-template-columns: 1fr; /* 1 columna */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* PASOS + CARRUSEL */
 .steps-section {
@@ -551,7 +707,7 @@ body {
 }
 .plan-btn-yellow {
   background: #f8c242;
-  color: #1b1b1b;
+  color: #fff;
 }
 
 /* TABLA COMPARATIVA */
@@ -894,6 +1050,84 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =========================================================
    RESET GENERAL
 ========================================================= */
@@ -929,8 +1163,8 @@ body {
 ========================================================= */
 .page-wrap {
   max-width: 1200px;
-  margin: 140px auto 80px;
-  padding: 0 20px 60px;
+  margin: 200px auto 80px;
+  padding: 0 0px 0px;
 }
 
 .hero-mini,
@@ -972,296 +1206,464 @@ body {
 
 
 
-/* =========================================================
-   BENEFICIOS
-========================================================= */
+/* ===============================
+   BENEFICIOS 3 x 2 PERFECTO
+=============================== */
+
 .benefits-section {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
-  gap: 50px;
-  align-items: start;
-  margin-bottom: 70px;
+  width: 100%;
+  margin-bottom: 90px;
 }
 
 .benefits-grid {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 18px 22px;
+  grid-template-columns: repeat(3, 1fr); /* ← AQUÍ ESTÁ LA CLAVE */
+  gap: 32px;
 }
 
+/* TARJETA */
 .benefit-card {
   background: #ffffff;
-  padding: 18px 20px;
-  border-radius: 20px;
-  font-size: 15px;
-  line-height: 1.55;
-  color: #1e2926;
-  border: 1px solid rgba(30, 41, 38, 0.08);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-  transition: 0.25s ease;
+  padding: 40px 28px 36px;
+  border-radius: 26px;
+  text-align: center;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .benefit-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
+  transform: translateY(-8px);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.18);
 }
 
-/* Iconos premium */
-.benefits-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.icons-box {
-  width: 100%;
-  min-height: 240px;
-  background: #1e2926;
-  border-radius: 26px;
+/* ICONO SUPERIOR */
+.benefit-icon {
+  width: 64px;
+  height: 64px;
+  background: #0f2e25;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 28px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  margin-bottom: 18px;
 }
 
-.icons-box img {
-  width: 85%;
-  height: auto;
-  filter: brightness(1.1);
+.benefit-icon img {
+  width: 30px;
 }
 
-.icons-note {
-  margin-top: 10px;
-  font-size: 13px;
-  color: #2e7a69;
-  font-style: italic;
+/* TEXTO */
+.benefit-card p {
+  margin: 0;
+  font-size: 15.5px;
+  font-weight: 200;
+  line-height: 1.55;
+  color: #142822;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media (max-width: 900px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 x 3 en móvil */
+  }
+}
+
+@media (max-width: 520px) {
+  .benefits-grid {
+    grid-template-columns: 1fr; /* 1 columna */
+  }
 }
 
 
 
-/* =========================================================
-   PASOS / CARRUSEL
-========================================================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   VISOR DE PASOS ESTILO VISITIA
+=============================== */
+
 .steps-section {
-  margin-top: 40px;
-  margin-bottom: 70px;
+  margin: 140px auto;
+  max-width: 1100px;
+  text-align: center;
 }
 
 .steps-section h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #1e2926;
-  font-weight: 700;
-}
-
-.steps-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
-  gap: 50px;
+  font-size: 36px;
+  font-weight: 900;
+  color: #0f2f28;
+  margin-bottom: 18px;
 }
 
 .steps-intro {
-  margin-bottom: 20px;
-  font-size: 16px;
-  color: #2f423c;
-}
-
-.steps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 18px 20px;
-}
-
-.step-card {
-  background: #ffffff;
-  padding: 16px 18px;
-  border-radius: 18px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  border: 1px solid rgba(0,0,0,0.05);
-  transition: 0.24s ease;
-}
-
-.step-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.09);
-}
-
-.step-number {
-  font-weight: 800;
-  font-size: 15px;
-  color: #1d7a67;
-}
-
-.step-title {
+  font-size: 18px;
+  color: #2a4a42;
   font-weight: 600;
-  margin-top: 4px;
-  color: #1e2926;
+  margin-bottom: 40px;
 }
 
-.step-link {
-  margin-top: 6px;
-  font-size: 13px;
-  color: #2e7a69;
-  text-decoration: underline;
-}
-
-
-/* =========================================================
-   PANEL DE VIDEO
-========================================================= */
-.carousel-column {
-  display: flex;
-  justify-content: center;
-}
-
-.video-panel {
-  width: 100%;
-  min-height: 280px;
-  background: #1e2926;
-  border-radius: 26px;
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
-}
-
-.video-caption {
-  font-size: 15px;
-  color: #bdd3cc;
-}
-
-.play-button {
-  width: 72px;
-  height: 72px;
-  background: #ffffff20;
-  border-radius: 50%;
-  border: 2px solid #ffffff50;
+/* VISOR GRANDE */
+.steps-viewer {
   position: relative;
-  cursor: pointer;
-  transition: 0.25s ease;
+  width: 100%;
+  height: 540px;
+  border-radius: 34px;
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.35);
+  margin-bottom: 26px;
 }
 
-.play-button:hover {
-  transform: scale(1.08);
-  background: #ffffff30;
+.steps-viewer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.play-button::before {
-  content: "";
+/* TEXTO SOBRE LA IMAGEN */
+.steps-overlay {
   position: absolute;
-  left: 28px;
-  top: 23px;
-  border-style: solid;
-  border-width: 12px 0 12px 18px;
-  border-color: transparent transparent transparent white;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.0),
+    rgba(0,0,0,0.75)
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 30px 34px;
 }
 
-
-/* =========================================================
-   CTA DESCUBRIR
-========================================================= */
-.cta-discover-box {
-  background: #1d7a67;
+.steps-overlay span {
+  font-size: 28px;
+  font-weight: 900;
   color: white;
-  padding: 18px 20px;
-  border-radius: 22px;
-  font-size: 15px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  text-align: left;
+  line-height: 1.2;
+}
+
+.steps-overlay span::first-line {
+  color: #2fdac2;
+}
+
+/* MINIATURAS */
+.steps-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.steps-thumbnails img {
+  width: 100%;
+  height: 86px;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: pointer;
+  opacity: 0.6;
+  transform: scale(0.95);
+  transition: 0.3s ease;
+}
+
+.steps-thumbnails img:hover {
+  opacity: 1;
+}
+
+.steps-thumbnails img.active {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+  outline: 3px solid #2fdac2;
+}
+
+/* =========================================
+   CTA DESCUBRIR — PREMIUM
+========================================= */
+
+.cta-discover {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-discover-box {
+  background: linear-gradient(
+    135deg,
+    #1d7a67,
+    #2fdac2
+  );
+  color: white;
+  padding: 26px 36px;
+  border-radius: 32px;
+  font-size: 16px;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.25);
+  text-align: center;
+  max-width: 820px;
 }
 
 .cta-discover-link {
-  margin-top: 8px;
+  margin-top: 12px;
   display: inline-block;
-  font-size: 14px;
-  color: #d8fff5;
-  text-decoration: underline;
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+  position: relative;
 }
 
+.cta-discover-link::after {
+  content: "→";
+  margin-left: 8px;
+  transition: 0.3s ease;
+}
+
+.cta-discover-link:hover::after {
+  margin-left: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .steps-thumbnails {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .steps-viewer {
+    height: 260px;
+  }
+
+  .steps-overlay span {
+    font-size: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   PRICING HEADER — PREMIUM
+========================================= */
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pricing-eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #1d7a67;
+  margin-bottom: 12px;
+}
+
+.pricing-title {
+  font-size: 34px;
+  font-weight: 900;
+  color: #1e2926;
+  letter-spacing: -0.6px;
+  margin-bottom: 10px;
+}
+
+.pricing-subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #4b5f58;
+}
 
 
 /* =========================================================
-   PRICING
+   PRICING — GLOW UP PREMIUM
 ========================================================= */
+
 .pricing-section {
-  margin-top: 50px;
-  margin-bottom: 70px;
+  margin-top: 70px;
+  margin-bottom: 90px;
+  text-align: center;
 }
 
 .pricing-section h2 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 10px;
+  font-size: 30px;
+  margin-bottom: 18px;
   color: #1e2926;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.plans-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
 }
 
 .plans-pill {
-  padding: 12px 32px;
-  background: #1d7a67;
+  padding: 14px 36px;
+  background: linear-gradient(135deg, #1d7a67, #2e9c86);
   color: white;
   border-radius: 999px;
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  box-shadow: 0 12px 30px rgba(29, 122, 103, 0.25);
 }
 
+/* GRID DE PLANES */
 .plans-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 26px;
+  gap: 34px;
+  align-items: stretch;
 }
 
+/* TARJETA BASE */
 .plan-card {
-  background: white;
-  border-radius: 22px;
-  padding: 22px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  border: 1px solid rgba(0,0,0,0.06);
-  transition: 0.25s ease;
+  background: #ffffff;
+  border-radius: 26px;
+  padding: 28px 26px 30px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .plan-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+  transform: translateY(-10px);
+  box-shadow: 0 28px 65px rgba(0, 0, 0, 0.16);
 }
 
+/* PLAN DESTACADO (PRO) */
+.plan-pro {
+  background: linear-gradient(180deg, #1e2926, #16201d);
+  color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+}
+
+.plan-pro .plan-name,
+.plan-pro .plan-price,
+.plan-pro .plan-sub,
+.plan-pro li,
+.plan-pro .plan-note {
+  color: #ffffff;
+}
+
+.plan-pro .plan-highlight {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* CABECERA */
 .plan-header {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+.plan-tag {
+  font-weight: 900;
+  font-size: 18px;
+  color: #1d7a67;
 }
 
 .plan-name {
-  font-weight: 800;
-  font-size: 18px;
+  font-weight: 900;
+  font-size: 20px;
   color: #1e2926;
 }
 
 .plan-price {
-  font-weight: 700;
-  font-size: 15px;
+  font-weight: 800;
+  font-size: 16px;
   color: #1d7a67;
 }
 
-.plan-features {
-  margin: 12px 0 10px 18px;
+.plan-sub {
+  margin: 10px 0 4px;
+  font-size: 14px;
+  opacity: 0.85;
 }
 
+/* FEATURES */
+.plan-features {
+  margin: 16px 0 14px 18px;
+  text-align: left;
+}
+
+.plan-features li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* BLOQUE DESTACADO */
 .plan-highlight {
   background: #d9efe6;
-  padding: 10px 12px;
+  padding: 12px 14px;
   border-radius: 14px;
-  margin-top: 10px;
+  margin-top: 14px;
   font-size: 14px;
+  font-weight: 600;
 }
 
+/* NOTA */
+.plan-note {
+  font-size: 13px;
+  opacity: 0.75;
+  margin-top: 10px;
+}
+
+/* BOTONES */
 .plan-btn {
-  margin-top: 12px;
-  padding: 12px 26px;
-  background: #1d7a67;
+  margin-top: 18px;
+  padding: 14px 34px;
+  background: linear-gradient(135deg, #1d7a67, #2e9c86);
   border-radius: 999px;
-  font-weight: 700;
+  font-weight: 800;
   color: white;
   cursor: pointer;
   border: none;
@@ -1270,102 +1672,1088 @@ body {
 
 .plan-btn:hover {
   transform: translateY(-3px);
-  background: #166353;
+  filter: brightness(1.08);
 }
 
+.plan-btn-yellow {
+  background: linear-gradient(135deg, #f2b646, #ffd27a);
+  color: #fff;
+}
 
 /* =========================================================
-   TABLA COMPARATIVA
+   TABLA COMPARATIVA — GLOW UP
 ========================================================= */
+
+.comparison-table-wrap {
+  margin-top: 50px;
+  overflow-x: auto;
+}
+
 .comparison-table {
   width: 100%;
   border-collapse: collapse;
   background: white;
-  border-radius: 22px;
+  border-radius: 26px;
   overflow: hidden;
-  box-shadow: 0 6px 22px rgba(0,0,0,0.06);
+  box-shadow: 0 12px 38px rgba(0,0,0,0.08);
+  font-size: 14px;
 }
 
 .comparison-table thead {
-  background: #e8f0ed;
+  background: #1e2926;
+  color: white;
 }
 
 .comparison-table th,
 .comparison-table td {
-  padding: 14px 16px;
-  font-size: 14px;
+  padding: 16px 18px;
+  text-align: center;
   border-bottom: 1px solid #e6e6e6;
 }
 
-.comparison-table tbody tr:nth-child(even) {
-  background: #fafafa;
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+  text-align: left;
+  font-weight: 700;
 }
+
+.comparison-table tbody tr:nth-child(even) {
+  background: #f8faf9;
+}
+
+.comparison-table tbody tr:hover {
+  background: #e8f3ef;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 /* =========================================================
-   PLAN DETAIL SECTIONS
+   PLAN DETAIL SECTION — PREMIUM FINAL LIMPIO
 ========================================================= */
-.plan-detail-header .pill-title {
-  background: #1d7a67;
+
+.plan-detail-section {
+  margin: 90px 0;
+  padding: 40px 0;
+}
+
+/* =========================================================
+   NUEVO SISTEMA DE TÍTULO EDITORIAL (REEMPLAZA PÍLDORA)
+========================================================= */
+
+.plan-editorial-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.plan-editorial-header h2 {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.plan-editorial-header p {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #6fdac0;
+}
+
+/* =========================================================
+   HEADER ORIGINAL (SE CONSERVA POR COMPATIBILIDAD)
+========================================================= */
+
+.plan-detail-header {
+  margin-bottom: 34px;
+  display: flex;
+  justify-content: center;
+}
+
+.pill-title {
+  background: linear-gradient(135deg, #1d7a67, #2e9b84, #6fdac0);
+  color: white;
+  padding: 18px 54px;
+  border-radius: 999px;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow:
+    0 20px 45px rgba(29,122,103,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.pill-title::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: titleShine 5s infinite;
+}
+
+@keyframes titleShine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(120%); }
+}
+
+/* =========================================================
+   LAYOUT PRINCIPAL
+========================================================= */
+
+.plan-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 70px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* =========================================================
+   TEXTO PRINCIPAL
+========================================================= */
+
+.plan-detail-text {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.96),
+    rgba(246,250,248,0.96)
+  );
+  padding: 40px 40px;
+  border-radius: 28px;
+  box-shadow: 0 26px 60px rgba(0,0,0,0.10);
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
 .plan-detail-text p {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #2f423c;
+  line-height: 1.75;
+}
+
+.plan-detail-text ul {
+  margin-top: 12px;
+  margin-left: 18px;
   font-size: 15px;
   color: #2f423c;
 }
 
-.vr-block {
-  background: #1e2926;
-  color: #f4f6f5;
-  border-radius: 18px;
-  padding: 14px 16px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+.plan-detail-text li {
+  margin-bottom: 10px;
+  line-height: 1.65;
 }
-
-
 
 /* =========================================================
-   TUTORIALES
+   VIDEO
 ========================================================= */
-.tutorial-card {
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: 18px;
-  padding: 14px 18px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+
+.plan-detail-video .video-panel {
+  background: radial-gradient(circle at top, #203c35, #0f1f1b);
+  border-radius: 34px;
+  padding: 0;
+  min-height: 320px;
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.08);
+  position: relative;
+  overflow: hidden;
 }
 
-.tutorial-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+.plan-detail-video .video-panel iframe {
+  width: 100%;
+  height: 320px;
+  border-radius: 34px;
+  border: none;
 }
-
 
 /* =========================================================
-   FAQ & PROYECTO A MEDIDA
+   TIMELINE
 ========================================================= */
-.custom-project-section {
-  margin: 80px 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+
+.steps-row-heading {
+  margin-top: 60px;
+  margin-bottom: 22px;
+  font-size: 15px;
+  font-weight: 900;
+  color: #1d7a67;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
 }
 
-.custom-block {
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.05);
+.visitia-timeline-horizontal {
+  position: relative;
+  margin-top: 70px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+
+.visitia-timeline-track {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #1d7a67, #6fdac0);
+  opacity: 0.75;
+  border-radius: 8px;
+}
+
+.visitia-timeline-item {
+  position: relative;
+  text-align: center;
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visitia-timeline-dot {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1d7a67, #2e9b84);
+  color: white;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 0 12px rgba(111,218,192,0.35),
+    0 8px 25px rgba(0,0,0,0.35);
+  z-index: 2;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.visitia-timeline-dot:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 0 16px rgba(29,122,103,0.25);
+}
+
+.visitia-timeline-title {
+  margin-top: 16px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: white;
+  max-width: 180px;
+  line-height: 1.3;
+}
+
+/* ================= HOVER CARD ================= */
+
+/* TARJETA HOVER */
+.visitia-timeline-hover-card {
+  position: absolute;
+  top: -140px;
+  width: 280px;
+  background: linear-gradient(180deg, #ffffff, #f6faf8);
   border-radius: 20px;
-  padding: 24px 26px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  padding: 18px 20px;
+  box-shadow: 0 20px 55px rgba(0,0,0,0.18);
+  border: 1px solid rgba(0,0,0,0.06);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: 0.35s ease;
+  z-index: 5;
 }
 
-.custom-block ul {
-  margin-top: 12px;
-  margin-left: 18px;
-  line-height: 1.6;
+.visitia-timeline-hover-card {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: auto;
+  transition: 0.35s ease;
 }
+
+.visitia-timeline-item:hover .visitia-timeline-hover-card,
+.visitia-timeline-hover-card:hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.visitia-timeline-hover-card p {
+  font-size: 14px;
+  color: #4b5f58;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.visitia-timeline-hover-card a {
+  color: #1d7a67;
+  font-weight: 800;
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+/* ACTIVACION HOVER */
+.visitia-timeline-item:hover .visitia-timeline-hover-card {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* =========================================================
+   CTA FINAL
+========================================================= */
+
+.plan-detail-cta {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.plan-detail-cta .plan-btn {
+  padding: 18px 54px;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  background: linear-gradient(135deg, #1d7a67, #2e9b84);
+  box-shadow: 0 18px 40px rgba(29,122,103,0.45);
+}
+
+.plan-detail-cta .plan-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 60px rgba(29,122,103,0.60);
+}
+
+/* =========================================================
+   FONDOS FULL WIDTH
+========================================================= */
+
+.bg-plan-basic,
+.bg-plan-vr {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 110px 0;
+}
+
+.bg-plan-basic {
+  background: linear-gradient(180deg, #1e2926, #163b32);
+}
+
+.bg-plan-vr {
+  background: radial-gradient(circle at top, #1b1b1b, #050505);
+}
+
+.bg-plan-basic > *,
+.bg-plan-vr > * {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .plan-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .visitia-timeline-horizontal {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .visitia-timeline-track {
+    display: none;
+  }
+
+  .visitia-timeline-item {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .visitia-timeline-title {
+    margin-left: 16px;
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .visitia-timeline-hover-card {
+    position: relative;
+    top: 14px;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    margin-left: 68px;
+  }
+}
+
+/* =========================================================
+   AJUSTES FINOS DE CONTRASTE POR PLAN
+   (NO rompe lo anterior)
+========================================================= */
+
+/* ========== PLAN BÁSICO (FONDO VERDE OSCURO) ========== */
+
+.bg-plan-basic .steps-row-heading {
+  color: #7ff2d6;
+  text-shadow: 0 0 8px rgba(127,242,214,0.25);
+}
+
+.bg-plan-basic .visitia-timeline-title {
+  color: #e9fffa;
+}
+
+.bg-plan-basic .visitia-timeline-track {
+  background: linear-gradient(90deg, #58e1c1, #9cf5e0);
+}
+
+/* ========== PLAN PRO (FONDO CLARO) ========== */
+
+.plan-detail-section:not(.bg-plan-basic):not(.bg-plan-vr) .steps-row-heading {
+  color: #1d7a67;
+  text-shadow: none;
+}
+
+.plan-detail-section:not(.bg-plan-basic):not(.bg-plan-vr) 
+.visitia-timeline-title {
+  color: #203732;
+}
+
+.plan-detail-section:not(.bg-plan-basic):not(.bg-plan-vr) 
+.visitia-timeline-track {
+  background: linear-gradient(90deg, #1d7a67, #6fdac0);
+}
+
+/* ========== PLAN REALIDAD VIRTUAL (FONDO NEGRO) ========== */
+
+.bg-plan-vr .steps-row-heading {
+  color: #6fdac0;
+  text-shadow: 0 0 10px rgba(111,218,192,0.35);
+}
+
+.bg-plan-vr .visitia-timeline-title {
+  color: #ffffff;
+}
+
+.bg-plan-vr .visitia-timeline-track {
+  background: linear-gradient(90deg, #6fdac0, #3bbfa1);
+}
+
+/* ===============================
+   PLAN PRO — TÍTULO UNIFICADO CON LOS DEMÁS
+=============================== */
+
+.plan-pro-titulo {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* TÍTULO PRINCIPAL (misma escala que Plan Básico y VR) */
+.plan-pro-titulo h2 {
+  font-size: 36px;        /* iguala jerarquía visual */
+  font-weight: 900;
+  color: #1e2926;        /* neutro premium para fondo claro */
+  letter-spacing: 2px;
+  margin: 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+/* SUBTÍTULO (misma escala que los otros) */
+.plan-pro-titulo p {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #1d7a67;        /* verde Visitia limpio */
+  text-shadow: none;    /* sin glow en fondo claro */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   TUTORIALES — CARRUSELES PRO
+=============================== */
+
+.tutorials-section {
+  margin: 40px 0;
+  padding: 0px 0;
+}
+
+.tutorials-note {
+  max-width: 780px;
+  margin: 30px auto 90px auto;
+  font-size: 15px;
+  color: #4f6660;
+  line-height: 1.75;
+  text-align: center;
+}
+
+/* ========= BLOQUE ========= */
+
+.tutorial-block {
+  margin-bottom: 140px;
+  position: relative;
+}
+
+.tutorial-block h3 {
+  font-size: 38px;
+  font-weight: 900;
+  margin-bottom: 0px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #0f2f28;
+  position: relative;
+}
+
+.tutorial-block h3::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #1d7a67, #6fdac0);
+  margin-top: 14px;
+  border-radius: 99px;
+}
+
+/* ========= CARRUSEL FULL WIDTH ========= */
+
+.tutorial-carousel {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  padding: 40px 80px 60px 80px;
+  scroll-behavior: smooth;
+  cursor: grab;
+
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tutorial-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.tutorial-carousel:active {
+  cursor: grabbing;
+}
+
+/* ========= SLIDE ========= */
+
+.tutorial-slide {
+  flex: 0 0 420px;
+  height: 260px;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+  box-shadow: 
+    0 22px 50px rgba(0,0,0,0.32),
+    inset 0 0 0 1px rgba(255,255,255,0.05);
+  text-decoration: none;
+  transition: 0.4s cubic-bezier(.2,.8,.2,1);
+}
+
+.tutorial-slide:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 
+    0 34px 70px rgba(0,0,0,0.42);
+}
+
+.tutorial-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ========= OVERLAY ========= */
+
+.tutorial-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.08),
+    rgba(0,0,0,0.88)
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ========= BADGE DEL TÍTULO (CONTENEDOR VISUAL) ========= */
+
+.tutorial-slide span {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+  z-index: 2;
+
+  background: linear-gradient(135deg, #1d7a67, #2e9b84);
+  padding: 10px 14px;
+  border-radius: 14px;
+
+  font-size: 14.5px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  color: white;
+  line-height: 1.35;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.18);
+}
+
+/* ========= FLECHAS ========= */
+
+.tutorial-nav {
+  position: absolute;
+  top: 95%;
+  transform: translateY(-20%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(15,15,15,0.55);
+  backdrop-filter: blur(6px);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.35s ease;
+  opacity: 0;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+.tutorial-nav:hover {
+  background: rgba(15,15,15,0.75);
+  transform: translateY(-50%) scale(1.18);
+}
+
+.tutorial-block:hover .tutorial-nav {
+  opacity: 1;
+}
+
+.tutorial-nav.left { left: 20px; }
+.tutorial-nav.right { right: 20px; }
+
+/* ========= RESPONSIVE ========= */
+
+@media (max-width: 900px) {
+  .tutorial-carousel {
+    padding: 30px 20px 50px 20px;
+  }
+
+  .tutorial-slide {
+    flex: 0 0 260px;
+    height: 170px;
+  }
+
+  .tutorial-block h3 {
+    font-size: 28px;
+  }
+}
+
+/* ========= CONTENEDOR DE FLECHAS ABAJO ========= */
+
+.tutorial-nav-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+/* ========= FLECHAS LIMPIAS ABAJO ========= */
+
+.tutorial-nav {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1d7a67, #2e9b84);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: 0.35s ease;
+  box-shadow: 0 10px 24px rgba(29,122,103,0.35);
+  border: none;
+}
+
+.tutorial-nav:hover {
+  transform: scale(1.2);
+  box-shadow: 0 16px 36px rgba(29,122,103,0.55);
+}
+
+.tutorial-nav.dark {
+  background: linear-gradient(135deg, #111, #333);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.45);
+}
+
+
+
+/* ===============================
+   UNIFICADOR VISUAL DE LA SECCIÓN
+=============================== */
+/* CENTRADO REAL DE LOS BLOQUES */
+.tutorial-block {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* TÍTULOS MÁS EDITORIALES */
+.tutorial-block h3 {
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+
+.tutorial-block h3::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CARRUSELES VISUALMENTE CENTRADOS */
+.tutorial-carousel {
+  justify-content: center;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+/* RESPIRACIÓN MÁS UNIFICADA ENTRE FILAS */
+.tutorial-block:not(:last-child) {
+  padding-bottom: 90px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+/* TÍTULOS DE CADA TARJETA MÁS VISITIA */
+.tutorial-slide span {
+  background: linear-gradient(
+    135deg,
+    rgba(20, 150, 125, 0.95),
+    rgba(40, 190, 160, 0.95)
+  );
+
+  border-left: 4px solid rgba(255,255,255,0.8);
+  padding-left: 18px;
+}
+
+/* REDUCCIÓN DE SOMBRA SUCIA */
+.tutorial-slide {
+  box-shadow:
+    0 14px 36px rgba(0,0,0,0.22);
+}
+
+.tutorial-slide:hover {
+  box-shadow:
+    0 28px 64px rgba(0,0,0,0.35);
+}
+
+
+
+
+/* =====================================
+   TÍTULO TIPO HERO DENTRO DE CADA SLIDE
+===================================== */
+
+.tutorial-slide span {
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  right: 0;
+
+  padding: 22px 26px 26px 26px;
+
+  background: linear-gradient(
+    60deg,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.65) 55%,
+    rgba(0,0,0,0.92) 100%
+  );
+
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  color: #ffffff;
+  line-height: 1.15;
+
+  text-shadow: 
+    0 6px 20px rgba(0,0,0,0.85),
+    0 2px 6px rgba(0,0,0,0.6);
+
+  border-radius: 0 0 30px 30px;
+  z-index: 2;
+}
+
+/* Número destacado en color Visitia */
+.tutorial-slide span::first-line {
+  color: #2fdac2;
+  font-weight: 900;
+}
+
+/* Hover más cinematográfico */
+.tutorial-slide:hover span {
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.75) 45%,
+    rgba(0,0,0,0.98) 100%
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   PROYECTO A MEDIDA / FAQ — CLON PREMIUM DEL INDEX
+========================================================= */
+
+.custom-project-section {
+  margin: 140px auto;
+  max-width: 1100px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+/* ===== BLOQUE PROYECTO A MEDIDA (NEGRO PREMIUM) ===== */
+
+.custom-block.featured {
+  background: #1a4d42;
+  border-radius: 32px;
+  padding: 90px 60px;
+  box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Contenedor interno tipo index */
+.custom-block.featured .custom-card {
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  max-width: 820px;
+  text-align: left;
+}
+
+/* ===== TÍTULO tipo barra verde ===== */
+
+.custom-block.featured .pill-title {
+  background: none;
+  color: #ffffff;
+  font-size: 2.1rem;
+  font-weight: 700;
+  padding: 0;
+  margin-bottom: 36px;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.5px;
+}
+
+/* Quitar estilo tipo cápsula del título "Proyecto a medida" */
+.custom-block.featured .pill-title {
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 28px;
+  display: inline-block;
+}
+
+/* Eliminar cualquier pseudo-elemento decorativo si existiera */
+.custom-block.featured .pill-title::before,
+.custom-block.featured .pill-title::after {
+  display: none !important;
+}
+
+
+/* ===== TEXTO BLANCO SUAVE ===== */
+
+.custom-block.featured p {
+  font-size: 1.17rem;
+  line-height: 1.75;
+  color: #e9f3ef;
+  margin-bottom: 40px;
+  max-width: 820px;
+}
+
+/* ===== BOTÓN BLANCO INVERTIDO ===== */
+
+.custom-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 44px;
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: #0f0f0f;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s ease;
+}
+
+.custom-cta:hover {
+  background: #eaeaea;
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* =========================================================
+   BLOQUE FAQ — LIMPIO, CLEAR, DE SOPORTE
+========================================================= */
+
+.custom-block:not(.featured) {
+  text-align: center;
+}
+
+.custom-block:not(.featured) .pill-title {
+  background: linear-gradient(135deg, #1d7a67, #6fdac0);
+  color: white;
+  padding: 8px 22px;
+  font-size: 12px;
+  border-radius: 999px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  box-shadow:
+    0 10px 28px rgba(29,122,103,0.45);
+}
+
+.custom-card.simple {
+  background: linear-gradient(180deg, #ffffff, #f6fbf9);
+  border-radius: 22px;
+  padding: 34px 36px;
+  margin-top: 22px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+
+  box-shadow:
+    0 18px 50px rgba(0,0,0,0.10),
+    inset 0 0 0 1px rgba(0,0,0,0.04);
+}
+
+/* ===== FAQ LINK ===== */
+
+.faq-link {
+  font-size: 16px;
+  color: #2f9f8a;
+  font-weight: 800;
+  text-decoration: none;
+  transition: 0.3s ease;
+  border-bottom: 2px solid rgba(47,159,138,0.4);
+  padding-bottom: 2px;
+}
+
+.faq-link:hover {
+  color: #186b5a;
+  border-bottom-color: #186b5a;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .custom-project-section {
+    margin: 100px auto;
+    gap: 80px;
+  }
+
+  .custom-block.featured {
+    padding: 60px 26px;
+  }
+
+  .custom-block.featured .pill-title {
+    font-size: 1.6rem;
+  }
+
+  .custom-block.featured p {
+    font-size: 15.5px;
+  }
+}
+
 
 
 
@@ -1389,4 +2777,14 @@ body {
     min-height: 220px;
   }
 }
+
+
+
+
+
+
+
+
+
+
 

@@ -65,8 +65,7 @@ body {
 }
 
 .logo-img {
-  height: 25px;
-  margin-bottom: 5px;
+  height: 32px;
 }
 
 /* MENÚ */
@@ -913,4 +912,3 @@ body {
   .ac-2grid { grid-template-columns: 1fr; }
   .ac-columns { flex-direction: column; align-items: center; }
 }
-
