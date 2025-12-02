@@ -18,18 +18,60 @@
         <span></span><span></span><span></span>
       </div>
 
+      <!-- LOGO -->
+      <div>
+        <img src="LogoEmpty.png" class="logo-img" />
+      </div>
+
       <!-- BLOQUE IZQUIERDO -->
       <div class="nav-block nav-left">
-        <img src="Visitia.png" class="logo-img" />
-
         <nav class="main-nav" id="mainNav">
-          <a href="index.html" class="nav-btn nav-btn--active">Inicio</a>
-          <a href="SolucionesInmobiliarias.html" class="nav-btn">Inmobiliarias</a>
-          <a href="ObraNueva.html" class="nav-btn">Obra nueva</a>
-          <a href="OtrosSectores.html" class="nav-btn">Otros sectores</a>
-          <a href="AreaCliente.html" class="nav-btn">Área cliente</a>
-          <a href="blog.html" class="nav-btn">Blog</a>
-        </nav>
+
+  <a href="index.html" class="nav-btn nav-btn--active">Inicio</a>
+
+  <!-- INMOBILIARIAS -->
+  <div class="nav-item-dropdown">
+    <a href="SolucionesInmobiliarias.html" class="nav-btn">Inmobiliarias</a>
+    <div class="nav-dropdown">
+      <a href="#beneficios">Beneficios</a>
+      <a href="#precios">Precios</a>
+      <a href="#prueba">Prueba gratis</a>
+      <a href="#planes">Nuestros planes</a>
+      <a href="#custom">Proyecto a medida</a>
+      <a href="#tutoriales">Tutoriales</a>
+    </div>
+  </div>
+
+  <!-- OBRA NUEVA -->
+  <div class="nav-item-dropdown">
+    <a href="ObraNueva.html" class="nav-btn">Obra nueva</a>
+    <div class="nav-dropdown">
+      <a href="#promotoras">Promotoras</a>
+      <a href="#arquitectura">Estudios de arquitectura</a>
+      <a href="#reformas">Reformas</a>
+      <a href="#interiorismo">Interiorismo</a>
+      <a href="#custom">Proyecto a medida</a>
+    </div>
+  </div>
+
+  <!-- OTROS SECTORES -->
+  <div class="nav-item-dropdown">
+    <a href="OtrosSectores.html" class="nav-btn">Otros sectores</a>
+    <div class="nav-dropdown">
+      <a href="#nautica">Náutica</a>
+      <a href="#turismo">Turismo</a>
+      <a href="#industria">Industria</a>
+      <a href="#custom">Proyecto a medida</a>
+      <!-- <a href="blog.html" class="nav-btn">Blog</a> -->
+    </div>
+  </div>
+
+  <a href="#" class="nav-btn">Proyectos a medida</a>
+  <a href="#" class="nav-btn">Área cliente</a>
+  <a href="blog.html" class="nav-btn">Blog</a>
+
+</nav>
+
       </div>
 
       <!-- BLOQUE DERECHO -->
@@ -101,17 +143,7 @@
           </div>
 
           <!-- MINI FEATURES -->
-          <div class="hero-features">
-            <div class="feature-item">
-              Tour creado en segundos
-            </div>
-            <div class="feature-item">
-              Clientes en todo el mundo
-            </div>
-            <div class="feature-item">
-              Compatible con VR, 360 y 3D
-            </div>
-          </div>
+          
         </div>
 
         <!-- RIGHT -->
@@ -128,14 +160,11 @@
       <div class="container">
 
         <h2 class="sector-title" data-reveal="fade-up">
-          Una plataforma versátil para múltiples industrias
+          Una plataforma versátil con soluciones para cada sector
         </h2>
 
         <p class="sector-desc" data-reveal="fade-up" data-reveal-delay="120">
-          Visitia se adapta a los retos y necesidades de distintos sectores
-          profesionales: desde inmobiliarias y arquitectura hasta industria,
-          turismo o náutica. Una solución única para digitalizar cualquier
-          espacio.
+          
         </p>
 
         <div class="sector-mini-grid">
@@ -166,9 +195,7 @@
 
         </div>
 
-        <a href="OtrosSectores.html" class="sector-btn" data-reveal="fade-up">
-          Descubrir sectores
-        </a>
+        
 
       </div>
     </section>
@@ -297,64 +324,79 @@
     </section>
 
     <!-- ================= PLANES ================= -->
-    <section id="area-cliente" class="section section--plans">
-      <div class="container plans-layout">
-        <!-- COLUMNA IZQUIERDA -->
-        <div class="plans-left" data-reveal="fade-up">
-          <h2 class="section-title">ESCOGE TU PLAN</h2>
-          <p class="plans-subtitle">
-            Evoluciona con nosotros a la vez que lo hace la tecnología.
+    <!-- ================= PLANES ================= -->
+<section id="area-cliente" class="section section--plans">
+  <div class="container plans-layout">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <div class="plans-left" data-reveal="fade-up">
+      <h2 class="section-title">ESCOGE TU PLAN</h2>
+
+      <p class="plans-subtitle">
+        Ponemos a tu disposición las soluciones más vanguardistas del
+        mercado al precio más asequible.
+      </p>
+
+      <div class="plans-list">
+
+        <div class="plan-card plan-card--highlight">
+          <h3>TOUR 360 express + home staging con IA</h3>
+          <p class="plan-desc">
+            Ideal para un tour 360 y con impacto visual.
           </p>
-
-          <div class="plans-list">
-            <div class="plan-card plan-card--highlight">
-              <h3>TOUR 360 express + home staging con IA</h3>
-              <p class="plan-desc">
-                Ideal para captar propiedades rápido y con impacto visual.
-              </p>
-            </div>
-
-            <div class="plan-card">
-              <h3>Tour 360 con mapas 3D</h3>
-              <p class="plan-desc">
-                Tour 360 integrado en un entorno 3D de tu zona.
-              </p>
-            </div>
-
-            <div class="plan-card">
-              <h3>Tour 360 inmersivo en Realidad Virtual</h3>
-              <p class="plan-desc">
-                La experiencia más avanzada dentro de gafas VR.
-              </p>
-            </div>
-
-            <div class="plan-card">
-              <h3>Tu proyecto a medida</h3>
-              <p class="plan-desc">
-                Soluciones únicas adaptadas a tu negocio.
-              </p>
-            </div>
-          </div>
-
-          <a href="SolucionesInmobiliarias.html" class="cta-pill">PRUÉBALO GRATIS</a>
         </div>
 
-        <!-- COLUMNA DERECHA -->
-        <div class="plans-right" data-reveal="fade-up" data-reveal-delay="150">
-          <p class="plans-copy">
-            Ponemos a tu disposición las soluciones más vanguardistas del
-            mercado al precio más asequible.
+        <div class="plan-card">
+          <h3>Tour 360 con mapas 3D</h3>
+          <p class="plan-desc">
+            Tour 360 integrado en un entorno 3D de tu zona.
           </p>
-
-          <div class="video-card">
-            <p class="video-label">
-              Vídeo representativo de todo lo que hacemos
-            </p>
-            <div class="video-circle"></div>
-          </div>
         </div>
+
+        <div class="plan-card">
+          <h3>Tour 360 inmersivo en Realidad Virtual</h3>
+          <p class="plan-desc">
+            La experiencia más avanzada para gafas de Realidad Virtual.
+          </p>
+        </div>
+
+        <div class="plan-card">
+          <h3>Tu proyecto a medida</h3>
+          <p class="plan-desc">
+            Soluciones únicas adaptadas a tu negocio.
+          </p>
+        </div>
+
       </div>
-    </section>
+
+      <a href="SolucionesInmobiliarias.html" class="cta-pill">PRUÉBALO GRATIS</a>
+    </div>
+
+    <!-- COLUMNA DERECHA -->
+    <div class="plans-right" data-reveal="fade-up" data-reveal-delay="150">
+
+      <!-- BLOQUE DE VÍDEO PREMIUM -->
+      <div>
+        <div class="plans-video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0&modestbranding=1&rel=0"
+            title="Vídeo representativo Visitia"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <p class="plans-copy">
+        <span>Evoluciona con nosotros</span> a la vez que lo hace la tecnología
+      </p>
+      </div>
+
+    </div> <!-- /plans-right -->
+
+  </div> <!-- /plans-layout -->
+</section>
+
 
     <!-- ================= FAQ ================= -->
     <section id="faq" class="section faq-section">
@@ -534,6 +576,8 @@
   <script src="SelectorIdioma.js"></script>
   <script src="FAQ.js"></script>
   <script src="ResponsiveNav.js"></script>
+  <script src="MenuHamburguesa.js"></script>
+  <script src="DropdownHamburguesa.js"></script>
 </body>
 
 </html>

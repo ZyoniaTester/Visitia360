@@ -9,34 +9,71 @@
 </head>
 <body>
 <!-- ================= HEADER / NAVBAR ================= -->
-  <header class="site-header double-nav" data-reveal="fade-down">
-
-  <!-- =====================
-       PISO SUPERIOR (NAV PRINCIPAL)
-  ====================== -->
-  <div class="top-nav">
+  <header class="site-header" data-reveal="fade-down">
     <div class="container nav-wrapper">
-
-      <!-- BOTÓN HAMBURGUESA -->
+      <!-- BOTÓN HAMBURGUESA (solo móviles) -->
       <div class="mobile-menu-btn" id="mobileMenuBtn">
         <span></span><span></span><span></span>
       </div>
 
+      <!-- LOGO -->
+      <div>
+        <img src="LogoEmpty.png" class="logo-img" />
+      </div>
+
       <!-- BLOQUE IZQUIERDO -->
       <div class="nav-block nav-left">
-        <img src="LogoEmpty.png" class="logo-img" />
-
         <nav class="main-nav" id="mainNav">
-          <a href="index.html" class="nav-btn">Inicio</a>
-          <a href="SolucionesInmobiliarias.html" class="nav-btn">Inmobiliarias</a>
-          <a href="ObraNueva.html" class="nav-btn nav-btn--active">Obra nueva</a>
-          <a href="OtrosSectores.html" class="nav-btn">Otros sectores</a>
-          <a href="AreaCliente.html" class="nav-btn">Área cliente</a>
-          <a href="blog.html" class="nav-btn">Blog</a>
-        </nav>
+
+  <a href="index.html" class="nav-btn">Inicio</a>
+
+  <!-- INMOBILIARIAS -->
+  <div class="nav-item-dropdown">
+    <a href="SolucionesInmobiliarias.html" class="nav-btn">Inmobiliarias</a>
+    <div class="nav-dropdown">
+      <a href="#beneficios">Beneficios</a>
+      <a href="#precios">Precios</a>
+      <a href="#prueba">Prueba gratis</a>
+      <a href="#planes">Nuestros planes</a>
+      <a href="#custom">Proyecto a medida</a>
+      <a href="#tutoriales">Tutoriales</a>
+    </div>
+  </div>
+
+  <!-- OBRA NUEVA -->
+  <div class="nav-item-dropdown">
+    <a href="ObraNueva.html" class="nav-btn nav-btn--active">Obra nueva</a>
+    <div class="nav-dropdown">
+      <a href="#promotoras">Promotoras</a>
+      <a href="#arquitectura">Estudios de arquitectura</a>
+      <a href="#reformas">Reformas</a>
+      <a href="#interiorismo">Interiorismo</a>
+      <a href="#custom">Proyecto a medida</a>
+    </div>
+  </div>
+
+  <!-- OTROS SECTORES -->
+  <div class="nav-item-dropdown">
+    <a href="OtrosSectores.html" class="nav-btn">Otros sectores</a>
+    <div class="nav-dropdown">
+      <a href="#nautica">Náutica</a>
+      <a href="#turismo">Turismo</a>
+      <a href="#industria">Industria</a>
+      <a href="#custom">Proyecto a medida</a>
+      <!-- <a href="blog.html" class="nav-btn">Blog</a> -->
+    </div>
+  </div>
+
+  <a href="#" class="nav-btn">Proyectos a medida</a>
+  <a href="#" class="nav-btn">Área cliente</a>
+  <a href="blog.html" class="nav-btn">Blog</a>
+
+</nav>
+
       </div>
 
       <!-- BLOQUE DERECHO -->
+      <!-- nav-block -->
       <div class="nav-right" id="navRight">
         <div class="lang-wrapper">
           <div class="lang-select">ES <span class="chevron">▼</span></div>
@@ -49,24 +86,8 @@
         <a href="#" class="login-btn">Entrar</a>
         <a href="#" class="cta-btn">Pruébalo gratis</a>
       </div>
-
     </div>
-  </div>
-
-  <!-- =====================
-       PISO INFERIOR (SUBNAV)
-  ====================== -->
-  <div class="bottom-subnav">
-    <div class="container subnav-wrapper">
-      <a href="#promotoras" class="subnav-link">Promotoras</a>
-      <a href="#estudiosarquitectura" class="subnav-link">Estudios de arquitectura</a>
-      <a href="#reformas" class="subnav-link">Reformas</a>
-      <a href="#interiorismo" class="subnav-link">Interiorismo</a>
-      <a href="#proyectomedida" class="subnav-link">Proyecto a medida</a>
-    </div>
-  </div>
-
-</header>
+  </header>
 
 <div class="container">
 
@@ -81,9 +102,11 @@
 
   <h2 class="section-title modern">VISITIA PARA OBRA NUEVA</h2>
 
-  <p class="hero-sub">
-    Obra Nueva con Visitia: <strong>transforma planos en experiencias que venden</strong>
-  </p>
+  <p class="hero-headline">
+  Obra Nueva con Visitia:<br>
+  <span>transforma planos en experiencias que venden</span>
+</p>
+
 
   <div class="hero-grid">
 
@@ -134,11 +157,37 @@
       </div>
 
       <!-- FRASE SOLO DEBAJO DEL CARRUSEL -->
-      <div class="hero-footer-text under-carousel">
-        <span>Vende antes de construir</span>
-        <span>Transmite más seguridad e ilusión al comprador</span>
-        <span>Capta más clientes</span>
-      </div>
+      <div class="hero-timeline">
+
+  <div class="hero-timeline-item">
+    <div class="hero-timeline-dot">
+      <img src="Vendeantesdeconstruir.png" alt="Vende antes de construir">
+    </div>
+    <div class="hero-timeline-hover">
+      <p>Vende antes de construir</p>
+    </div>
+  </div>
+
+  <div class="hero-timeline-item">
+    <div class="hero-timeline-dot">
+      <img src="Seguridad.png" alt="Ilusión y seguridad">
+    </div>
+    <div class="hero-timeline-hover">
+      <p>Transmite más seguridad e ilusión al comprador</p>
+    </div>
+  </div>
+
+  <div class="hero-timeline-item">
+    <div class="hero-timeline-dot">
+      <img src="Interesados.png" alt="Capta clientes">
+    </div>
+    <div class="hero-timeline-hover">
+      <p>Capta más clientes</p>
+    </div>
+  </div>
+
+</div>
+
 
     </div>
 
@@ -196,7 +245,7 @@
       </p>
 
       <div class="promotoras-actions">
-        <a class="btn-yellow">Contáctanos</a>
+        <a class="btn-yellow big promotoras-cta">Contáctanos</a>
       </div>
 
     </div>

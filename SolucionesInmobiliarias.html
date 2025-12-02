@@ -9,34 +9,71 @@
 </head>
 <body class="fade-in">
 <!-- ================= HEADER / NAVBAR ================= -->
-  <header class="site-header double-nav" data-reveal="fade-down">
-
-  <!-- =====================
-       PISO SUPERIOR (NAV PRINCIPAL)
-  ====================== -->
-  <div class="top-nav">
+  <header class="site-header" data-reveal="fade-down">
     <div class="container nav-wrapper">
-
-      <!-- BOTÓN HAMBURGUESA -->
+      <!-- BOTÓN HAMBURGUESA (solo móviles) -->
       <div class="mobile-menu-btn" id="mobileMenuBtn">
         <span></span><span></span><span></span>
       </div>
 
+      <!-- LOGO -->
+      <div>
+        <img src="LogoEmpty.png" class="logo-img" />
+      </div>
+
       <!-- BLOQUE IZQUIERDO -->
       <div class="nav-block nav-left">
-        <img src="LogoEmpty.png" class="logo-img" />
-
         <nav class="main-nav" id="mainNav">
-          <a href="index.html" class="nav-btn">Inicio</a>
-          <a href="SolucionesInmobiliarias.html" class="nav-btn nav-btn--active">Inmobiliarias</a>
-          <a href="ObraNueva.html" class="nav-btn">Obra nueva</a>
-          <a href="OtrosSectores.html" class="nav-btn">Otros sectores</a>
-          <a href="AreaCliente.html" class="nav-btn">Área cliente</a>
-          <a href="blog.html" class="nav-btn">Blog</a>
-        </nav>
+
+  <a href="index.html" class="nav-btn">Inicio</a>
+
+  <!-- INMOBILIARIAS -->
+  <div class="nav-item-dropdown">
+    <a href="SolucionesInmobiliarias.html" class="nav-btn nav-btn--active">Inmobiliarias</a>
+    <div class="nav-dropdown">
+      <a href="#beneficios">Beneficios</a>
+      <a href="#precios">Precios</a>
+      <a href="#prueba">Prueba gratis</a>
+      <a href="#planes">Nuestros planes</a>
+      <a href="#custom">Proyecto a medida</a>
+      <a href="#tutoriales">Tutoriales</a>
+    </div>
+  </div>
+
+  <!-- OBRA NUEVA -->
+  <div class="nav-item-dropdown">
+    <a href="ObraNueva.html" class="nav-btn">Obra nueva</a>
+    <div class="nav-dropdown">
+      <a href="#promotoras">Promotoras</a>
+      <a href="#arquitectura">Estudios de arquitectura</a>
+      <a href="#reformas">Reformas</a>
+      <a href="#interiorismo">Interiorismo</a>
+      <a href="#custom">Proyecto a medida</a>
+    </div>
+  </div>
+
+  <!-- OTROS SECTORES -->
+  <div class="nav-item-dropdown">
+    <a href="OtrosSectores.html" class="nav-btn">Otros sectores</a>
+    <div class="nav-dropdown">
+      <a href="#nautica">Náutica</a>
+      <a href="#turismo">Turismo</a>
+      <a href="#industria">Industria</a>
+      <a href="#custom">Proyecto a medida</a>
+      <!-- <a href="blog.html" class="nav-btn">Blog</a> -->
+    </div>
+  </div>
+
+  <a href="#" class="nav-btn">Proyectos a medida</a>
+  <a href="#" class="nav-btn">Área cliente</a>
+  <a href="blog.html" class="nav-btn">Blog</a>
+
+</nav>
+
       </div>
 
       <!-- BLOQUE DERECHO -->
+      <!-- nav-block -->
       <div class="nav-right" id="navRight">
         <div class="lang-wrapper">
           <div class="lang-select">ES <span class="chevron">▼</span></div>
@@ -49,41 +86,83 @@
         <a href="#" class="login-btn">Entrar</a>
         <a href="#" class="cta-btn">Pruébalo gratis</a>
       </div>
-
     </div>
-  </div>
-
-  <!-- =====================
-       PISO INFERIOR (SUBNAV)
-  ====================== -->
-  <div class="bottom-subnav">
-    <div class="container subnav-wrapper">
-      <a href="#beneficios" class="subnav-link">Beneficios</a>
-      <a href="#precios" class="subnav-link">Precios</a>
-      <a href="#prueba" class="subnav-link">Prueba gratis</a>
-      <a href="#planes" class="subnav-link">Nuestros planes</a>
-      <a href="#custom" class="subnav-link">Proyecto a medida</a>
-      <a href="#tutoriales" class="subnav-link">Tutoriales</a>
-    </div>
-  </div>
-
-</header>
+  </header>
 
 
-  <main class="page-wrap">
+  <main>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     <!-- HERO / CABECERA INMOBILIARIAS -->
     <section class="hero-inmo">
       <div class="hero-inmo-left">
         <h1 class="hero-pill">Visitia para inmobiliarias</h1>
-        <p class="hero-subtitle">
-          Impulsa tus ventas y gana eficiencia con Visitia.
-        </p>
       </div>
     </section>
 
+
+    <!-- PASOS + VISOR -->
+<section class="steps-section">
+  <h2>En Visitia no queremos que te quedes atrás</h2>
+
+  <p class="steps-intro">
+    Crea tu propio tour 360 en tiempo récord.<br>
+    Sigue estos sencillos pasos:
+  </p>
+
+  <!-- VISOR PRINCIPAL -->
+  <div class="steps-viewer">
+  <a id="mainStepLink" href="camara.html">
+    <img id="mainStepImage" src="A1.jpg" alt="Paso activo">
+    <div class="steps-overlay">
+      <span id="mainStepText">1. Compra la cámara 360</span>
+    </div>
+  </a>
+</div>
+
+
+  <!-- MINIATURAS -->
+  <div class="steps-thumbnails">
+  <img src="A1.jpg" data-text="1. Compra la cámara 360" data-link="camara.html" class="active">
+  <img src="A2.jpg" data-text="2. Aprende a usar la cámara" data-link="tutorial-camara.html">
+  <img src="A3.jpg" data-text="3. Sube las fotos 360" data-link="subida.html">
+  <img src="A4.jpg" data-text="4. Consigue 3 tours gratis" data-link="gratis.html">
+  <img src="A1.jpg" data-text="5. Prueba el home staging con IA" data-link="staging.html">
+  <img src="A2.jpg" data-text="6. Contrata tu suscripción" data-link="precios.html">
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- BENEFICIOS + ICONOS -->
     <section class="benefits-section">
+      <p class="hero-subtitle">
+          Impulsa tus ventas y gana eficiencia con Visitia.
+        </p>
   <div class="benefits-grid">
 
     <div class="benefit-card">
@@ -142,237 +221,221 @@
 
 
 
-
-
-
-
-
-
-    <!-- PASOS + VISOR -->
-<section class="steps-section">
-  <h2>En Visitia no queremos que te quedes atrás</h2>
-
-  <p class="steps-intro">
-    Crea tu propio tour 360 en tiempo récord.<br>
-    Sigue estos sencillos pasos:
-  </p>
-
-  <!-- VISOR PRINCIPAL -->
-  <div class="steps-viewer">
-  <a id="mainStepLink" href="camara.html">
-    <img id="mainStepImage" src="A1.jpg" alt="Paso activo">
-    <div class="steps-overlay">
-      <span id="mainStepText">1. Compra la cámara 360</span>
-    </div>
-  </a>
-</div>
-
-
-  <!-- MINIATURAS -->
-  <div class="steps-thumbnails">
-  <img src="A1.jpg" data-text="1. Compra la cámara 360" data-link="camara.html" class="active">
-  <img src="A2.jpg" data-text="2. Aprende a usar la cámara" data-link="tutorial-camara.html">
-  <img src="A3.jpg" data-text="3. Sube las fotos 360" data-link="subida.html">
-  <img src="A4.jpg" data-text="4. Consigue 3 tours gratis" data-link="gratis.html">
-  <img src="A1.jpg" data-text="5. Prueba el home staging con IA" data-link="staging.html">
-  <img src="A2.jpg" data-text="6. Contrata tu suscripción" data-link="precios.html">
-</div>
-
-  <div class="cta-discover">
-        <div class="cta-discover-box">
-          <p>
-            ¿Buscas algo más innovador? Descubre nuestros tours en 3D y Realidad Virtual.
-          </p>
-          <a href="#" class="cta-discover-link">Enlace a los planes Pro y RV</a>
-        </div>
-      </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- PLANES Y PRECIOS -->
     <section class="pricing-section">
       <div class="pricing-header">
-  <span class="pricing-eyebrow">Planes Visitia</span>
-  <h2 class="pricing-title">Innova con nosotros y diferénciate del resto</h2>
+<div class="pricing-header-pill">
+
+  <span class="pricing-eyebrow-pill">Planes Visitia</span>
+
+  <h2 class="pricing-title-pill">
+    Innova con nosotros y diferénciate del resto
+  </h2>
+
+</div>
+
   <p class="pricing-subtitle">
     Elige el plan que mejor se adapte a tu volumen de propiedades y a la experiencia que quieres ofrecer.
   </p>
 </div>
 
       <div class="plans-grid">
-        <!-- FREE -->
-        <article class="plan-card plan-free">
-          <div class="plan-header">
-            <span class="plan-tag">FREE 0€</span>
-            <p class="plan-sub">Ideal para probar Visitia</p>
-          </div>
-          <ul class="plan-features">
-            <li>Crea tours virtuales inmediatos subiendo tus fotos 360</li>
-            <li>Home staging con IA instantáneo</li>
-          </ul>
-          <p class="plan-note">Tus 3 primeros tours sin coste</p>
-          <button class="plan-btn plan-btn-yellow">Pruébalo gratis</button>
-        </article>
 
-        <!-- BÁSICO -->
-        <article class="plan-card plan-basic">
-          <div class="plan-header">
-            <span class="plan-name">BÁSICO</span>
-            <span class="plan-price">19,95€/mes</span>
-          </div>
-          <p class="plan-sub">El más recomendado para empezar</p>
-          <ul class="plan-features">
-            <li>Tours 360 inmediatos</li>
-            <li>Mejora del plano</li>
-            <li>Home staging con IA instantáneo</li>
-          </ul>
-          <div class="plan-highlight">
-            Incluye integración del tour en tu web y vídeo del tour.
-          </div>
-          <p class="plan-note">Incluye 50 tours activos*<br />*Cancela cuando quieras</p>
-          <button class="plan-btn">Suscríbete</button>
-        </article>
+  <!-- FREE -->
+  <article class="plan-card plan-free">
+    <div class="plan-header">
+      <span class="plan-tag">⭐ FREE 0€</span>
+      <p class="plan-sub">Ideal para probar Visitia</p>
+    </div>
 
-        <!-- PRO -->
-        <article class="plan-card plan-pro">
-          <div class="plan-header">
-            <span class="plan-name">PRO</span>
-            <span class="plan-price">59,95€/mes</span>
-          </div>
-          <p class="plan-sub">Para destacar tus proyectos</p>
-          <ul class="plan-features">
-            <li>Tour inmersivo 360 en el software Visitia</li>
-            <li>Fotos 360 integradas + mapas 3D</li>
-            <li>Extras: visita online guiada en tiempo real</li>
-          </ul>
-          <div class="plan-highlight">
-            Incluye todas las funciones del plan básico.
-          </div>
-          <p class="plan-note">Incluye 75 tours activos*<br />*Cancela cuando quieras</p>
-          <button class="plan-btn">Suscríbete</button>
-        </article>
+    <ul class="plan-features">
+      <li><strong>Tours virtuales inmediatos</strong> subiendo tus fotos 360 ⏱️</li>
+      <li><strong>Home staging con IA</strong> instantáneo 🎨</li>
+    </ul>
 
-        <!-- REALIDAD VIRTUAL -->
-        <article class="plan-card plan-vr">
-          <div class="plan-header">
-            <span class="plan-name">REALIDAD VIRTUAL</span>
-            <span class="plan-price">99,95€/mes</span>
-          </div>
-          <p class="plan-sub">Para una experiencia inmersiva</p>
-          <ul class="plan-features">
-            <li>Tour 360 en el software Visitia para Realidad Virtual</li>
-            <li>Fotos 360 integradas + mapas 3D</li>
-            <li>Compatible con Realidad Virtual y Aumentada</li>
-          </ul>
-          <div class="plan-highlight">
-            Incluye acceso al plan básico y al plan pro.
-          </div>
-          <p class="plan-note">Incluye 75 tours activos*</p>
-          <button class="plan-btn">Suscríbete</button>
-        </article>
-      </div>
+    <p class="plan-note"><strong>Tus 3 primeros tours</strong> sin coste</p>
+    <button class="plan-btn plan-btn-yellow">Pruébalo gratis</button>
+  </article>
+
+  <!-- BÁSICO -->
+  <article class="plan-card plan-basic">
+    <div class="plan-header">
+      <span class="plan-name">💼 BÁSICO</span>
+      <span class="plan-price">19,95€/mes</span>
+    </div>
+
+    <p class="plan-sub">El más recomendado para empezar</p>
+
+    <ul class="plan-features">
+      <li><strong>Tours 360 inmediatos</strong> ⏱️</li>
+      <li><strong>Mejora del plano</strong> 📐</li>
+      <li><strong>Home staging con IA</strong> instantáneo 🎨</li>
+    </ul>
+
+    <div class="plan-highlight">
+      Incluye <strong>integración del tour en tu web</strong> 🌐 + 
+      <strong>vídeo del tour</strong> 🎬
+    </div>
+
+    <p class="plan-note">
+      Incluye <strong>50 tours activos</strong><br>*Cancela cuando quieras
+    </p>
+
+    <button class="plan-btn">Suscríbete</button>
+  </article>
+
+  <!-- PRO -->
+  <article class="plan-card plan-pro">
+    <div class="plan-header">
+      <span class="plan-name">🚀 PRO</span>
+      <span class="plan-price">59,95€/mes</span>
+    </div>
+
+    <p class="plan-sub">Para destacar tus proyectos</p>
+
+    <ul class="plan-features">
+      <li><strong>Tour inmersivo 360</strong> en el software Visitia ⭐</li>
+      <li><strong>Fotos 360 integradas</strong> + mapas 3D 📍</li>
+      <li><strong>Visita online guiada</strong> en tiempo real 🏡</li>
+    </ul>
+
+    <div class="plan-highlight">
+      Incluye <strong>todas las funciones</strong> del plan básico 💼
+    </div>
+
+    <p class="plan-note">
+      Incluye <strong>75 tours activos</strong><br>*Cancela cuando quieras
+    </p>
+
+    <button class="plan-btn">Suscríbete</button>
+  </article>
+
+  <!-- REALIDAD VIRTUAL -->
+  <article class="plan-card plan-vr">
+    <div class="plan-header">
+      <span class="plan-name">💡 REALIDAD VIRTUAL</span>
+      <span class="plan-price">99,95€/mes</span>
+    </div>
+
+    <p class="plan-sub">Para una experiencia inmersiva</p>
+
+    <ul class="plan-features">
+      <li><strong>Tour 360 en Realidad Virtual</strong> 🎆</li>
+      <li><strong>Fotos 360 + mapas 3D</strong> 📍</li>
+      <li><strong>Compatible con RV y RA</strong></li>
+    </ul>
+
+    <div class="plan-highlight">
+      Incluye <strong>plan básico</strong> 💼 y <strong>plan pro</strong> 🚀
+    </div>
+
+    <p class="plan-note">
+      Incluye <strong>75 tours activos</strong><br>*Cancela cuando quieras
+    </p>
+
+    <button class="plan-btn">Suscríbete</button>
+  </article>
+
+</div>
+
 
       <!-- TABLA COMPARATIVA -->
-      <div class="comparison-table-wrap">
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Compara nuestros planes</th>
-              <th>FREE</th>
-              <th>BÁSICO</th>
-              <th>PRO</th>
-              <th>REALIDAD VIRTUAL</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Tour 360</td>
-              <td>✓</td>
-              <td>✓</td>
-              <td>✓</td>
-              <td>✓</td>
-            </tr>
-            <tr>
-              <td>Home staging con IA</td>
-              <td>✓</td>
-              <td>✓</td>
-              <td>✓</td>
-              <td>✓</td>
-            </tr>
-            <tr>
-              <td>Mejora del plano</td>
-              <td>✗</td>
-              <td>✓</td>
-              <td>✓</td>
-              <td>✓</td>
-            </tr>
-            <tr>
-              <td>Integración del tour en la web</td>
-              <td>✗</td>
-              <td>✓</td>
-              <td>✓</td>
-              <td>✓</td>
-            </tr>
-            <tr>
-              <td>Vídeo resumen del tour</td>
-              <td>✗</td>
-              <td>✓</td>
-              <td>✓</td>
-              <td>✓</td>
-            </tr>
-            <tr>
-              <td>Mapas 3D de la ciudad</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>✓</td>
-              <td>✓</td>
-            </tr>
-            <tr>
-              <td>Tour 360 Realidad Virtual y Aumentada</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>✓</td>
-            </tr>
-            <tr>
-              <td>Visita virtual guiada</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>✓</td>
-              <td>✓</td>
-            </tr>
-            <tr>
-              <td>Firma virtual parte visita</td>
-              <td>✗</td>
-              <td>✗</td>
-              <td>+29,95€/agente mes</td>
-              <td>+29,95€/agente mes</td>
-            </tr>
-            <tr>
-              <td>Nº propiedades activas</td>
-              <td>3</td>
-              <td>50</td>
-              <td>75</td>
-              <td>75</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+<div class="comparison-table-wrap">
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th class="feature-col">Compara nuestros planes</th>
+        <th class="plan-free">FREE</th>
+        <th class="plan-basic">BÁSICO</th>
+        <th class="plan-pro">PRO</th>
+        <th class="plan-vr">REALIDAD VIRTUAL</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Tour 360</td>
+        <td class="yes">✓</td>
+        <td class="yes">✓</td>
+        <td class="yes">✓</td>
+        <td class="yes">✓</td>
+      </tr>
+
+      <tr>
+        <td>Home staging con IA</td>
+        <td class="yes">✓</td>
+        <td class="yes">✓</td>
+        <td class="yes">✓</td>
+        <td class="yes">✓</td>
+      </tr>
+
+      <tr>
+        <td>Mejora del plano</td>
+        <td class="no">✗</td>
+        <td class="yes">✓</td>
+        <td class="yes">✓</td>
+        <td class="yes">✓</td>
+      </tr>
+
+      <tr>
+        <td>Integración del tour en la web</td>
+        <td class="no">✗</td>
+        <td class="yes">✓</td>
+        <td class="yes">✓</td>
+        <td class="yes">✓</td>
+      </tr>
+
+      <tr>
+        <td>Vídeo resumen del tour</td>
+        <td class="no">✗</td>
+        <td class="yes">✓</td>
+        <td class="yes">✓</td>
+        <td class="yes">✓</td>
+      </tr>
+
+      <tr>
+        <td>Mapas 3D de la ciudad</td>
+        <td class="no">✗</td>
+        <td class="no">✗</td>
+        <td class="yes">✓</td>
+        <td class="yes">✓</td>
+      </tr>
+
+      <tr>
+        <td>Tour 360 en Realidad Virtual</td>
+        <td class="no">✗</td>
+        <td class="no">✗</td>
+        <td class="no">✗</td>
+        <td class="yes">✓</td>
+      </tr>
+
+      <tr>
+        <td>Visita virtual guiada</td>
+        <td class="no">✗</td>
+        <td class="no">✗</td>
+        <td class="yes">✓</td>
+        <td class="yes">✓</td>
+      </tr>
+
+      <tr>
+        <td>Firma virtual parte visita</td>
+        <td class="no">✗</td>
+        <td class="no">✗</td>
+        <td class="extra">+29,95€</td>
+        <td class="extra">+29,95€</td>
+      </tr>
+
+      <tr class="highlight-row">
+        <td>Nº propiedades activas</td>
+        <td>3</td>
+        <td>50</td>
+        <td class="pro-highlight">75</td>
+        <td>75</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
 
 
@@ -642,7 +705,7 @@
   </div>
 
   <div class="plan-detail-cta">
-    <button class="plan-btn">Más información</button>
+    <button class="plan-btn">Suscribete</button>
   </div>
 
 </section>
@@ -822,5 +885,6 @@
 
     <script src="TutorialesCarrusel.js"></script>
     <script src="CarruselSencillosPasos.js"></script>
+    <script src="SelectorIdioma.js"></script>
 </body>
 </html>

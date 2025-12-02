@@ -10,34 +10,71 @@
 
 <body>
 <!-- ================= HEADER / NAVBAR ================= -->
-  <header class="site-header double-nav" data-reveal="fade-down">
-
-  <!-- =====================
-       PISO SUPERIOR (NAV PRINCIPAL)
-  ====================== -->
-  <div class="top-nav">
+  <header class="site-header" data-reveal="fade-down">
     <div class="container nav-wrapper">
-
-      <!-- BOTÓN HAMBURGUESA -->
+      <!-- BOTÓN HAMBURGUESA (solo móviles) -->
       <div class="mobile-menu-btn" id="mobileMenuBtn">
         <span></span><span></span><span></span>
       </div>
 
+      <!-- LOGO -->
+      <div>
+        <img src="LogoEmpty.png" class="logo-img" />
+      </div>
+
       <!-- BLOQUE IZQUIERDO -->
       <div class="nav-block nav-left">
-        <img src="LogoEmpty.png" class="logo-img" />
-
         <nav class="main-nav" id="mainNav">
-          <a href="index.html" class="nav-btn">Inicio</a>
-          <a href="SolucionesInmobiliarias.html" class="nav-btn">Inmobiliarias</a>
-          <a href="ObraNueva.html" class="nav-btn">Obra nueva</a>
-          <a href="OtrosSectores.html" class="nav-btn nav-btn--active">Otros sectores</a>
-          <a href="AreaCliente.html" class="nav-btn">Área cliente</a>
-          <a href="blog.html" class="nav-btn">Blog</a>
-        </nav>
+
+  <a href="index.html" class="nav-btn">Inicio</a>
+
+  <!-- INMOBILIARIAS -->
+  <div class="nav-item-dropdown">
+    <a href="SolucionesInmobiliarias.html" class="nav-btn">Inmobiliarias</a>
+    <div class="nav-dropdown">
+      <a href="#beneficios">Beneficios</a>
+      <a href="#precios">Precios</a>
+      <a href="#prueba">Prueba gratis</a>
+      <a href="#planes">Nuestros planes</a>
+      <a href="#custom">Proyecto a medida</a>
+      <a href="#tutoriales">Tutoriales</a>
+    </div>
+  </div>
+
+  <!-- OBRA NUEVA -->
+  <div class="nav-item-dropdown">
+    <a href="ObraNueva.html" class="nav-btn">Obra nueva</a>
+    <div class="nav-dropdown">
+      <a href="#promotoras">Promotoras</a>
+      <a href="#arquitectura">Estudios de arquitectura</a>
+      <a href="#reformas">Reformas</a>
+      <a href="#interiorismo">Interiorismo</a>
+      <a href="#custom">Proyecto a medida</a>
+    </div>
+  </div>
+
+  <!-- OTROS SECTORES -->
+  <div class="nav-item-dropdown">
+    <a href="OtrosSectores.html" class="nav-btn nav-btn--active">Otros sectores</a>
+    <div class="nav-dropdown">
+      <a href="#nautica">Náutica</a>
+      <a href="#turismo">Turismo</a>
+      <a href="#industria">Industria</a>
+      <a href="#custom">Proyecto a medida</a>
+      <!-- <a href="blog.html" class="nav-btn">Blog</a> -->
+    </div>
+  </div>
+
+  <a href="#" class="nav-btn">Proyectos a medida</a>
+  <a href="#" class="nav-btn">Área cliente</a>
+  <a href="blog.html" class="nav-btn">Blog</a>
+
+</nav>
+
       </div>
 
       <!-- BLOQUE DERECHO -->
+      <!-- nav-block -->
       <div class="nav-right" id="navRight">
         <div class="lang-wrapper">
           <div class="lang-select">ES <span class="chevron">▼</span></div>
@@ -50,23 +87,8 @@
         <a href="#" class="login-btn">Entrar</a>
         <a href="#" class="cta-btn">Pruébalo gratis</a>
       </div>
-
     </div>
-  </div>
-
-  <!-- =====================
-       PISO INFERIOR (SUBNAV)
-  ====================== -->
-  <div class="bottom-subnav">
-    <div class="container subnav-wrapper">
-      <a href="#nautica" class="subnav-link">Náutica</a>
-      <a href="#turismo" class="subnav-link">Turismo</a>
-      <a href="#industria" class="subnav-link">Industria</a>
-      <a href="#proyectomedida" class="subnav-link">Proyecto a medida</a>
-    </div>
-  </div>
-
-</header>
+  </header>
 
 <div class="container">
 
@@ -79,14 +101,19 @@
 
 
     <!-- HERO -->
-    <section class="hero-others">
-        <a class="btn-green big">Impulsa tu proyecto con Visitia</a>
+    <section class="hero-others container">
 
-        <p class="hero-sub">
-            Transforma tus espacios en experiencias virtuales, <br>
-            desde tours 360 hasta recorridos inmersivos en Realidad Virtual.
-        </p>
-    </section>
+  <span class="section-title modern">
+    IMPULSA TU PROYECTO CON VISITIA
+  </span>
+
+  <p class="hero-sub hero-sub-strong">
+    Transforma tus espacios en experiencias virtuales,<br>
+    desde tours 360 hasta recorridos inmersivos en Realidad Virtual.
+  </p>
+
+</section>
+
 
     <!-- TARJETAS 3 COLUMNAS -->
     <div class="three-column">
@@ -118,6 +145,7 @@
                     o contáctanos para un <strong>proyecto a medida</strong>.
                 </li>
             </ul>
+            <img src="A1.jpg" class="sector-image" alt="Náutica">
         </div>
 
         <!-- TURISMO -->
@@ -146,6 +174,7 @@
                     Contáctanos para un <strong>proyecto a medida</strong>.
                 </li>
             </ul>
+            <img src="A2.jpg" class="sector-image" alt="Turismo">
         </div>
 
         <!-- INDUSTRIA -->
@@ -177,6 +206,7 @@
                     Contáctanos para un <strong>proyecto a medida</strong>.
                 </li>
             </ul>
+            <img src="A3.jpg" class="sector-image" alt="Industria">
         </div>
 
     </div>
@@ -194,32 +224,7 @@
 
 
 
-<!-- VIDEO SHOWCASE -->
-<section class="video-section">
 
-  <div class="video-frame">
-
-    <!-- VIDEO EMBEBIDO DE DEMOSTRACIÓN -->
-    <div class="video-embed">
-      <iframe 
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0&modestbranding=1&rel=0"
-        title="Demo Visitia"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-      </iframe>
-    </div>
-
-    <!-- TEXTO OVERLAY -->
-     <!-- 
-    <div class="video-overlay">
-      • Video demo generado con IA (bodega · antena · barco)
-    </div>
-    -->
-
-  </div>
-
-</section>
 
 
 
