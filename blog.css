@@ -17,7 +17,7 @@ html {
 
 body {
   font-family: "Helvetica", "Arial", sans-serif;
-  background: linear-gradient(90deg, #f5f3f0, #ded5cc);
+  background: white;
   color: #3f5146;
   line-height: 1.6;
   min-height: 100vh;

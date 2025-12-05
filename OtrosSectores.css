@@ -16,7 +16,7 @@ html {
 
 body {
   background-color: #eae7e4;
-  background: linear-gradient(to bottom, #f5f3ef, #f0ede8);
+  background: white;
   color: #3f5146;
 }
 
@@ -374,6 +374,7 @@ body {
   background: radial-gradient(circle at top left, rgba(143,227,214,0.45), transparent 60%);
   opacity: 0;
   transition: 0.35s ease;
+  pointer-events: none;
 }
 
 .sector-card:hover::before {
@@ -426,6 +427,7 @@ body {
   color: #d99629;
   font-weight: 800;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .link-blue {

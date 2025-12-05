@@ -988,6 +988,7 @@ body {
   border-radius: 999px;
   font-weight: 800;
   box-shadow: 0 10px 30px rgba(248,194,66,0.45);
+  text-decoration: none;
 }
 
 .btn-yellow:hover {

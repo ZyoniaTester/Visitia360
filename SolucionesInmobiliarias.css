@@ -716,7 +716,7 @@ body {
 }
 
 .plan-pro .plan-header {
-  /*background: #c3dbf7;*/
+  background: #c3dbf7;
   border-radius: 14px;
   padding: 8px 12px;
 }
@@ -805,6 +805,7 @@ body {
   font-size: 13px;
   background: #008d5b;
   color: #fff;
+  text-decoration: none;
 }
 
 .plan-btn-yellow {
@@ -1064,8 +1065,9 @@ body {
 
 /* PLAN DESTACADO (PRO) */
 .plan-pro {
-  background: linear-gradient(180deg, #1e2926, #16201d);
-  color: #ffffff;
+  background: #ffffff;
+  /*background: linear-gradient(180deg, #1e2926, #16201d);*/
+  color: #3F5146;
   transform: scale(1.05);
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
 }
@@ -1075,7 +1077,7 @@ body {
 .plan-pro .plan-sub,
 .plan-pro li,
 .plan-pro .plan-note {
-  color: #ffffff;
+  color: #1E2926;
 }
 
 .plan-pro .plan-highlight {
@@ -1173,13 +1175,14 @@ body {
 }
 
 .comparison-table {
-  width: 100%;
+  width: 80%;
   border-collapse: collapse;
   background: white;
   border-radius: 26px;
   overflow: hidden;
   box-shadow: 0 12px 38px rgba(0,0,0,0.08);
   font-size: 14px;
+  margin-left: 150px;
 }
 
 .comparison-table thead {
@@ -1505,7 +1508,7 @@ body {
   font-weight: 900;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: white;
+  color: #1d7a67;
   margin-bottom: 6px;
 }
 
@@ -1514,7 +1517,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.6px;
   text-transform: uppercase;
-  color: #6fdac0;
+  color: black;
 }
 
 /* =========================================================
@@ -1820,7 +1823,7 @@ body {
   font-size: 15px;
   font-weight: 900;
   letter-spacing: 0.8px;
-  background: linear-gradient(135deg, #f2b646, #ffd27a);
+  /*background: linear-gradient(135deg, #f2b646, #ffd27a);*/
   color: #fff;
   box-shadow: 0 18px 40px rgba(29,122,103,0.45);
 }
@@ -1849,6 +1852,7 @@ body {
 
 .bg-plan-vr {
   background: radial-gradient(circle at top, #1b1b1b, #050505);
+  background: linear-gradient(135deg, #fff3e2, #ffe1b0);
 }
 
 .bg-plan-basic > *,
@@ -1941,12 +1945,12 @@ body {
 /* ========== PLAN REALIDAD VIRTUAL (FONDO NEGRO) ========== */
 
 .bg-plan-vr .steps-row-heading {
-  color: #6fdac0;
+  color: black;
   text-shadow: 0 0 10px rgba(111,218,192,0.35);
 }
 
 .bg-plan-vr .visitia-timeline-title {
-  color: #ffffff;
+  color: black;
 }
 
 .bg-plan-vr .visitia-timeline-track {
@@ -1992,6 +1996,77 @@ body {
 
 
 
+/* === FONDO COMPLETO DE LA SECCIÓN (MINT SUAVE PREMIUM) === */
+.bg-plan-basic {
+    background: linear-gradient(135deg, #e9fffa, #dbf7ef);
+    padding: 90px 0;
+    border-radius: 0 0 60px 60px; /* Curva premium opcional */
+}
+
+/* TÍTULO EDITORIAL */
+.bg-plan-basic .plan-editorial-header h2 {
+    color: #0f6a57;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+}
+
+.bg-plan-basic .plan-editorial-header p {
+    color: #1b8d75;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* PÁRRAFOS */
+.bg-plan-basic .plan-detail-text p {
+    color: #145c4c;
+}
+
+/* PANEL DE VIDEO */
+.bg-plan-basic .video-panel {
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 20px;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.1);
+}
+
+/* TIMELINE: COLORES SOBRE FONDO MINT */
+.bg-plan-basic .steps-row-heading {
+    color: #0f6a57;
+    text-shadow: none;
+}
+
+.bg-plan-basic .visitia-timeline-title {
+    color: #145c4c;
+}
+
+.bg-plan-basic .visitia-timeline-track {
+    background: linear-gradient(90deg, #2fb59a, #8ef1d8);
+}
+
+/* DOT DEL TIMELINE */
+.bg-plan-basic .visitia-timeline-dot {
+    background: #ffffff;
+    color: #0f6a57;
+    border: 2px solid #0f6a57;
+}
+
+/* HOVER CARDS */
+.bg-plan-basic .visitia-timeline-hover-card {
+    background: #ffffff;
+    border: 1px solid #c7eee4;
+}
+
+/* CTA */
+.bg-plan-basic .plan-detail-cta .plan-btn-yellow {
+    background: #f7c564;
+    color: white;
+    box-shadow: 0 12px 30px rgba(247,197,100,0.35);
+}
+
+.bg-plan-basic .plan-detail-cta .plan-btn-yellow:hover {
+    background: #e4b251;
+    transform: translateY(-4px);
+}
 
 
 
