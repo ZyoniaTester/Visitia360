@@ -26,6 +26,17 @@ body {
   margin: 0 auto;
 }
 
+.logo-inline {
+  display: inline-block;
+  width: 75px; /* ajusta el tamaño a gusto */
+  height: 20px;
+  background-image: url('logo-visitia.png'); /* TU LOGO */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: 0px;
+  margin-left: -6px;
+}
 
 
 
@@ -391,6 +402,35 @@ body {
 
 
 
+/* NAV OCULTO EN SCROLL */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: transform .35s ease, opacity .35s ease;
+}
+
+/* Oculto (scroll down) */
+.site-header.hide-nav {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Visible (scroll up o top) */
+.site-header.show-nav {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -743,13 +783,47 @@ body {
   margin-bottom: 50px;
 }
 
+/* Tarjetas mini con efecto premium */
 .sector-mini {
-  background: #434444;
-  padding: 22px 10px;
-  border-radius: 18px;
-  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.06);
-  transition: 0.25s ease;
-  cursor: default;
+  position: relative;
+  background: linear-gradient(180deg, #ffffff, #f2f2f2);
+  padding: 28px 12px;
+  border-radius: 26px;
+  box-shadow:
+    0 16px 45px rgba(0,0,0,0.08),
+    inset 0 0 0 1px rgba(0,0,0,0.05);
+  transition: 0.35s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Glow mint lateral */
+.sector-mini::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(143,227,214,0.45), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+/* Hover con glow y elevación */
+.sector-mini:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 30px 90px rgba(0,0,0,0.16),
+    inset 0 0 0 1px rgba(79,182,165,0.25);
+}
+
+.sector-mini:hover::before {
+  opacity: 1;
+}
+
+/* Animación del icono */
+.sector-mini:hover .mini-icon-img {
+  transform: scale(1.08);
+  transition: 0.35s ease;
 }
 
 .mini-icon-img {
@@ -757,7 +831,7 @@ body {
   height: 100px;
   object-fit: contain;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.12));
-  filter: brightness(0) saturate(100%) invert(70%) sepia(58%) saturate(590%) hue-rotate(355deg) brightness(92%) contrast(75%);
+  filter: brightness(0) saturate(100%) invert(17%) sepia(8%) saturate(894%) hue-rotate(112deg) brightness(92%) contrast(88%);
 }
 
 .sector-mini:hover {
@@ -794,12 +868,6 @@ body {
   background: #266a5b;
   transform: translateY(-2px);
 }
-
-
-
-
-
-
 
 /* =========================================================
    PROYECTOS A MEDIDA — Versión Premium Fondo Negro
@@ -1507,6 +1575,73 @@ body {
 
 
 
+/* ===== MODAL PRIVACIDAD ===== */
+.privacy-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+  animation: fadeIn .25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.privacy-modal-content {
+  background: #fff;
+  width: min(600px, 90%);
+  padding: 35px 40px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.20);
+  position: relative;
+  animation: popIn .28s ease;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+@keyframes popIn {
+  from { transform: scale(.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* BOTÓN CLOSE */
+.privacy-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: .2s ease;
+}
+
+.privacy-close:hover {
+  transform: scale(1.15);
+  color: #1d7a67;
+}
+
+/* TEXTO */
+.privacy-modal-content h2 {
+  margin-bottom: 20px;
+  color: #1d7a67;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.privacy-text p {
+  margin-bottom: 14px;
+  line-height: 1.6;
+  color: #333;
+}
 
 
 

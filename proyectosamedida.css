@@ -26,7 +26,17 @@ body {
   margin: 0 auto;
 }
 
-
+.logo-inline {
+  display: inline-block;
+  width: 75px; /* ajusta el tamaño a gusto */
+  height: 20px;
+  background-image: url('logo-visitia.png'); /* TU LOGO */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: 0px;
+  margin-left: -6px;
+}
 
 
 
@@ -253,6 +263,27 @@ body {
 
 
 
+/* NAV OCULTO EN SCROLL */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: transform .35s ease, opacity .35s ease;
+}
+
+/* Oculto (scroll down) */
+.site-header.hide-nav {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Visible (scroll up o top) */
+.site-header.show-nav {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 
 
@@ -284,12 +315,49 @@ body {
 
 /* RECUADRO PRINCIPAL */
 .pm-box {
-    background: #fff;
-    border-radius: 18px;
-    padding: 40px 45px;
+    position: relative;
+    background: linear-gradient(180deg, #ffffff, #f7f7f7);
+    border-radius: 28px;
+    padding: 45px 50px;
     max-width: 900px;
     margin: 0 auto;
-    box-shadow: 0 25px 80px rgba(0,0,0,0.08);
+    box-shadow:
+        0 28px 90px rgba(0,0,0,0.12),
+        inset 0 0 0 1px rgba(0,0,0,0.06);
+    overflow: hidden;
+    transition: 0.45s ease;
+}
+
+/* Glow mint */
+.pm-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top left,
+        rgba(143,227,214,0.45),
+        transparent 65%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Hover premium */
+.pm-box:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 50px 140px rgba(0,0,0,0.20),
+        inset 0 0 0 1px rgba(79,182,165,0.25);
+}
+
+.pm-box:hover::before {
+    opacity: 1;
+}
+
+/* Zoom global de imágenes cuando se hace hover a toda la caja */
+.pm-box:hover .pm-img img {
+    transform: scale(1.04); /* zoom suave general */
 }
 
 /* TEXTOS */
@@ -452,6 +520,78 @@ body {
   padding-top: 20px;
 }
 
+
+
+
+
+
+/* ===== MODAL PRIVACIDAD ===== */
+.privacy-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+  animation: fadeIn .25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.privacy-modal-content {
+  background: #fff;
+  width: min(600px, 90%);
+  padding: 35px 40px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.20);
+  position: relative;
+  animation: popIn .28s ease;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+@keyframes popIn {
+  from { transform: scale(.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* BOTÓN CLOSE */
+.privacy-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: .2s ease;
+}
+
+.privacy-close:hover {
+  transform: scale(1.15);
+  color: #1d7a67;
+}
+
+/* TEXTO */
+.privacy-modal-content h2 {
+  margin-bottom: 20px;
+  color: #1d7a67;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.privacy-text p {
+  margin-bottom: 14px;
+  line-height: 1.6;
+  color: #333;
+}
 
 
 

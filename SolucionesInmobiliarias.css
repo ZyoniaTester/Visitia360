@@ -28,7 +28,17 @@ body {
   padding-right: clamp(24px, 4vw, 90px);
 }
 
-
+.logo-inline {
+  display: inline-block;
+  width: 75px; /* ajusta el tamaño a gusto */
+  height: 20px;
+  background-image: url('logo-visitia.png'); /* TU LOGO */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: 0px;
+  margin-left: -6px;
+}
 
 
 
@@ -252,7 +262,27 @@ body {
 
 
 
+/* NAV OCULTO EN SCROLL */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: transform .35s ease, opacity .35s ease;
+}
 
+/* Oculto (scroll down) */
+.site-header.hide-nav {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Visible (scroll up o top) */
+.site-header.show-nav {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 
 
@@ -902,7 +932,7 @@ body {
 
 .comparison-table .extra {
   color: black;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -1109,7 +1139,7 @@ body {
 
 .plan-sub {
   margin: 10px 0 4px;
-  font-size: 14px;
+  font-size: 15px;
   opacity: 0.85;
 }
 
@@ -1121,7 +1151,7 @@ body {
 
 .plan-features li {
   margin-bottom: 8px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.5;
 }
 
@@ -1137,7 +1167,7 @@ body {
 
 /* NOTA */
 .plan-note {
-  font-size: 13px;
+  font-size: 15px;
   opacity: 0.75;
   margin-top: 10px;
 }
@@ -1181,7 +1211,7 @@ body {
   border-radius: 26px;
   overflow: hidden;
   box-shadow: 0 12px 38px rgba(0,0,0,0.08);
-  font-size: 14px;
+  font-size: 18px;
   margin-left: 150px;
 }
 
@@ -1215,7 +1245,7 @@ body {
 .comparison-table thead th {
   font-weight: 800;
   color: #fff;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 /* FREE */
@@ -1368,7 +1398,73 @@ body {
 
 
 
+/* ===== MODAL PRIVACIDAD ===== */
+.privacy-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+  animation: fadeIn .25s ease;
+}
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.privacy-modal-content {
+  background: #fff;
+  width: min(600px, 90%);
+  padding: 35px 40px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.20);
+  position: relative;
+  animation: popIn .28s ease;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+@keyframes popIn {
+  from { transform: scale(.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* BOTÓN CLOSE */
+.privacy-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: .2s ease;
+}
+
+.privacy-close:hover {
+  transform: scale(1.15);
+  color: #1d7a67;
+}
+
+/* TEXTO */
+.privacy-modal-content h2 {
+  margin-bottom: 20px;
+  color: #1d7a67;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.privacy-text p {
+  margin-bottom: 14px;
+  line-height: 1.6;
+  color: #333;
+}
 
 
 
@@ -1445,6 +1541,20 @@ body {
     padding: 0 20px 10px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1605,12 +1715,29 @@ body {
   margin-left: 18px;
   font-size: 15px;
   color: #2f423c;
+  list-style: none;
+  text-align: left !important;
 }
 
 .plan-detail-text li {
   margin-bottom: 10px;
   line-height: 1.65;
+  position: relative;
+  padding-left: 22px; /* espacio para el icono */
+  text-align: left !important;
 }
+
+.plan-detail-text li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #2ba383, #71d6bb);
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+
 
 /* =========================================================
    VIDEO
@@ -1850,6 +1977,18 @@ body {
   background: linear-gradient(180deg, #1e2926, #163b32);
 }
 
+/* Centrado del contenido interno del PLAN PRO */
+.bg-plan-pro {
+  width: 100%;        /* Corrige el desborde de 100vw */
+  max-width: 1200px;  /* Igual que los demás planes */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 110px 0;   /* Igual que los otros fondos */
+  position: relative;
+}
+
+
 .bg-plan-vr {
   background: radial-gradient(circle at top, #1b1b1b, #050505);
   background: linear-gradient(135deg, #fff3e2, #ffe1b0);
@@ -2067,6 +2206,430 @@ body {
     background: #e4b251;
     transform: translateY(-4px);
 }
+
+
+
+
+
+
+/* =========================================================
+   CARD PREMIUM — CONTENEDOR GENERAL
+========================================================= */
+.plan-detail-section {
+    width: 100%;
+    max-width: 1450px;
+    padding: 60px 50px;
+    border-radius: 36px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(14px);
+    box-shadow:
+        0 45px 95px rgba(0,0,0,0.25),
+        inset 0 0 0 1px rgba(255,255,255,0.45);
+    position: relative;
+    overflow: hidden;
+}
+.plan-detail-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top left,
+        rgba(220,221,207,0.85),
+        transparent 70%
+    );
+    pointer-events: none;
+    opacity: 0.65;
+}
+.plan-detail-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================================
+   HEADER EDITORIAL (TÍTULO + SUBTÍTULO)
+========================================================= */
+.plan-editorial-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+.plan-editorial-header h2 {
+    font-size: 34px;
+    font-weight: 900;
+    color: #1d7a67;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+.plan-editorial-header p {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =========================================================
+   LAYOUT PRINCIPAL (TEXTO + VIDEO)
+========================================================= */
+.plan-detail-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/* =========================================================
+   TEXTO — CARD INTERIOR
+========================================================= */
+.plan-detail-text {
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.95),
+        rgba(247,249,247,0.95)
+    );
+    padding: 40px 36px;
+    border-radius: 26px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.10);
+    border: 1px solid rgba(0,0,0,0.06);
+}
+.plan-detail-text p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #2f423c;
+    line-height: 1.75;
+}
+.plan-detail-text ul {
+    margin-top: 12px;
+    margin-left: 18px;
+    font-size: 15px;
+    color: #2f423c;
+    list-style: none;
+}
+.plan-detail-text li {
+    margin-bottom: 10px;
+    line-height: 1.65;
+    position: relative;
+    padding-left: 22px;
+}
+.plan-detail-text li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #2ba383, #71d6bb);
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    top: 7px;
+}
+
+/* =========================================================
+   VIDEO PANEL
+========================================================= */
+.video-panel {
+    border-radius: 26px;
+    overflow: hidden;
+    background: transparent;
+    padding: 16px;
+    box-shadow:
+        0 20px 55px rgba(0,0,0,0.35),
+        inset 0 0 0 1px rgba(255,255,255,0.1);
+}
+.video-panel iframe {
+    width: 100%;
+    height: 320px;
+    border-radius: 18px;
+}
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+.steps-row-heading {
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 18px;
+    color: #1d7a67;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.visitia-timeline-horizontal {
+    /*margin: 60px 0;*/
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+}
+.visitia-timeline-track {
+    position: absolute;
+    top: 26px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #1d7a67, #6fdac0);
+    opacity: 0.75;
+    border-radius: 8px;
+}
+.visitia-timeline-item {
+    position: relative;
+    width: 33.33%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.visitia-timeline-title {
+    margin-top: 16px;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: white;
+    max-width: 180px;
+    line-height: 1.3;
+}
+/* DOT */
+.visitia-timeline-dot {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1d7a67, #2e9b84);
+    color: white;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    box-shadow:
+        0 0 0 12px rgba(111,218,192,0.35),
+        0 8px 25px rgba(0,0,0,0.35);
+    cursor: pointer;
+    transition: 0.3s ease;
+    animation: visitiaPulse 2.8s ease-in-out infinite;
+}
+
+/*
+.visitia-timeline-dot:hover {
+    animation-play-state: paused;
+    transform: scale(1.2);
+    box-shadow:
+        0 0 0 20px rgba(29,122,103,0.25),
+        0 12px 35px rgba(0,0,0,0.45);
+}
+*/
+
+/* Hover card */
+/*
+.visitia-timeline-hover-card {
+    position: absolute;
+    top: -140px;
+    width: 280px;
+    background: linear-gradient(180deg, #ffffff, #f6faf8);
+    border-radius: 20px;
+    padding: 18px 20px;
+    box-shadow: 0 20px 55px rgba(0,0,0,0.18);
+    border: 1px solid rgba(0,0,0,0.06);
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: 0.35s ease;
+    z-index: 5;
+}
+.visitia-timeline-item:hover .visitia-timeline-hover-card {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+*/
+
+/* Pulse animation */
+@keyframes visitiaPulse {
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(111,218,192,0.6),
+            0 8px 25px rgba(0,0,0,0.35);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow:
+            0 0 0 18px rgba(111,218,192,0),
+            0 12px 30px rgba(0,0,0,0.45);
+        transform: scale(1.08);
+    }
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(111,218,192,0),
+            0 8px 25px rgba(0,0,0,0.35);
+        transform: scale(1);
+    }
+}
+
+/* =========================================================
+   CTA FINAL
+========================================================= */
+.plan-detail-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+.plan-btn {
+    background: linear-gradient(135deg, #1d7a67, #3fc7ad);
+    padding: 16px 48px;
+    border-radius: 999px;
+    color: white;
+    font-size: 16px;
+    font-weight: 900;
+    box-shadow: 0 12px 28px rgba(29,122,103,0.45);
+    transition: .25s ease;
+}
+.plan-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 45px rgba(29,122,103,0.55);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 900px) {
+
+    .plan-detail-section {
+        padding: 40px 28px;
+    }
+
+    .plan-detail-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .video-panel iframe {
+        height: 260px;
+    }
+
+    .visitia-timeline-horizontal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .visitia-timeline-track {
+        display: none;
+    }
+
+    .visitia-timeline-item {
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .visitia-timeline-title {
+        margin-left: 16px;
+        margin-top: 0;
+        text-align: left;
+    }
+
+    .visitia-timeline-hover-card {
+        position: relative;
+        top: 14px;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        margin-left: 68px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bg-plan-basic {
+    position: relative;
+}
+.bg-plan-basic::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top left,
+        rgba(143,227,214,0.38),
+        transparent 70%
+    );
+    pointer-events: none;
+    opacity: 0.75;
+}
+.bg-plan-basic > * {
+    position: relative;
+    z-index: 2;
+}
+
+.bg-plan-pro {
+    position: relative;
+}
+
+.bg-plan-pro::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top left,
+        rgba(77,135,255,0.35), /* azul suave basado en #4D87FF */
+        transparent 70%
+    );
+    pointer-events: none;
+    opacity: 0.75;
+}
+
+.bg-plan-pro > * {
+    position: relative;
+    z-index: 2;
+}
+
+.bg-plan-vr {
+    position: relative;
+}
+
+.bg-plan-vr::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top left,
+        rgba(227,215,255,0.80), /* violeta suave basado en #E3D7FF */
+        transparent 70%
+    );
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.bg-plan-vr > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

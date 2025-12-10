@@ -18,7 +18,9 @@
 
       <!-- LOGO -->
       <div>
-        <img src="TuMundoMasCerca.png" class="logo-img" />
+        <a href="index.html">
+          <img src="Logo-con-claim sin-fondo.png" class="logo-img" />
+        </a>
       </div>
 
       <!-- BLOQUE IZQUIERDO -->
@@ -134,7 +136,7 @@
   </ul>
 
   <p>
-    Visitia convierte cada proyecto en una experiencia interactiva que 
+    <span class="logo-inline"></span> convierte cada proyecto en una experiencia interactiva que 
     <strong>acelera la captación</strong>, 
     <strong>impulsa las ventas</strong> y 
     <strong>reduce la incertidumbre del comprador</strong>.
@@ -204,55 +206,53 @@
 
 
 
-<!-- PROMOTORAS — FULL WIDTH REDISEÑADA -->
 <section id="promotoras" class="promotoras-band">
 
-  <div class="container promotoras-layout reverse">
+  <div class="promotoras-card">   <!-- NUEVA TARJETA -->
 
-    <!-- VIDEO A LA IZQUIERDA -->
-    <div class="promotoras-visual">
-      <div class="promotoras-video">
+    <div class="container promotoras-layout reverse">
 
-        <!-- SIMULACIÓN DE VIDEO -->
-        <video muted loop preload="auto" poster="preview.jpg"></video>
-
-        <div class="video-overlay">
-          <div class="play-btn"></div>
+      <!-- VIDEO IZQUIERDA -->
+      <div class="promotoras-visual">
+        <div class="promotoras-video">
+          <video muted loop preload="auto" poster="preview.jpg"></video>
+          <div class="video-overlay">
+            <div class="play-btn"></div>
+          </div>
         </div>
-
       </div>
-    </div>
 
-    <!-- CAJA DE TEXTO A LA DERECHA -->
-    <div class="promotoras-glass-card">
+      <!-- TEXTO DERECHA -->
+      <div class="promotoras-glass-card">
+        <h3 class="promotoras-title">PROMOTORAS</h3>
 
-      <h3 class="promotoras-title">PROMOTORAS</h3>
+        <p class="promotoras-lead">
+          <span class="logo-inline"></span> te permite mostrar el edificio terminado antes de que exista,
+          <strong>eliminando por completo la necesidad de un piso piloto</strong>.
+        </p>
 
-      <p class="promotoras-lead">
-        Visitia te permite mostrar el edificio terminado antes de que exista,
-        <strong>eliminando por completo la necesidad de un piso piloto</strong>.
-      </p>
+        <ul class="promotoras-features">
+          <li><strong>Renders existentes → Tour 360 inmediato</strong></li>
+          <li><strong>Home staging con IA en tiempo real</strong></li>
+          <li><strong>Visualización en web, VR y AR</strong></li>
+        </ul>
 
-      <ul class="promotoras-features">
-        <li><strong>Renders existentes → Tour 360 inmediato</strong> ⏱️</li>
-        <li><strong>Home staging con IA en tiempo real</strong> 😮‍💨</li>
-        <li><strong>Visualización en web, VR y AR</strong></li>
-      </ul>
+        <p class="promotoras-impact">
+          <span class="logo-inline"></span> convierte cada proyecto en una experiencia interactiva que
+          <strong>acelera la captación, impulsa las ventas y reduce la incertidumbre del comprador</strong>.
+        </p>
 
-      <p class="promotoras-impact">
-        Visitia convierte cada proyecto en una experiencia interactiva que
-        <strong>acelera la captación, impulsa las ventas y reduce la incertidumbre del comprador</strong>.
-      </p>
-
-      <div class="promotoras-actions">
-        <a href="proyectosamedida.html" class="btn-yellow big promotoras-cta">Contáctanos</a>
+        <div class="promotoras-actions">
+          <a href="proyectosamedida.html" class="btn-yellow big promotoras-cta">Contáctanos</a>
+        </div>
       </div>
 
     </div>
 
-  </div>
+  </div> <!-- fin tarjeta -->
 
 </section>
+
 
 
 
@@ -376,7 +376,6 @@
       <div class="container footer-inner">
         <ul class="footer-col" data-reveal="fade-up">
           <li class="footer-title">Suscríbete a la newsletter</li>
-          <li>Pago protegido</li>
         </ul>
 
         <ul class="footer-col" data-reveal="fade-up">
@@ -385,13 +384,12 @@
         </ul>
 
         <ul class="footer-col" data-reveal="fade-up">
-          <li class="footer-title">Política privacidad</li>
-          <li>ZYONIA SL</li>
+          <li class="footer-title">Política de privacidad</li>
         </ul>
 
         <ul class="footer-col" data-reveal="fade-up">
-          <li class="footer-title">Acuerdo de licencia</li>
-          <li>Acuerdo de hosting</li>
+          <li class="footer-title">Términos y condiciones</li>
+          <li>ZYONIA SL</li>
         </ul>
       </div>
 
@@ -400,6 +398,35 @@
       </div>
     </footer>
 
+
+    <!-- MODAL DE POLÍTICA DE PRIVACIDAD -->
+<div id="privacy-modal" class="privacy-modal">
+  <div class="privacy-modal-content">
+    <button class="privacy-close">&times;</button>
+    <h2>Política de privacidad</h2>
+
+    <div class="privacy-text">
+      <!-- Aquí pega tu texto real de política -->
+      <p>
+        En Visitia nos tomamos muy en serio la protección de datos personales.
+        Esta política explica cómo recopilamos, usamos y protegemos tu
+        información al utilizar nuestros servicios.
+      </p>
+      <p>
+        No compartimos tu información con terceros salvo que sea estrictamente
+        necesario para prestar nuestros servicios o cumplir requisitos legales.
+      </p>
+      <p>
+        Para más información contáctanos en soporte@visitia.es
+      </p>
+    </div>
+  </div>
+</div>
+
+
     <script src="CarruselObraNueva.js"></script>
+    <script src="navDinamico.js"></script>
+    <script src="navMouse.js"></script>
+    <script src="politicaprivacidad.js"></script>
 </body>
 </html>

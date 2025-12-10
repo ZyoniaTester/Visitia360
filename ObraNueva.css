@@ -26,7 +26,17 @@ body {
   margin: 0 auto;
 }
 
-
+.logo-inline {
+  display: inline-block;
+  width: 75px; /* ajusta el tamaño a gusto */
+  height: 20px;
+  background-image: url('logo-visitia.png'); /* TU LOGO */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: 0px;
+  margin-left: -6px;
+}
 
 
 
@@ -255,7 +265,27 @@ body {
 
 
 
+/* NAV OCULTO EN SCROLL */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: transform .35s ease, opacity .35s ease;
+}
 
+/* Oculto (scroll down) */
+.site-header.hide-nav {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Visible (scroll up o top) */
+.site-header.show-nav {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 
 
@@ -329,6 +359,78 @@ body {
   opacity: 0.7;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding-top: 20px;
+}
+
+
+
+
+
+/* ===== MODAL PRIVACIDAD ===== */
+.privacy-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+  animation: fadeIn .25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.privacy-modal-content {
+  background: #fff;
+  width: min(600px, 90%);
+  padding: 35px 40px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.20);
+  position: relative;
+  animation: popIn .28s ease;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+@keyframes popIn {
+  from { transform: scale(.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* BOTÓN CLOSE */
+.privacy-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: .2s ease;
+}
+
+.privacy-close:hover {
+  transform: scale(1.15);
+  color: #1d7a67;
+}
+
+/* TEXTO */
+.privacy-modal-content h2 {
+  margin-bottom: 20px;
+  color: #1d7a67;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.privacy-text p {
+  margin-bottom: 14px;
+  line-height: 1.6;
+  color: #333;
 }
 
 
@@ -828,19 +930,21 @@ body {
 
 
 /* =========================================================
-   PROMOTORAS — FULL WIDTH PREMIUM CON VIDEO
+   PROMOTORAS — FULL WIDTH PREMIUM CON VIDEO + TARJETA
 ========================================================= */
 
+/* Banda full-width */
 .promotoras-band {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   padding: 140px 0;
-  background: #dcddcf;
+  /*background: #dcddcf;*/
+  background: transparent;
   position: relative;
   overflow: hidden;
 }
 
-/* Patrón suave de fondo */
+/* Patrón opcional de fondo */
 .promotoras-band::before {
   content: "";
   position: absolute;
@@ -849,22 +953,81 @@ body {
   pointer-events: none;
 }
 
-/* Layout */
-.promotoras-layout {
+/* =========================================================
+   TARJETA PRINCIPAL — MINT GLOSSY
+========================================================= */
+
+.promotoras-card {
   position: relative;
+  background: linear-gradient(180deg, #ffffff, #f7f7f7);
+  border-radius: 42px;
+  padding: 70px 80px;
+  max-width: 1240px;
+  margin: 0 auto;
+  box-shadow:
+    0 35px 120px rgba(0,0,0,0.15),
+    inset 0 0 0 1px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: 0.45s ease;
+}
+
+/* Glow mint en hover */
+.promotoras-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(221, 217, 207, 0.38),
+    transparent 65%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+/* Hover de la tarjeta */
+.promotoras-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 50px 150px rgba(0,0,0,0.22),
+    inset 0 0 0 1px rgba(79,182,165,0.25);
+}
+
+.promotoras-card:hover::before {
+  opacity: 1;
+}
+
+/* Levantar texto y CTA */
+.promotoras-card:hover .promotoras-title,
+.promotoras-card:hover .promotoras-lead,
+.promotoras-card:hover .promotoras-features li,
+.promotoras-card:hover .promotoras-impact,
+.promotoras-card:hover .promotoras-actions {
+  transform: translateY(-3px);
+  transition: transform 0.35s ease;
+}
+
+/* =========================================================
+   LAYOUT INTERNO
+========================================================= */
+
+.promotoras-layout {
   display: grid;
   grid-template-columns: 1fr 1.25fr;
   align-items: center;
   gap: 80px;
+  position: relative;
   z-index: 2;
 }
 
-/* Invertido */
 .promotoras-layout.reverse {
   grid-template-columns: 1.25fr 1fr;
 }
 
-/* ================= VIDEO ================= */
+/* =========================================================
+   VIDEO
+========================================================= */
 
 .promotoras-visual {
   display: flex;
@@ -881,6 +1044,7 @@ body {
   border-radius: 36px;
   overflow: hidden;
   box-shadow: 0 35px 90px rgba(0,0,0,0.7);
+  transition: transform 0.45s ease;
 }
 
 .promotoras-video video {
@@ -890,9 +1054,10 @@ body {
   height: 100%;
   object-fit: cover;
   opacity: 0.25;
+  transition: opacity 0.4s ease, transform 0.45s ease;
 }
 
-/* Overlay */
+/* Glow overlay */
 .video-overlay {
   position: absolute;
   inset: 0;
@@ -902,7 +1067,13 @@ body {
   justify-content: center;
 }
 
-/* Botón play */
+/* Hover de card → animar video */
+.promotoras-card:hover .promotoras-video video {
+  opacity: 0.35;
+  transform: scale(1.05);
+}
+
+/* Botón Play */
 .play-btn {
   width: 90px;
   height: 90px;
@@ -922,19 +1093,10 @@ body {
   border-color: transparent transparent transparent white;
 }
 
-/* ================= TARJETA ================= */
+/* =========================================================
+   TEXTO DENTRO DE LA TARJETA
+========================================================= */
 
-.promotoras-glass-card {
-  background: rgba(255,255,255,0.95);
-  border-radius: 36px;
-  padding: 58px 56px;
-  box-shadow:
-    0 45px 90px rgba(0,0,0,0.4),
-    inset 0 0 0 1px rgba(255,255,255,0.45);
-  backdrop-filter: blur(16px);
-}
-
-/* Título */
 .promotoras-title {
   font-size: 2rem;
   font-weight: 900;
@@ -943,7 +1105,6 @@ body {
   margin-bottom: 22px;
 }
 
-/* Lead */
 .promotoras-lead {
   font-size: 1.15rem;
   line-height: 1.6;
@@ -951,7 +1112,6 @@ body {
   margin-bottom: 24px;
 }
 
-/* Lista */
 .promotoras-features {
   margin-left: 20px;
   margin-bottom: 26px;
@@ -963,7 +1123,6 @@ body {
   color: #1e2e2a;
 }
 
-/* Impacto */
 .promotoras-impact {
   margin-top: 20px;
   font-size: 1.05rem;
@@ -972,7 +1131,7 @@ body {
   line-height: 1.6;
 }
 
-/* Acciones */
+/* Botones */
 .promotoras-actions {
   margin-top: 30px;
   display: flex;
@@ -980,39 +1139,50 @@ body {
   flex-wrap: wrap;
 }
 
-/* ================= BOTONES ================= */
+/* =========================================================
+   BOTONES
+========================================================= */
 
 .btn-yellow {
   background: linear-gradient(135deg, #f8c242, #ffe28a);
   color: #1b1b1b;
   border-radius: 999px;
   font-weight: 800;
-  box-shadow: 0 10px 30px rgba(248,194,66,0.45);
+  padding: 16px 40px;
   text-decoration: none;
+  box-shadow: 0 12px 30px rgba(248,194,66,0.45);
+  transition: 0.3s ease;
 }
 
 .btn-yellow:hover {
   transform: translateY(-3px);
 }
 
+/* Verde */
 .btn-green {
   background: linear-gradient(135deg, #1d7a67, #3fc7ad);
   color: white;
   border-radius: 999px;
   font-weight: 800;
-  box-shadow: 0 10px 30px rgba(29,122,103,0.45);
+  padding: 16px 40px;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(29,122,103,0.45);
 }
 
 .btn-green:hover {
   transform: translateY(-3px);
 }
 
-/* ================= RESPONSIVE ================= */
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
 @media (max-width: 1000px) {
+
   .promotoras-layout,
   .promotoras-layout.reverse {
     grid-template-columns: 1fr;
+    gap: 50px;
   }
 
   .promotoras-video {
@@ -1023,10 +1193,11 @@ body {
     padding: 90px 0;
   }
 
-  .promotoras-glass-card {
-    padding: 42px 38px;
+  .promotoras-card {
+    padding: 45px 38px;
   }
 }
+
 
 
 
@@ -1049,32 +1220,81 @@ body {
   align-items: stretch;
 }
 
-/* Tarjetas base */
+/* ---------- TARJETAS EDITORIALES (Base + efecto premium) ---------- */
+
 .editorial-card {
   position: relative;
-  background: linear-gradient(180deg, #ffffff, #f3f3f3);
+  background: linear-gradient(180deg, #ffffff, #f7f7f7);
   border-radius: 40px;
   padding: 54px 46px;
-  box-shadow: 0 35px 90px rgba(0,0,0,0.12);
-  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow:
+    0 28px 90px rgba(0,0,0,0.12),
+    inset 0 0 0 1px rgba(0,0,0,0.06);
   overflow: hidden;
+  transition: 0.45s ease;
 }
 
-/* Variante verde arquitectura */
-.editorial-card.architecture {
-  background: linear-gradient(135deg, #e9f8f4, #cfeee7);
+/* Glow (se activa en hover, personalizado por variante) */
+.editorial-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
 }
 
-/* Variante cálida reformas */
-.editorial-card.reforms {
-  background: linear-gradient(135deg, #fff3e2, #ffe1b0);
+/* Efecto hover premium */
+.editorial-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 50px 140px rgba(0,0,0,0.18),
+    inset 0 0 0 1px rgba(60,120,110,0.18); /* mint por defecto */
 }
 
-/* ================= CABECERA EDITORIAL ================= */
+.editorial-card:hover::before {
+  opacity: 1;
+}
+
+/* ---------- VARIANTE VERDE (ARQUITECTURA) ---------- */
+
+.editorial-card.architecture::before {
+  background: radial-gradient(
+    circle at top left,
+    rgba(143,227,214,0.45),
+    transparent 60%
+  );
+}
+
+.editorial-card.architecture:hover {
+  box-shadow:
+    0 50px 140px rgba(0,0,0,0.20),
+    inset 0 0 0 1px rgba(79,182,165,0.25);
+}
+
+/* ---------- VARIANTE CÁLIDA (REFORMAS) ---------- */
+
+.editorial-card.reforms::before {
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 213, 155, 0.45),
+    transparent 65%
+  );
+}
+
+.editorial-card.reforms:hover {
+  box-shadow:
+    0 50px 140px rgba(0,0,0,0.18),
+    inset 0 0 0 1px rgba(255,160,65,0.25);
+}
+
+
+/* =========================================================
+   CABECERA EDITORIAL
+========================================================= */
 
 .editorial-header {
   margin-bottom: 30px;
-  position: relative;
 }
 
 .editorial-tag {
@@ -1107,7 +1327,10 @@ body {
   color: #1d7a67;
 }
 
-/* ================= LISTA ================= */
+
+/* =========================================================
+   LISTAS
+========================================================= */
 
 .editorial-list {
   margin-left: 18px;
@@ -1121,9 +1344,10 @@ body {
   color: #1f2f2b;
 }
 
-/* =========================================
-   BOTÓN
-========================================= */
+
+/* =========================================================
+   BOTONES / UTILIDADES
+========================================================= */
 
 .center {
   text-align: center;
@@ -1138,7 +1362,25 @@ body {
   box-shadow: 0 16px 40px rgba(248,194,66,0.45);
 }
 
-/* ================= RESPONSIVE ================= */
+.link-blue {
+  text-decoration: underline;
+  color: #2e7a69;
+}
+
+.orange-link {
+  color: #d08900;
+  cursor: pointer;
+}
+
+.link {
+  color: #1a5ed8;
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
 @media (max-width: 1000px) {
   .section-double.editorial-double {
@@ -1158,32 +1400,21 @@ body {
 
 
 
-/* =========================================================
-   SECCIONES MINI
-========================================================= */
-.section-mini {
-  margin-bottom: 60px;
-}
 
-.section-mini ul {
-  margin-left: 18px;
-  margin-top: 10px;
-}
 
-.link-blue {
-  text-decoration: underline;
-  color: #2e7a69;
-}
 
-.orange-link {
-  color: #d08900;
-  cursor: pointer;
-}
 
-.link {
-  color: #1a5ed8;
-  text-decoration: underline;
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
