@@ -1,16 +1,22 @@
 const modal = document.getElementById("privacy-modal");
-const openBtn = document.querySelector(
-  ".footer-col:nth-child(3) .footer-title"
-);
 const closeBtn = document.querySelector(".privacy-close");
 
-// Abrir modal
-openBtn.addEventListener("click", () => {
-  modal.style.display = "flex";
-  document.body.style.overflow = "hidden"; // bloquea scroll
+// Selecciona elementos tanto por ID como por clase
+const openBtns = [
+  ...document.querySelectorAll("#openPrivacy"),
+  ...document.querySelectorAll(".openPrivacy")
+];
+
+// Abrir modal desde cualquier botón/enlace
+openBtns.forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.style.display = "flex";
+    document.body.style.overflow = "hidden"; // bloquea scroll
+  });
 });
 
-// Cerrar con botón
+// Cerrar con botón X
 closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
   document.body.style.overflow = "auto";

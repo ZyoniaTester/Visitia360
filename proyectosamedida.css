@@ -520,6 +520,11 @@ body {
   padding-top: 20px;
 }
 
+.footer-link-clean {
+  color: inherit;
+  text-decoration: none;
+}
+
 
 
 
