@@ -670,7 +670,7 @@ body {
 
 .pricing-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 .pricing-eyebrow {
@@ -843,6 +843,78 @@ body {
   color: #fff;
 }
 
+
+
+
+
+
+
+/* ===============================
+   BILLING TOGGLE
+================================ */
+
+.billing-toggle {
+  display: inline-flex;
+  background: #f2f2f2;
+  border-radius: 999px;
+  padding: 10px;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  margin: 0 auto 30px;
+}
+
+.billing-option {
+  padding: 14px 36px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #777;
+  transition: 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.billing-option .save {
+  font-size: 13px;
+  font-weight: 900;
+  color: #0a9f6a;
+}
+
+.billing-option.active {
+  background: #ffffff;
+  color: #1e2926;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.14); /* un poco más presencia */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ===============================
    TABLA COMPARATIVA — BASE
 =============================== */
@@ -965,7 +1037,7 @@ body {
 
 .pricing-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 .pricing-eyebrow {
@@ -2342,6 +2414,7 @@ body {
     width: 100%;
     height: 320px;
     border-radius: 18px;
+    aspect-ratio: 16 / 9;
 }
 
 /* =========================================================
@@ -3285,3 +3358,346 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   RESPONSIVE GLOBAL — INMOBILIARIAS
+========================================================= */
+
+/* ======================
+   TABLET (≤ 1024px)
+====================== */
+@media (max-width: 1024px) {
+
+  /* NAVBAR */
+  .logo-img {
+    height: 72px;
+  }
+
+  .nav-btn {
+    font-size: 0.82rem;
+    padding: 8px 12px;
+  }
+
+  /* HERO */
+  .hero-inmo {
+    margin-top: 140px;
+    justify-content: center;
+  }
+
+  .hero-pill {
+    font-size: 18px;
+    padding: 16px 42px;
+  }
+
+  /* STEPS */
+  .steps-viewer {
+    height: 420px;
+  }
+
+  .steps-overlay span {
+    font-size: 22px;
+  }
+
+  .steps-thumbnails {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* BENEFICIOS */
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* PLAN DETAIL */
+  .plan-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .plan-detail-video iframe {
+    height: 300px;
+  }
+
+  /* FOOTER */
+  .footer-inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+/* ======================
+   MOBILE (≤ 768px)
+====================== */
+@media (max-width: 768px) {
+
+  /* ===== NAVBAR MOBILE ===== */
+  .site-header {
+    top: 0;
+  }
+
+  .nav-wrapper {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 90px;
+    left: 16px;
+    right: 16px;
+    background: #f3f2f0;
+    border-radius: 26px;
+    padding: 20px;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    display: none;
+    z-index: 2000;
+  }
+
+  .main-nav.show {
+    display: flex;
+  }
+
+  .nav-item-dropdown {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+  }
+
+  .nav-dropdown a {
+    padding: 6px 0;
+    font-size: 0.85rem;
+  }
+
+  /* ===== HERO ===== */
+  .hero-inmo {
+    margin-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+  }
+
+  .hero-pill {
+    font-size: 16px;
+    padding: 14px 34px;
+    text-align: center;
+  }
+
+  /* ===== STEPS ===== */
+  .steps-section h2 {
+    font-size: 24px;
+  }
+
+  .steps-intro {
+    font-size: 14px;
+  }
+
+  .steps-viewer {
+    height: 260px;
+  }
+
+  .steps-overlay span {
+    font-size: 16px;
+  }
+
+  .steps-thumbnails {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .steps-thumbnails img {
+    height: 64px;
+  }
+
+  /* ===== BENEFICIOS ===== */
+  .benefits-section .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  /* ===== PRICING ===== */
+  .pricing-header-pill {
+    padding: 22px 28px;
+    border-radius: 32px;
+  }
+
+  .pricing-eyebrow-pill {
+    font-size: 14px;
+    letter-spacing: 1.8px;
+  }
+
+  .pricing-title-pill {
+    font-size: 20px;
+  }
+
+  .billing-toggle {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .billing-option {
+    justify-content: center;
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  /* ===== PLAN CARDS ===== */
+  .plans-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .plan-pro {
+    transform: none;
+  }
+
+  /* ===== TABLA COMPARATIVA ===== */
+  .comparison-table {
+    width: 100%;
+    font-size: 12px;
+    margin-left: 0;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 10px 8px;
+  }
+
+  .comparison-table th:first-child,
+  .comparison-table td:first-child {
+    width: 40%;
+  }
+
+  /* ===== PLAN DETAIL ===== */
+  .plan-editorial-header h2 {
+    font-size: 24px;
+  }
+
+  .plan-editorial-header p {
+    font-size: 13px;
+  }
+
+  .plan-detail-text {
+    padding: 28px 24px;
+  }
+
+  .plan-detail-text p,
+  .plan-detail-text li {
+    font-size: 14px;
+  }
+
+  .video-panel iframe {
+    height: 220px;
+  }
+
+  /* ===== TIMELINE ===== */
+  .visitia-timeline-horizontal {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .visitia-timeline-item {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  .visitia-timeline-dot {
+    margin-right: 14px;
+  }
+
+  .visitia-timeline-title {
+    margin-top: 0;
+    text-align: left;
+  }
+
+  /* ===== CTA ===== */
+  .plan-detail-cta .plan-btn {
+    width: 100%;
+    padding: 16px;
+  }
+
+  /* ===== PROYECTO A MEDIDA ===== */
+  .custom-project-section {
+    gap: 60px;
+  }
+
+  .custom-block.featured {
+    padding: 50px 26px;
+  }
+
+  .custom-block.featured p {
+    font-size: 14.5px;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-col {
+    align-items: center;
+  }
+}

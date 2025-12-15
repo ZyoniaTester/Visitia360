@@ -17,14 +17,17 @@ function setActive(index) {
   currentIndex = index;
 }
 
-/* Click manual */
+// Click manual
 thumbs.forEach((thumb, index) => {
   thumb.addEventListener("click", () => {
     setActive(index);
   });
 });
 
-/* Autoplay cada 6 segundos */
+// 🔑 Inicialización correcta
+setActive(0);
+
+// Autoplay
 setInterval(() => {
   let next = (currentIndex + 1) % thumbs.length;
   setActive(next);

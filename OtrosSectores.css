@@ -1229,3 +1229,257 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   RESPONSIVE — TABLET (<=1200px)
+========================================================= */
+@media (max-width: 1200px) {
+
+  .container {
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  .logo-img {
+    height: 80px;
+  }
+
+  .three-column {
+    gap: 40px;
+  }
+
+  .sector-card {
+    padding: 36px 32px;
+  }
+
+  .hero-others {
+    margin-top: 160px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET / MOBILE GRANDE (<=900px)
+========================================================= */
+@media (max-width: 900px) {
+
+  /* ===== NAVBAR ===== */
+  .nav-wrapper {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav-left,
+  .nav-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo-img {
+    height: 70px;
+  }
+
+  /* ===== HERO ===== */
+  .hero-others {
+    margin-top: 140px;
+    margin-bottom: 60px;
+  }
+
+  .hero-others .hero-sub {
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .section-title.modern {
+    font-size: 19px;
+    padding: 12px 32px;
+  }
+
+  /* ===== GRID ===== */
+  .three-column {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .sector-card {
+    padding: 34px 28px;
+  }
+
+  .sector-card li {
+    font-size: 15px;
+  }
+
+  .sector-image {
+    border-radius: 20px;
+  }
+
+  /* ===== CTA ===== */
+  .btn-yellow.big {
+    padding: 18px 48px;
+    font-size: 17px;
+  }
+
+  /* ===== PROYECTO A MEDIDA ===== */
+  .custom-project-section {
+    margin: 100px auto;
+    gap: 80px;
+  }
+
+  .custom-block.featured {
+    padding: 60px 32px;
+  }
+
+  .custom-block.featured .pill-title {
+    font-size: 1.6rem;
+  }
+
+  .custom-block.featured p {
+    font-size: 15.5px;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer-inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    text-align: center;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE (<=600px)
+========================================================= */
+@media (max-width: 600px) {
+
+  /* ===== NAVBAR ===== */
+  .site-header {
+    top: 0;
+  }
+
+  .nav-wrapper {
+    padding: 12px 0;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-btn {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .lang-select,
+  .login-btn,
+  .cta-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  /* ===== HERO ===== */
+  .hero-others {
+    margin-top: 120px;
+  }
+
+  .hero-others .hero-sub {
+    font-size: 15.5px;
+  }
+
+  .section-title.modern {
+    font-size: 17px;
+    padding: 10px 26px;
+  }
+
+  /* ===== TARJETAS ===== */
+  .sector-card {
+    padding: 28px 22px;
+    border-radius: 26px;
+  }
+
+  .section-title.small {
+    font-size: 15px;
+    padding: 10px 22px;
+  }
+
+  .sector-card li {
+    font-size: 14.5px;
+    line-height: 1.55;
+  }
+
+  .sector-image {
+    margin-top: 26px;
+    border-radius: 18px;
+  }
+
+  /* ===== CTA ===== */
+  .center {
+    margin-top: 60px;
+  }
+
+  .btn-yellow.big {
+    width: 100%;
+    max-width: 320px;
+    padding: 16px 0;
+    font-size: 16px;
+  }
+
+  /* ===== PROYECTO A MEDIDA ===== */
+  .custom-block.featured {
+    padding: 48px 22px;
+    border-radius: 26px;
+  }
+
+  .custom-block.featured .pill-title {
+    font-size: 1.4rem;
+  }
+
+  .custom-block.featured p {
+    font-size: 14.5px;
+  }
+
+  .custom-cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+}
