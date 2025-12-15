@@ -1,20 +1,71 @@
-// Mostrar banner solo si no hay decisión previa
-document.addEventListener("DOMContentLoaded", () => {
-  const banner = document.getElementById("cookie-banner");
+const cookieBanner = document.getElementById("cookie-banner");
+const acceptBtn = document.getElementById("cookie-accept");
+const rejectBtn = document.getElementById("cookie-reject");
+const configBtn = document.getElementById("cookie-settings");
 
-  const decision = localStorage.getItem("visitiaCookies");
+const settingsModal = document.getElementById("cookie-settings-modal");
+const settingsClose = document.querySelector(".cookie-settings-close");
+const saveSettings = document.getElementById("cookie-save-settings");
 
-  if (!decision) {
-    banner.classList.add("show");
+/* ======================
+   HELPERS
+====================== */
+function hideCookieBanner() {
+  cookieBanner.classList.remove("show");
+}
+
+/* ======================
+   MOSTRAR BANNER
+====================== */
+if (!localStorage.getItem("cookieConsent")) {
+  setTimeout(() => {
+    cookieBanner.classList.add("show");
+  }, 800);
+}
+
+/* ======================
+   ACCIONES PRINCIPALES
+====================== */
+
+// Aceptar todas
+acceptBtn.addEventListener("click", () => {
+  localStorage.setItem("cookieConsent", "all");
+  hideCookieBanner();
+});
+
+// Rechazar todas
+rejectBtn.addEventListener("click", () => {
+  localStorage.setItem("cookieConsent", "none");
+  hideCookieBanner();
+});
+
+// Abrir configuración
+configBtn.addEventListener("click", () => {
+  settingsModal.style.display = "flex";
+});
+
+// Cerrar configuración (X)
+settingsClose.addEventListener("click", () => {
+  settingsModal.style.display = "none";
+});
+
+// Cerrar clic fuera
+settingsModal.addEventListener("click", (e) => {
+  if (e.target === settingsModal) {
+    settingsModal.style.display = "none";
   }
+});
 
-  document.getElementById("cookie-accept").addEventListener("click", () => {
-    localStorage.setItem("visitiaCookies", "accepted");
-    banner.classList.remove("show");
-  });
+// Guardar preferencias
+saveSettings.addEventListener("click", () => {
+  const prefs = {
+    necessary: true, // siempre true
+    preferences: document.getElementById("cookies-preferences").checked,
+    analytics: document.getElementById("cookies-analytics").checked,
+    marketing: document.getElementById("cookies-marketing").checked
+  };
 
-  document.getElementById("cookie-reject").addEventListener("click", () => {
-    localStorage.setItem("visitiaCookies", "rejected");
-    banner.classList.remove("show");
-  });
+  localStorage.setItem("cookieConsent", JSON.stringify(prefs));
+  settingsModal.style.display = "none";
+  hideCookieBanner();
 });
