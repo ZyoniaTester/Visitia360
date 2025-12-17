@@ -862,133 +862,128 @@ body {
 
 
 
+
+
+
+
+
+
+
+
 /* =========================================================
-   TARJETAS — 3 COLUMNAS
+   SECCIÓN SECTORES
 ========================================================= */
+
+.sectors-section {
+  padding: 0px 6vw;
+  margin-top: -60px;
+}
+
+/* Contenedor */
 .three-column {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+/* Card estilo PROMOTORAS */
+.sector-card.promo-style {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 34px;
-  margin: 40px 0 60px;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 50px;
+  padding: 52px;
+  background: #ffffff;
+  border-radius: 40px;
+  align-items: center;
+  text-align: left;
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.08),
+    inset 0 0 0 1px rgba(255,255,255,0.7);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.sector-card {
-  background: white;
-  padding: 28px;
-  border-radius: 22px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  border: 1px solid rgba(0,0,0,0.06);
-}
-
-.section-title.small {
-  background: #1d7a67;
-  color: white;
-  padding: 10px 22px;
-  border-radius: 14px;
-  width: fit-content;
-  margin-bottom: 20px;
-  font-size: 19px;
-  font-weight: 700;
-}
-
-.sector-card ul {
-  padding-left: 20px;
-}
-
-.sector-card li {
-  margin-bottom: 14px;
-  font-size: 0.96rem;
-  line-height: 1.55;
-}
-
-.orange-link {
-  color: #d67a00;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.link-blue {
-  color: #1a5ed8;
-  font-weight: 600;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-
-
-/* =========================================================
-   VIDEO SHOWCASE — PREMIUM
-========================================================= */
-
-.video-section {
-  margin: 100px 0;
+/* Imagen */
+.sector-media {
   display: flex;
   justify-content: center;
 }
 
-/* CONTENEDOR PRINCIPAL */
-.video-frame {
+.sector-image {
   width: 100%;
-  max-width: 1180px;
-  border-radius: 34px;
-  overflow: hidden;
-  position: relative;
-  background: #111;
-  box-shadow: 
-    0 25px 50px rgba(0,0,0,0.45),
-    inset 0 0 0 1px rgba(255,255,255,0.06);
+  max-width: 440px;
+  border-radius: 30px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.25);
 }
 
-/* CONTENEDOR DEL IFRAME */
-.video-embed {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 */
-  background: #0e0e0e;
+/* Contenido */
+.sector-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
 }
 
-/* IFRAME */
-.video-embed iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+/* Título */
+.section-title.small {
+  font-size: 1.9rem;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+  color: #1d7a67;
 }
 
-/* TEXTO INFERIOR */
-.video-overlay {
-  position: absolute;
-  bottom: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(20,20,20,0.65);
-  backdrop-filter: blur(6px);
-  color: rgba(255,255,255,0.75);
-  font-size: 0.85rem;
-  padding: 10px 18px;
-  border-radius: 999px;
-  letter-spacing: 0.4px;
+/* Lista */
+.sector-content ul {
+  padding-left: 20px;
+  margin: 0;
 }
 
-/* ================================
+.sector-content li {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #1f2f2b;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+/* Enlaces */
+.orange-link {
+  color: #f5a623;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.link-blue {
+  color: #1d7a67;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* CTA */
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+/* =========================================================
    RESPONSIVE
-================================ */
-@media (max-width: 900px) {
+========================================================= */
 
-  .video-section {
-    margin: 70px 0;
+@media (max-width: 980px) {
+  .sector-card.promo-style {
+    grid-template-columns: 1fr;
+    padding: 36px;
   }
 
-  .video-frame {
-    border-radius: 22px;
+  .sector-media {
+    order: -1;
   }
 
-  .video-overlay {
-    font-size: 0.78rem;
-    padding: 8px 14px;
+  .sector-image {
+    max-width: 100%;
   }
 }
+
 
 
 
@@ -1483,3 +1478,45 @@ body {
     font-size: 0.8rem;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
