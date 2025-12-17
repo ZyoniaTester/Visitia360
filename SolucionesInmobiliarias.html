@@ -265,8 +265,9 @@
         <article class="plan-card plan-free">
           <div class="plan-header">
             <span class="plan-tag">⭐ FREE 0€</span>
-            <p class="plan-sub">Ideal para probar <span class="logo-inline"></span></p>
           </div>
+
+          <p class="plan-sub">Ideal para probar <span class="logo-inline"></span></p>
 
           <ul class="plan-features">
             <li><strong>Tours 360 inmediatos</strong> ⏱️</li>
@@ -282,7 +283,7 @@
         </article>
 
         <!-- BÁSICO -->
-        <article class="plan-card plan-basic">
+        <article class="plan-card plan-basic" onclick="scrollToPlan('plan-basico')">
           <div class="plan-header">
             <span class="plan-name">💼 BÁSICO</span>
             <!--<span class="plan-price">19,95€/mes</span>-->
@@ -302,7 +303,7 @@
 
           <div class="plan-highlight">
             <!-- Incluye <strong>integración del tour en tu web</strong> 🌐 + 
-      <strong>vídeo del tour</strong> 🎬 -->
+            <strong>vídeo del tour</strong> 🎬 -->
             Incluye <strong>enlace para compartir el tour virtual</strong> 🌐
           </div>
 
@@ -310,11 +311,11 @@
             Incluye <strong>25 tours activos</strong><br>*Cancela cuando quieras
           </p>
 
-          <a href="https://homestaging.visitiacloud.com/" class="plan-btn">Suscríbete</a>
+          <a href="https://homestaging.visitiacloud.com/" class="plan-btn" onclick="event.stopPropagation();">Suscríbete</a>
         </article>
 
         <!-- PRO -->
-        <article class="plan-card plan-pro">
+        <article class="plan-card plan-pro" onclick="scrollToPlan('plan-pro')">
           <div class="plan-header">
             <span class="plan-name">🚀 PRO</span>
             <!--<span class="plan-price">59,95€/mes</span>-->
@@ -340,11 +341,11 @@
             Incluye <strong>50 tours activos</strong><br>*Cancela cuando quieras
           </p>
 
-          <a href="https://homestaging.visitiacloud.com/" class="plan-btn">Suscríbete</a>
+          <a href="https://homestaging.visitiacloud.com/" class="plan-btn" onclick="event.stopPropagation();">Suscríbete</a>
         </article>
 
         <!-- REALIDAD VIRTUAL -->
-        <article class="plan-card plan-vr">
+        <article class="plan-card plan-vr" onclick="scrollToPlan('plan-vr')">
           <div class="plan-header">
             <span class="plan-name">💡 REALIDAD VIRTUAL</span>
             <!--<span class="plan-price">99,95€/mes</span>-->
@@ -370,7 +371,7 @@
             Incluye <strong>50 tours activos</strong><br>*Cancela cuando quieras
           </p>
 
-          <a href="https://homestaging.visitiacloud.com/" class="plan-btn">Suscríbete</a>
+          <a href="https://homestaging.visitiacloud.com/" class="plan-btn" onclick="event.stopPropagation();">Suscríbete</a>
         </article>
 
       </div>
@@ -1343,6 +1344,7 @@
   <script src="navMouse.js"></script>
   <script src="politicaprivacidad.js"></script>
   <script src="precioMES-ANUAL.js"></script>
+  <script src="scrollPlan.js"></script>
 </body>
 
 </html>
