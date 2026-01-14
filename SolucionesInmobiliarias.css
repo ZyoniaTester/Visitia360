@@ -524,6 +524,7 @@ body {
 .benefits-section {
   width: 100%;
   max-width: 1400px;
+  margin-top: 100px;
   margin: 0 auto 90px;
   padding-left: clamp(20px, 4vw, 80px);
   padding-right: clamp(20px, 4vw, 80px);
@@ -533,6 +534,7 @@ body {
 .benefits-section .hero-subtitle {
   font-size: 20px;
   font-weight: 700;
+  margin-top: 120px;
   color: #2f423c;
   margin-bottom: 42px;
 }
@@ -1075,11 +1077,12 @@ body {
   align-items: center;
   gap: 14px; /* + aire entre eyebrow y título */
   padding: 28px 64px; /* + aire lateral y vertical */
-  border-radius: 999px;
+  /*border-radius: 999px;
   background: linear-gradient(135deg, #1d7a67, #2e9b84, #6fdac0);
   box-shadow:
     0 24px 55px rgba(29, 122, 103, 0.45),
     inset 0 0 0 1px rgba(255, 255, 255, 0.22);
+    */
   text-align: center;
   margin: 0 auto 46px;
   max-width: 1100px; /* evita que se vea “gorda” de más */
@@ -1092,7 +1095,7 @@ body {
   font-weight: 900;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(4, 92, 33, 0.95);
   opacity: 0.9;
 }
 
