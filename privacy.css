@@ -341,6 +341,39 @@ body{
 }
 .legal-footer a:hover{ text-decoration: underline; }
 
+/* Rights - Sección 8 */
+.rights-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.right-card{
+  background: linear-gradient(180deg, #ffffff, #f3f2f0);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.06);
+}
+
+.right-card h4{
+  margin: 0 0 10px;
+}
+
+.right-card p{
+  margin: 0 0 10px;
+  line-height: 1.75;
+}
+
+.right-card .list{
+  margin: 10px 0 10px 20px;
+}
+
+@media (max-width: 640px){
+  .rights-grid{ grid-template-columns: 1fr; }
+}
+
 /* Responsive */
 @media (max-width: 1100px){
   .grid{ grid-template-columns: 1fr; }
