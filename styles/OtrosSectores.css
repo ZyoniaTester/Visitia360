@@ -307,7 +307,7 @@ body {
 }
 
 .hero-others .hero-sub {
-  color: #2a2a2a;
+  color: #1e2e2a;
   margin-top: 20px;
   font-size: 21px;
   line-height: 1.6;
@@ -812,12 +812,14 @@ body {
 ========================================================= */
 .hero-others {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .hero-others .hero-sub {
+  
   margin-top: 16px;
-  font-size: 1.2rem;
+  margin-left: 10;
+  font-size: 25px;
   line-height: 1.6;
   opacity: 0.85;
 }

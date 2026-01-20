@@ -543,16 +543,24 @@ body {
 .benefits-section .hero-subtitle {
   font-family: Arial, Helvetica, sans-serif; 
   
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 800;
   margin-top: 180px;
+  text-align: center;
   
   color: #2f423c;
-  margin-bottom: 60px;
+  
+  
 }
 
 .subti {
  color: #2e7a69;
+ 
+ font-family: Arial, Helvetica, sans-serif; 
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+  padding-bottom: 50px;
 }
 
 /* GRID 3 x 2 */
@@ -1090,8 +1098,8 @@ body {
 .pricing-header-pill {
   display: inline-flex;
   flex-direction: column;
-  align-items: center;
-  gap: 14px; /* + aire entre eyebrow y título */
+  align-items: left;
+  gap: 0px; /* + aire entre eyebrow y título */
   padding: 28px 64px; /* + aire lateral y vertical */
   /*border-radius: 999px;
   background: linear-gradient(135deg, #1d7a67, #2e9b84, #6fdac0);
@@ -1099,19 +1107,19 @@ body {
     0 24px 55px rgba(29, 122, 103, 0.45),
     inset 0 0 0 1px rgba(255, 255, 255, 0.22);
     */
-  text-align: center;
-  margin: 0 auto 46px;
+  text-align: left;
+  margin: 0 auto 0px;
   max-width: 1100px; /* evita que se vea “gorda” de más */
   width: fit-content;
 }
 
 /* TEXTO SUPERIOR */
 .pricing-eyebrow-pill {
-  font-size: 22px;
+  font-size: 35px;
   font-weight: 900;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: rgba(4, 92, 33, 0.95);
+  letter-spacing: 0px;
+  /*text-transform: uppercase;*/
+  color: #1e2e2a;
   opacity: 0.9;
 }
 
@@ -1135,9 +1143,9 @@ body {
 }
 
 .pricing-section h2 {
-  font-size: 30px;
+  font-size: 38px;
   margin-bottom: 18px;
-  color: #1e2926;
+  color: #2E7A69;
   font-weight: 800;
   letter-spacing: -0.5px;
 }
@@ -1276,6 +1284,7 @@ body {
   cursor: pointer;
   border: none;
   transition: 0.25s ease;
+  margin-left: 50px;
 }
 
 .plan-btn:hover {
