@@ -2000,6 +2000,23 @@ body {
     0 12px 35px rgba(0,0,0,0.45);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ================= HOVER CARD ================= */
 
 /* TARJETA HOVER */
@@ -2053,6 +2070,69 @@ body {
   transform: translateY(0);
   pointer-events: auto;
 }
+
+
+
+
+
+
+
+
+/* ================= TIMELINE INFO (SIEMPRE VISIBLE) ================= */
+
+.visitia-timeline-hover-card{
+  position: static;          /* antes: absolute */
+  top: auto;                 /* por si quedaba heredado */
+  width: min(320px, 92%);    /* responsivo, no se desborda */
+  margin-top: 14px;          /* separación debajo del título */
+  opacity: 1;                /* siempre visible */
+  transform: none;
+  pointer-events: auto;
+
+  background: rgba(255,255,255,0.08);  /* funciona bien en fondos oscuros */
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.28);
+  backdrop-filter: blur(8px);
+}
+
+/* texto dentro */
+.visitia-timeline-hover-card p{
+  font-size: 13.5px;
+  color: #2f423c;
+  line-height: 1.55;
+  margin: 0 0 10px 0;
+}
+
+/* link */
+.visitia-timeline-hover-card a{
+  color: #5f9f8e;
+  font-weight: 900;
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+/* elimina la lógica hover previa (por si queda) */
+.visitia-timeline-item:hover .visitia-timeline-hover-card,
+.visitia-timeline-hover-card:hover{
+  opacity: 1;
+  transform: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* =========================================================
    CTA FINAL
@@ -2762,6 +2842,9 @@ body {
 
 
 
+
+
+
 /* ===============================
    TUTORIALES — CARRUSELES PRO
 =============================== */
@@ -2784,7 +2867,6 @@ body {
 }
 
 /* ========= BLOQUE ========= */
-
 .tutorial-block {
   margin-bottom: 140px;
   position: relative;
@@ -2811,7 +2893,6 @@ body {
 }
 
 /* ========= CARRUSEL FULL WIDTH ========= */
-
 .tutorial-carousel {
   display: flex;
   gap: 28px;
@@ -2838,7 +2919,6 @@ body {
 }
 
 /* ========= SLIDE ========= */
-
 .tutorial-slide {
   flex: 0 0 420px;
   height: 260px;
@@ -2846,16 +2926,21 @@ body {
   overflow: hidden;
   position: relative;
   background: #000;
-  box-shadow: 
+  box-shadow:
     0 22px 50px rgba(0,0,0,0.32),
     inset 0 0 0 1px rgba(255,255,255,0.05);
-  text-decoration: none;
+
+  /* Cambios por ser button */
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
   transition: 0.4s cubic-bezier(.2,.8,.2,1);
 }
 
 .tutorial-slide:hover {
   transform: translateY(-10px) scale(1.04);
-  box-shadow: 
+  box-shadow:
     0 34px 70px rgba(0,0,0,0.42);
 }
 
@@ -2867,7 +2952,6 @@ body {
 }
 
 /* ========= OVERLAY ========= */
-
 .tutorial-slide::after {
   content: "";
   position: absolute;
@@ -2881,8 +2965,7 @@ body {
   pointer-events: none;
 }
 
-/* ========= BADGE DEL TÍTULO (CONTENEDOR VISUAL) ========= */
-
+/* ========= BADGE DEL TÍTULO ========= */
 .tutorial-slide span {
   position: absolute;
   bottom: 18px;
@@ -2906,7 +2989,6 @@ body {
 }
 
 /* ========= FLECHAS ========= */
-
 .tutorial-nav {
   position: absolute;
   top: 95%;
@@ -2925,6 +3007,7 @@ body {
   transition: 0.35s ease;
   opacity: 0;
   box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  border: none;
 }
 
 .tutorial-nav:hover {
@@ -2938,6 +3021,153 @@ body {
 
 .tutorial-nav.left { left: 20px; }
 .tutorial-nav.right { right: 20px; }
+
+/* ===============================
+   MODAL PDF (EMBED)
+=============================== */
+.pdf-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.pdf-modal.is-open {
+  display: block;
+}
+
+.pdf-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
+}
+
+.pdf-modal__dialog {
+  position: relative;
+  width: min(1100px, calc(100% - 28px));
+  height: min(82vh, 760px);
+  margin: 6vh auto 0 auto;
+
+  border-radius: 18px;
+  overflow: visible;
+  background: #0b0b0f;
+  box-shadow: 0 30px 90px rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.pdf-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.pdf-modal__title {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+}
+
+.pdf-modal__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pdf-modal__open {
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.pdf-modal__open:hover {
+  border-color: rgba(255,255,255,0.25);
+}
+
+.pdf-modal__close {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.92);
+  cursor: pointer;
+}
+
+.pdf-modal__close:hover {
+  border-color: rgba(255,255,255,0.25);
+}
+
+.pdf-modal__body{
+  height: calc(100% - 57px);
+  background: transparent;
+
+  padding: 10px;              /* margen general */
+  padding-bottom: 18px;       /* evita corte de última hoja */
+  box-sizing: border-box;
+}
+
+
+.pdf-embed{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #0b0b0f;
+
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+.pdf-fallback{
+  display:none;
+  padding: 14px 16px;
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+}
+
+.pdf-fallback a{
+  color: rgba(255,255,255,0.9);
+}
+
+/* Mobile tweaks */
+@media (max-width: 720px){
+  .tutorial-carousel{ padding: 32px 18px 48px 18px; }
+  .tutorial-slide{ flex-basis: 82vw; height: 240px; }
+  .tutorial-block h3{ font-size: 30px; }
+  .pdf-modal__dialog{ height: 86vh; margin-top: 4vh; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ========= RESPONSIVE ========= */
 
@@ -3091,7 +3321,7 @@ body {
 
 /* Número destacado en color Visitia */
 .tutorial-slide span::first-line {
-  color: #2fdac2;
+  /*color: #2fdac2;*/
   font-weight: 900;
 }
 
