@@ -1931,7 +1931,7 @@ body {
   height: 52px;
   border-radius: 50%;
   background: linear-gradient(135deg, #1d7a67, #2e9b84);
-  color: white;
+  color: rgb(193, 20, 20);
   font-weight: 900;
   display: flex;
   align-items: center;
