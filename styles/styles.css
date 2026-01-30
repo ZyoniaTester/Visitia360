@@ -1705,8 +1705,7 @@ body {
 ========================================================= */
 
 .visitia-footer {
-  background: #1e2926;
-  /* Verde oscuro Visitia */
+  background: #1e2926; /* Verde oscuro Visitia */
   color: #f5f3f0;
   padding: 60px 0 30px;
   margin-top: 90px;
@@ -1743,14 +1742,14 @@ body {
   opacity: 1;
 }
 
-/* Hover elegante */
+/ Hover elegante /
 .footer-col li:hover {
   color: #ffffff;
   cursor: pointer;
   opacity: 1;
 }
 
-/* Línea inferior */
+/ Línea inferior /
 .footer-bottom {
   margin-top: 50px;
   text-align: center;
@@ -1765,7 +1764,25 @@ body {
   text-decoration: none;
 }
 
+.footer-image {
+  margin-top: 14px;
+  opacity: 0.9;
+}
 
+.footer-image img {
+  max-width: 160px;
+  width: 100%;
+  height: auto;
+  display: block;
+  /filter: grayscale(100%) brightness(0.95);/
+  transition: 0.3s ease;
+}
+
+/* Hover elegante */
+.footer-image img:hover {
+  filter: grayscale(0%) brightness(1);
+  transform: translateY(-2px);
+}
 
 
 
