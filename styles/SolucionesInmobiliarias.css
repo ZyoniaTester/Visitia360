@@ -929,6 +929,106 @@ body {
 
 
 
+/* ===============================
+   PREMIUM — FLOAT BADGE (VR)
+   (Solo plan PREMIUM)
+=============================== */
+.plan-vr{
+  position: relative;
+  overflow: visible;
+}
+
+/* Badge “sticker” encajado en el borde */
+.premium-float-badge{
+  position: absolute;
+  top: -40px;              /* 👈 sube el badge (mitad fuera / mitad dentro) */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 14px;
+  border-radius: 16px;
+
+  /* más “sticker”, menos “caja blanca” */
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(214,199,255,0.75);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  pointer-events: none;
+  max-width: 300px;
+  width: max-content;
+  padding: 12px 20px;
+}
+
+/* chip VR */
+.premium-float-badge__chip{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+
+  color: #1e2926;
+  background: linear-gradient(135deg, rgba(214,199,255,1), rgba(195,219,247,1));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.85);
+}
+
+/* texto */
+.premium-float-badge__text{
+  font-size: 12.5px;
+  font-weight: 850;
+  color: #1e2926;
+  line-height: 1.05;
+}
+
+/* halo atrás, pero más controlado (no “cabecera”) */
+.premium-float-badge__spark{
+  position: absolute;
+  inset: -14px -18px;
+  z-index: -1;
+  border-radius: 18px;
+  background: radial-gradient(circle at 35% 30%,
+    rgba(214,199,255,0.55),
+    rgba(195,219,247,0.18),
+    rgba(255,255,255,0));
+  filter: blur(10px);
+  opacity: 0.9;
+}
+
+/* Mobile */
+@media (max-width: 520px){
+  .premium-float-badge{
+    top: -30px;
+    padding: 9px 12px;
+    max-width: 94%;
+  }
+  .premium-float-badge__text{
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1442,7 +1542,7 @@ body {
 ========================================================= */
 
 .visitia-footer {
-  background: #1e2926; /* Verde oscuro Visitia */
+  background: #1e2926;
   color: #f5f3f0;
   padding: 60px 0 30px;
   margin-top: 90px;
@@ -1474,19 +1574,19 @@ body {
 .footer-title {
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 14px !important;
+  margin-bottom: 14px;
   font-size: 1rem;
   opacity: 1;
 }
 
-/ Hover elegante /
+/* Hover elegante */
 .footer-col li:hover {
   color: #ffffff;
   cursor: pointer;
   opacity: 1;
 }
 
-/ Línea inferior /
+/* Línea inferior */
 .footer-bottom {
   margin-top: 50px;
   text-align: center;
@@ -1501,6 +1601,7 @@ body {
   text-decoration: none;
 }
 
+/* Imagen del footer */
 .footer-image {
   margin-top: 14px;
   opacity: 0.9;
@@ -1511,13 +1612,10 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  /filter: grayscale(100%) brightness(0.95);/
   transition: 0.3s ease;
 }
 
-/* Hover elegante */
 .footer-image img:hover {
-  filter: grayscale(0%) brightness(1);
   transform: translateY(-2px);
 }
 
@@ -2541,23 +2639,92 @@ body {
 }
 
 /* =========================================================
-   VIDEO PANEL
+   VIDEO FRAME (uniforme + editable)
+   - Tú controlas tamaño del cuadro (width/height o aspect-ratio)
+   - El video NUNCA se deforma (cover)
+   - Ajustas recorte con --scale
 ========================================================= */
-.video-panel {
-    border-radius: 26px;
-    overflow: hidden;
-    background: transparent;
-    padding: 16px;
-    box-shadow:
-        0 20px 55px rgba(0,0,0,0.35),
-        inset 0 0 0 1px rgba(255,255,255,0.1);
+
+/* Contenedor principal del video */
+.video-frame {
+  /* tamaño base (puedes cambiarlo) */
+  width: 100%;
+  max-width: 560px;         /* controla qué tan ancho se ve */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* forma del cuadro: elige UNA opción */
+  aspect-ratio: 16 / 9;     /* recomendado para YouTube */
+  /* height: 340px; */      /* si prefieres altura fija */
+
+  border-radius: 26px;
+  overflow: hidden;
+
+  background: radial-gradient(circle at top, #203c35, #0f1f1b);
+  box-shadow:
+    0 24px 60px rgba(0,0,0,0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.08);
+
+  /* control fino del “zoom” sin deformar */
+  --scale: 1.08;
 }
 
-.video-panel iframe {
-    width: 100%;
-    height: 320px;
-    border-radius: 18px;
-    aspect-ratio: 16 / 9;
+/* Capa interna que asegura el recorte correcto */
+.video-embed {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Iframe en modo "cover" sin chatear (sin deformar) */
+.video-embed iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  /* cover real (como object-fit, pero para iframe) */
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%) scale(var(--scale));
+
+  border: 0;
+}
+
+/* Responsive: en móvil reduce un poco la presencia */
+@media (max-width: 900px) {
+  .video-frame {
+    max-width: 100%;
+    /* si quieres: aspect-ratio: 16 / 10; */
+  }
+}
+
+/* BÁSICO */
+.video-frame--basic {
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  --scale: 1.01;
+}
+
+/* PRO */
+.video-frame--pro {
+  max-width: 620px;   /* un poco más ancho */
+  aspect-ratio: 16 / 9;
+  --scale: 1.01;      /* un pelín más zoom */
+}
+
+/* PREMIUM ONLINE */
+.video-frame--premium-online {
+  max-width: 620px;
+  aspect-ratio: 16 / 9;
+  --scale: 1.01;
+}
+
+/* VR (si lo ocupas distinto) */
+.video-frame--vr {
+  max-width: 600px;
+  aspect-ratio: 16 / 9;
+  --scale: 1.01;
 }
 
 /* =========================================================

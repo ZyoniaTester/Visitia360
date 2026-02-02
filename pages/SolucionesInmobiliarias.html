@@ -318,11 +318,23 @@
 
         <!-- REALIDAD VIRTUAL -->
         <article class="plan-card plan-vr" onclick="scrollToPlan('plan-vr')">
+
+          
+          <!-- REALIDAD VIRTUAL -->
+
+  <!-- BADGE FUERA DE LA CARD (pero anclado a ella) -->
+  <div class="premium-float-badge" aria-hidden="true">
+    <span class="premium-float-badge__chip">VR</span>
+    <span class="premium-float-badge__text">Posibilidad de usar con Realidad Virtual</span>
+    <span class="premium-float-badge__spark" aria-hidden="true"></span>
+  </div>
+
+
           <div class="plan-header">
             <span class="plan-name">💡PREMIUM</span>
             <!--<span class="plan-price">99,95€/mes</span>-->
             <span class="plan-price" data-monthly="69,95€/mes" data-annual="83,29€/mes · facturado anualmente">
-              99,95€/mes
+              Desde 69,95€/mes
             </span>
 
           </div>
@@ -330,10 +342,10 @@
           <p class="plan-sub">Para una experiencia inmersiva</p>
 
           <ul class="plan-features">
-            <li><strong>Integra el tour 360 en nuestro software inmersivo con mapas 3D </strong> 🎆</li>
-            <li><strong>Visita guiada con agente en remoto</strong> 📍</li>
-            <li><strong>Firma parte visita</strong> virtual 🏡</li>
-           
+            <li><strong>Online o en Realidad Virtual </strong></li>
+            <li><strong>Integra el tour 360 en nuestro software inmersivo con mapas 3D</strong></li>
+            <li><strong>Visita guiada con agente en remoto</strong></li>
+            <li><strong>Firma parte visita virtual</strong></li>
           </ul>
 
           <div class="plan-highlight">
@@ -397,14 +409,6 @@
               <td class="yes">✓</td>
             </tr>
 
-            <!-- <tr>
-              <td>Vídeo resumen del tour</td>
-              <td class="no">✗</td>
-              <td class="yes">✓</td>
-              <td class="yes">✓</td>
-              <td class="yes">✓</td>
-            </tr> -->
-
             <tr>
               <td>Mapas 3D de la ciudad</td>
               <td class="no">✗</td>
@@ -414,22 +418,12 @@
             </tr>
 
             <tr>
-              <td>Tour 360 en Realidad Virtual</td>
+              <td>Posibilidad tour en Realidad Virtual</td>
               <td class="no">✗</td>
               <td class="no">✗</td>
               <td class="no">✗</td>
               <td class="yes">✓</td>
             </tr>
-
-            <!--
-      <tr>
-        <td>Visita virtual guiada</td>
-        <td class="no">✗</td>
-        <td class="no">✗</td>
-        <td class="yes">✓</td>
-        <td class="yes">✓</td>
-      </tr>
--->
 
             <tr>
               <td>Visita guiada por agente online</td>
@@ -444,7 +438,6 @@
               <td>3</td>
               <td>15</td>
               <td>25</td>
-              <!--<td class="pro-highlight">50</td>-->
               <td>25</td>
             </tr>
           </tbody>
@@ -497,7 +490,7 @@
             <ul>
               <li>
                 Home staging (decoración virtual) con
-                <strong>con Inteligencia Artificial,</strong>
+                <strong>Inteligencia Artificial,</strong>
                 para que puedas modificar cualquier foto y crear un tour con decoración virtual.
               </li>
 
@@ -514,13 +507,18 @@
 
           <!-- VIDEO -->
           <div class="plan-detail-video">
-            <div class="video-panel">
-              <iframe
-                src="https://www.youtube.com/embed/R9-QaeImWtY?autoplay=1&mute=1&loop=1&playlist=R9-QaeImWtY&controls=0&modestbranding=1&rel=0"
-                title="Vídeo representativo Visitia" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-              </iframe>
-            </div>
-          </div>
+  <div class="video-frame video-frame--basic">
+    <div class="video-embed">
+      <iframe
+        src="https://www.youtube.com/embed/R9-QaeImWtY?autoplay=1&mute=1&loop=1&playlist=R9-QaeImWtY&controls=0&modestbranding=1&rel=0"
+        title="Vídeo representativo Visitia"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
 
         </div>
 
@@ -552,7 +550,7 @@
             <div class="visitia-timeline-dot">3</div>
             <span class="visitia-timeline-title">Sube tus fotos a <span class="logo-inline"></span></span>
             <div class="visitia-timeline-hover-card">
-              <p>Tu tour queda listo con video, enlace y código web.</p>
+              <p>En nuestra plataforma de <span class="logo-inline"></span></span> podrás ver paso a paso cómo subir las fotos y generar el tour 360</p>
               <a href="https://homestaging.visitiacloud.com/">Subir fotos</a>
             </div>
           </div>
@@ -571,6 +569,196 @@
 
 
 
+<!-- PLAN PRO -->
+<section id="plan-pro" class="plan-detail-section bg-plan-pro">
+
+  <!-- TITULO EDITORIAL -->
+  <div class="plan-editorial-header plan-pro-titulo">
+    <h2>PLAN PRO</h2>
+    <p>TOUR 360 + MAPAS 3D</p>
+  </div>
+
+  <!-- ✅ MISMO LAYOUT QUE PLAN VR -->
+  <div class="plan-detail-layout">
+
+    <div class="plan-detail-text">
+      <p>
+        <strong>Crea tours 360 al instante en nuestra plataforma e integra el tour en un mapa 3D. Incluye:</strong>
+      </p>
+
+      <ul>
+        <li>
+          Home staging (decoración virtual) con
+          <strong>Inteligencia Artificial</strong>,
+          para que puedas modificar cualquier foto y crear un tour con decoración virtual.
+        </li>
+
+        <li>
+          Añade la ubicación orientativa para
+          <strong>situar el tour 360 sobre el mapa 3D de la ciudad de tu interés</strong>
+        </li>
+
+        <li>
+          Enlace del tour virtual para
+          <strong>compartir con tus clientes e incluirlo en tu web</strong>,
+          <strong>en Idealista, Fotocasa, etc.</strong>
+        </li>
+      </ul>
+    </div>
+
+    <!-- PRO -->
+    <div class="plan-detail-video">
+  <div class="video-frame video-frame--pro">
+    <div class="video-embed">
+      <iframe
+        src="https://www.youtube.com/embed/7NVZ3xDhxyo?autoplay=1&mute=1&loop=1&playlist=7NVZ3xDhxyo&controls=0&modestbranding=1&rel=0"
+        title="Demo software inmersivo online"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+
+  <div class="steps-row-heading">Pasos a seguir</div>
+
+  <div class="visitia-timeline-horizontal">
+    <div class="visitia-timeline-track"></div>
+
+    <div class="visitia-timeline-item">
+      <div class="visitia-timeline-dot">1</div>
+      <span class="visitia-timeline-title">Captura la propiedad</span>
+      <div class="visitia-timeline-hover-card">
+        <p>Realiza las fotografías 360 del inmueble.</p>
+        <a href="/pages/SolucionesInmobiliarias.html#tutoriales">Ver tutorial</a>
+      </div>
+    </div>
+
+    <div class="visitia-timeline-item">
+      <div class="visitia-timeline-dot">2</div>
+      <span class="visitia-timeline-title">Sube las fotos</span>
+      <div class="visitia-timeline-hover-card">
+        <p>Sube las fotos 360 al portal de <span class="logo-inline"></span>.</p>
+        <a href="https://homestaging.visitiacloud.com/">Subir archivos</a>
+      </div>
+    </div>
+
+    <div class="visitia-timeline-item">
+      <div class="visitia-timeline-dot">3</div>
+      <span class="visitia-timeline-title">Tour Premium listo</span>
+      <div class="visitia-timeline-hover-card">
+        <p>Añade una ubicación orientativa para activar el tour 360 con mapas 3D.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="plan-detail-cta">
+    <a href="https://homestaging.visitiacloud.com/" class="plan-btn">Suscríbete</a>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+      <!-- PLAN PREMIUM ONLINE -->
+<section id="plan-vr" class="plan-detail-section bg-plan-vr">
+
+  <!-- TITULO EDITORIAL -->
+  <div class="plan-editorial-header plan-vr-titulo">
+    <h2>Plan Premium, software inmersivo online</h2>
+    <p>MAPAS 3D INTERACTIVOS</p>
+  </div>
+
+  <!-- ✅ MISMO LAYOUT QUE PLAN VR -->
+  <div class="plan-detail-layout">
+
+    <div class="plan-detail-text">
+      <p>
+        <strong>Crea tours 360 al instante en nuestra plataforma e integra el tour en un mapa 3D. Incluye:</strong>
+      </p>
+
+      <ul>
+        <li>
+          Home staging (decoración virtual) con
+          <strong>Inteligencia Artificial</strong>,
+          para que puedas modificar cualquier foto y crear un tour con decoración virtual.
+        </li>
+
+        <li>
+          Añade la ubicación orientativa para
+          <strong>situar el tour 360 sobre el mapa 3D de la ciudad de tu interés</strong>
+        </li>
+
+        <li>
+          Enlace del tour virtual para
+          <strong>compartir con tus clientes e incluirlo en tu web</strong>,
+          <strong>en Idealista, Fotocasa, etc.</strong>
+        </li>
+      </ul>
+    </div>
+
+    <div class="plan-detail-video">
+  <div class="video-frame video-frame--premium-online">
+    <div class="video-embed">
+      <iframe
+        src="https://www.youtube.com/embed/IY4VazTe0qw?autoplay=1&mute=1&loop=1&playlist=IY4VazTe0qw&controls=0&modestbranding=1&rel=0"
+        title="Demo software inmersivo online"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+
+  <div class="steps-row-heading">Pasos a seguir</div>
+
+  <div class="visitia-timeline-horizontal">
+    <div class="visitia-timeline-track"></div>
+
+    <div class="visitia-timeline-item">
+      <div class="visitia-timeline-dot">1</div>
+      <span class="visitia-timeline-title">Captura la propiedad</span>
+      <div class="visitia-timeline-hover-card">
+        <p>Realiza las fotografías 360 del inmueble.</p>
+        <a href="/pages/SolucionesInmobiliarias.html#tutoriales">Ver tutorial</a>
+      </div>
+    </div>
+
+    <div class="visitia-timeline-item">
+      <div class="visitia-timeline-dot">2</div>
+      <span class="visitia-timeline-title">Sube las fotos</span>
+      <div class="visitia-timeline-hover-card">
+        <p>Sube las fotos 360 al portal de <span class="logo-inline"></span>.</p>
+        <a href="https://homestaging.visitiacloud.com/">Subir archivos</a>
+      </div>
+    </div>
+
+    <div class="visitia-timeline-item">
+      <div class="visitia-timeline-dot">3</div>
+      <span class="visitia-timeline-title">Tour Premium listo</span>
+      <div class="visitia-timeline-hover-card">
+        <p>Añade una ubicación orientativa para activar el tour 360 con mapas 3D.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="plan-detail-cta">
+    <a href="https://homestaging.visitiacloud.com/" class="plan-btn">Suscríbete</a>
+  </div>
+
+</section>
 
 
 
@@ -579,97 +767,6 @@
 
 
 
-      <!-- PLAN PRO -->
-      <section id="plan-pro" class="plan-detail-section bg-plan-pro">
-
-        <!-- TITULO EDITORIAL -->
-        <div class="plan-editorial-header plan-pro-titulo">
-          <h2>PLAN PRO</h2>
-          <p>Tour 360 + mapas 3D</p>
-        </div>
-
-        <div class="plan-detail-text">
-
-            <p>
-              <strong>Crea tours 360 al instante en nuestra plataforma e integra el tour en un mapa 3D. Incluye:</strong>
-            </p>
-
-            <ul>
-              <li>
-                Home staging (decoración virtual) con
-                <strong>con Inteligencia Artificial,</strong>
-                para que puedas modificar cualquier foto y crear un tour con decoración virtual.
-              </li>
-
-
-               <li>
-                Añade la ubicación orientativa para 
-                <strong>situar el tour 360 sobre el mapa 3D de la ciudad de tu interés</strong>
-               
-              </li>
-
-
-              <li>
-                Enlace del tour virtual para
-                <strong>compartir con tus clientes e incluirlo en tu web,</strong>
-                 <strong> en Idealista, en Fotocasa, etc.</strong>
-                
-              </li>
-
-              <!--<li>
-                Además, puedes subir el <strong>plano 2D de la propiedad</strong>,
-                amueblarlo, ajustarlo y realizar modificaciones para
-                darle un acabado más profesional y comercial.
-              </li>
-
-              <li>
-                Una vez creado, obtendrás un
-                <strong>enlace directo del tour virtual</strong>
-                listo para compartir, enviar o integrar donde lo necesites.
-              </li>
-            -->
-            </ul>
-          </div>
-
-        <div class="steps-row-heading">Pasos a seguir</div>
-
-        <div class="visitia-timeline-horizontal">
-          <div class="visitia-timeline-track"></div>
-
-          <div class="visitia-timeline-item">
-            <div class="visitia-timeline-dot">1</div>
-            <span class="visitia-timeline-title">Captura la propiedad</span>
-            <div class="visitia-timeline-hover-card">
-              <p>Realiza las fotografías 360 del inmueble.</p>
-              <a href="/pages/SolucionesInmobiliarias.html#tutoriales">Ver tutorial</a>
-            </div>
-          </div>
-
-          <div class="visitia-timeline-item">
-            <div class="visitia-timeline-dot">2</div>
-            <span class="visitia-timeline-title">Sube las fotos</span>
-            <div class="visitia-timeline-hover-card">
-              
-              <p>Sube las fotos 360 al portal de <span class="logo-inline"></span>.</p>
-              <a href="https://homestaging.visitiacloud.com/">Subir archivos</a>
-            </div>
-          </div>
-
-          <div class="visitia-timeline-item">
-            <div class="visitia-timeline-dot">3</div>
-            <span class="visitia-timeline-title">Tour Pro listo</span>
-            <div class="visitia-timeline-hover-card">
-              <p>Añade una ubicación orientativa para activar el tour 360 con mapas 3D.</p>
-              
-            </div>
-          </div>
-        </div>
-
-        <div class="plan-detail-cta">
-          <a href="https://homestaging.visitiacloud.com/" class="plan-btn">Suscríbete</a>
-        </div>
-
-      </section>
 
 
 
@@ -680,19 +777,12 @@
 
 
 
-
-
-
-
-
-
-
-      <!-- PLAN REALIDAD VIRTUAL -->
+      <!-- PLAN PREMIUM REALIDAD VIRTUAL -->
       <section id="plan-vr" class="plan-detail-section bg-plan-vr">
 
         <!-- TITULO EDITORIAL -->
         <div class="plan-editorial-header">
-          <h2>PLAN REALIDAD VIRTUAL</h2>
+          <h2>Plan Premium Realidad Virtual:</h2>
           <p>Experiencia inmersiva 360°</p>
         </div>
 
@@ -727,13 +817,19 @@
           </div>
 
           <div class="plan-detail-video">
-            <div class="video-panel">
-              <iframe
-                src="https://www.youtube.com/embed/IY4VazTe0qw?autoplay=1&mute=1&loop=1&playlist=IY4VazTe0qw&controls=0&modestbranding=1&rel=0"
-                title="Vídeo representativo Visitia" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-              </iframe>
-            </div>
-          </div>
+  <div class="video-frame video-frame--premium-online">
+    <div class="video-embed">
+      <iframe
+        src="https://www.youtube.com/embed/IY4VazTe0qw?autoplay=1&mute=1&loop=1&playlist=IY4VazTe0qw&controls=0&modestbranding=1&rel=0"
+        title="Demo software inmersivo online"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
+
 
         </div>
 
@@ -773,7 +869,7 @@
             <div class="visitia-timeline-dot">4</div>
             <span class="visitia-timeline-title">Sube las fotos</span>
             <div class="visitia-timeline-hover-card">
-              <p>Una vez subas las fotos al portal de <span class="logo-inline"></span>te prepararemos el tour en realidad virtual.</p>
+              <p>Una vez subas las fotos al portal de <span class="logo-inline"></span>te prepararemos el tour en Realidad Virtual.</p>
             <!--<a href="https://homestaging.visitiacloud.com/">Activar tour</a>-->
             </div>
           </div>
@@ -978,25 +1074,16 @@
         <ul class="footer-col" data-reveal="fade-up">
           <li class="footer-title">Suscríbete al newsletter</li>
           <li><a class="footer-link-clean" href="/index.html#contacto">Contáctanos</a></li>
-          <li class="footer-image">
-            <img src="/images/Logo Deusto Emprende Blanco.webp" alt="Deusto Emprende">
-          </li>
         </ul>
 
         <ul class="footer-col" data-reveal="fade-up">
           <!--<li class="footer-title">Consulta nuestro blog</li>-->
           <li><a class="footer-link-clean footer-title" href="">LinkedIn</a></li>
-          <li class="footer-image">
-            <img src="/images/SELLO WEB fiveclm.webp" alt="Emprende">
-          </li>
         </ul>
 
         <ul class="footer-col" data-reveal="fade-up">
           <li><a class="footer-link-clean footer-title" href="/pages/privacy.html">Política de Privacidad</a></li>
           <li><a class="footer-link-clean" href="https://zyonia.com/">ZYONIA SL</a></li>
-          <li class="footer-image">
-            <img src="/images/bat-horizontal-alta-1.webp" alt="Emprende">
-          </li>
         </ul>
 
         <ul class="footer-col" data-reveal="fade-up">
