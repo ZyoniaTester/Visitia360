@@ -37,7 +37,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   vertical-align: 0px;
-  margin-left: -6px;
+  margin-left: 0px;
 }
 
 .logo-title {
@@ -3801,7 +3801,88 @@ body {
 
 
 
+/* =========================================================
+   PRICING CARDS — ALIGN FIX (pegar al FINAL del CSS)
+========================================================= */
 
+/* 1) La card como columna "estructurada" */
+.plan-card{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* 2) Reservamos alturas consistentes por bloque */
+.plan-header{
+  min-height: 78px;           /* ajusta si quieres */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+/* subtítulo: mismo alto en todas */
+.plan-sub{
+  min-height: 44px;           /* si te brinca en móvil, bájalo */
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+/* 3) La lista debe ocupar el "cuerpo" y empujar lo de abajo */
+.plan-features{
+  flex: 1;                    /* clave: iguala alturas */
+  margin: 0;                  /* quitamos variaciones */
+  padding-left: 18px;         /* reemplaza margin-left */
+  text-align: left;
+}
+
+.plan-features li{
+  margin: 0 0 8px 0;
+  line-height: 1.5;
+}
+
+/* 4) Cuadro verde: misma altura visual para alinear entre cards */
+.plan-highlight{
+  min-height: 56px;           /* sube/baja según tu texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;    /* o left si lo prefieres */
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* 5) Nota: reserva alto fijo para que el botón caiga igual */
+.plan-note{
+  min-height: 44px;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+/* 6) Botón SIEMPRE abajo */
+.plan-btn{
+  margin-top: auto;           /* clave: lo pega al fondo */
+  align-self: center;         /* centra botón (si lo quieres a la izq, quita esto) */
+}
+
+/* Si quieres el botón a la izquierda como antes, usa esto en vez de align-self:center */
+/*
+.plan-btn{
+  margin-top: auto;
+  align-self: flex-start;
+}
+*/
+
+/* 7) Ajuste especial: la card PREMIUM tiene badge flotante,
+      dale un poco de aire arriba para que no "aplasten" visualmente */
+.plan-vr{
+  padding-top: 40px;          /* compensa el badge flotante */
+}
+
+.primer-card{
+  margin-bottom: 70px;
+}
 
 
 
