@@ -3828,6 +3828,7 @@ body {
   margin: 0 0 10px 0;
   display: flex;
   align-items: center;
+  margin-left: 50px;
 }
 
 /* 3) La lista debe ocupar el "cuerpo" y empujar lo de abajo */
