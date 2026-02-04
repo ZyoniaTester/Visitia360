@@ -544,6 +544,41 @@ body {
 
 
 
+/* =========================================================
+   LISTAS VISITIA — OTROS SECTORES
+========================================================= */
+
+.sector-content ul {
+  list-style: none;      /* quitamos bullet nativo */
+  padding: 0;
+  margin: 0;
+}
+
+.sector-content ul li {
+  position: relative;
+  padding-left: 18px;    /* espacio para el bullet */
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* Bullet verde Visitia */
+.sector-content ul li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #2ba383, #71d6bb);
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  transform: translateY(-50%);
+}
+
+
+
+
+
+
 
 
 

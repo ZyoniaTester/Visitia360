@@ -458,6 +458,43 @@ body {
 
 
 
+/* =========================================================
+   LISTAS VISITIA — PROYECTO A MEDIDA
+========================================================= */
+
+.pm-box ul {
+  list-style: none;   /* quita el bullet nativo */
+  padding: 0;
+  margin: 18px 0 24px;
+}
+
+.pm-box ul li {
+  position: relative;
+  padding-left: 18px;   /* espacio para el bullet custom */
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+/* Bullet verde Visitia */
+.pm-box ul li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #2ba383, #71d6bb);
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  transform: translateY(-50%);
+}
+
+
+
+
+
+
+
+
 
 
 
