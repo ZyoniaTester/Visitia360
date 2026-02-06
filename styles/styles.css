@@ -1264,6 +1264,10 @@ body {
    BLOQUE VIDEO PLANES — PREMIUM
 ======================================== */
 
+.columna-video-escoge {
+  margin-top: 150px;
+}
+
 .plans-video-frame {
   width: 100%;
   background: linear-gradient(145deg, #1e2926, #14201d);

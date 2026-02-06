@@ -84,6 +84,7 @@
 .page-obra .editorial-list li {
   position: relative;
   padding-left: 18px;
+  margin-top: 20px;
 }
 
 .page-obra .enter li::before,
