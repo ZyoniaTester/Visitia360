@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visitia · Proyecto a Medida</title>
-    <link rel="stylesheet" href="/styles/proyectosamedida.css">
-    <link rel="icon" type="image/png" href="/images/Visitia-Favicon.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Visitia</title>
+
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="/styles/styles.css" />
+  <link rel="stylesheet" href="/styles/nav.css" />
+
+  <link rel="stylesheet" href="/styles/proyectosamedida.css" />
+
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="/Visitia-Favicon.png" />
 </head>
 
 <body>
-<!-- ================= HEADER / NAVBAR ================= -->
-  <header class="site-header" data-reveal="fade-down">
+
+  <!-- ==================================================
+     HEADER / NAVBAR (UNIFICADO)
+  =================================================== -->
+  <header class="site-header">
     <div class="container nav-wrapper">
-      <!-- BOTÓN HAMBURGUESA (solo móviles) -->
+
+      <!-- BOTÓN HAMBURGUESA -->
       <div class="mobile-menu-btn" id="mobileMenuBtn">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
       <!-- LOGO -->
       <div>
         <a href="/index.html">
-          <img src="/images/Logo-con-claim sin-fondo.png" class="logo-img" />
+          <img
+            src="/images/Logo-con-claim sin-fondo.png"
+            alt="Visitia"
+            class="logo-img"
+          />
         </a>
       </div>
 
@@ -28,183 +48,344 @@
       <div class="nav-block nav-left">
         <nav class="main-nav" id="mainNav">
 
-  <a href="/index.html" class="nav-btn">Inicio</a>
+          <a href="/index.html" class="nav-btn">Inicio</a>
 
-  <!-- INMOBILIARIAS -->
-  <div class="nav-item-dropdown">
-    <a href="/pages/SolucionesInmobiliarias.html" class="nav-btn">Inmobiliarias</a>
-    <div class="nav-dropdown">
-      <a href="/pages/SolucionesInmobiliarias.html#beneficios">Beneficios</a>
-      <a href="/pages/SolucionesInmobiliarias.html#precios">Precios</a>
-      <a href="/pages/SolucionesInmobiliarias.html#plan-basico">Prueba gratis</a>
-      <a href="/pages/SolucionesInmobiliarias.html#planes">Nuestros planes</a>
-      <a href="/pages/SolucionesInmobiliarias.html#proyecto-a-medida">Proyecto a medida</a>
-      <a href="/pages/SolucionesInmobiliarias.html#tutoriales">Tutoriales</a>
-    </div>
-  </div>
+          <!-- INMOBILIARIAS -->
+          <div class="nav-item-dropdown">
+            <a href="/pages/SolucionesInmobiliarias.html" class="nav-btn">
+              Inmobiliarias
+            </a>
+            <div class="nav-dropdown">
+              <a href="/pages/SolucionesInmobiliarias.html#beneficios">Beneficios</a>
+              <a href="/pages/SolucionesInmobiliarias.html#precios">Precios</a>
+              <a href="/pages/SolucionesInmobiliarias.html#plan-basico">Prueba gratis</a>
+              <a href="/pages/SolucionesInmobiliarias.html#planes">Nuestros planes</a>
+              <a href="/pages/SolucionesInmobiliarias.html#proyecto-a-medida">Proyecto a medida</a>
+              <a href="/pages/SolucionesInmobiliarias.html#tutoriales">Tutoriales</a>
+            </div>
+          </div>
 
-  <!-- OBRA NUEVA -->
-  <div class="nav-item-dropdown">
-    <a href="/pages/ObraNueva.html" class="nav-btn">Obra nueva</a>
-    <div class="nav-dropdown">
-      <a href="/pages/ObraNueva.html#promotoras">Promotoras</a>
-      <a href="/pages/ObraNueva.html#arquitectura">Estudios de arquitectura</a>
-      <a href="/pages/ObraNueva.html#reformas-interiorismo">Reformas</a>
-      <a href="/pages/ObraNueva.html#reformas-interiorismo">Interiorismo</a>
-      <a href="/pages/ObraNueva.html#proyecto-a-medida">Proyecto a medida</a>
-    </div>
-  </div>
+          <!-- OBRA NUEVA -->
+          <div class="nav-item-dropdown">
+            <a href="/pages/ObraNueva.html" class="nav-btn">
+              Obra nueva
+            </a>
+            <div class="nav-dropdown">
+              <a href="/pages/ObraNueva.html#promotoras">Promotoras</a>
+              <a href="/pages/ObraNueva.html#arquitectura">Arquitectura</a>
+              <a href="/pages/ObraNueva.html#reformas-interiorismo">Reformas</a>
+              <a href="/pages/ObraNueva.html#interiorismo">Interiorismo</a>
+              <a href="/pages/ObraNueva.html#proyecto-a-medida">Proyecto a medida</a>
+            </div>
+          </div>
 
-  <!-- OTROS SECTORES -->
-  <div class="nav-item-dropdown">
-    <a href="/pages/OtrosSectores.html" class="nav-btn">Otros sectores</a>
-    <div class="nav-dropdown">
-      <a href="/pages/OtrosSectores.html#nautica">Náutica</a>
-      <a href="/pages/OtrosSectores.html#turismo">Turismo</a>
-      <a href="/pages/OtrosSectores.html#industria">Industria</a>
-      <a href="/pages/OtrosSectores.html#proyecto-a-medida">Proyecto a medida</a>
-      <!-- <a href="blog.html" class="nav-btn">Blog</a> -->
-    </div>
-  </div>
+          <!-- OTROS SECTORES -->
+          <div class="nav-item-dropdown">
+            <a href="/pages/OtrosSectores.html" class="nav-btn">
+              Otros sectores
+            </a>
+            <div class="nav-dropdown">
+              <a href="/pages/OtrosSectores.html#nautica">Náutica</a>
+              <a href="/pages/OtrosSectores.html#turismo">Turismo</a>
+              <a href="/pages/OtrosSectores.html#industria">Industria</a>
+              <a href="/pages/OtrosSectores.html#proyecto-a-medida">Proyecto a medida</a>
+            </div>
+          </div>
 
-  <a href="/pages/proyectosamedida.html" class="nav-btn nav-btn--active">Proyectos a medida</a>
-  <a href="https://homestaging.visitiacloud.com/" class="nav-btn">Área cliente</a>
-  <!-- <a href="blog.html" class="nav-btn">Blog</a> -->
+          <a href="/pages/proyectosamedida.html" class="nav-btn nav-btn--active">
+            Proyectos a medida
+          </a>
 
-</nav>
+          <a href="https://homestaging.visitiacloud.com/" class="nav-btn">
+            Área cliente
+          </a>
 
+        </nav>
       </div>
 
       <!-- BLOQUE DERECHO -->
-      <!-- nav-block -->
       <div class="nav-right" id="navRight">
         <div class="lang-wrapper">
-          <div class="lang-select">ES <span class="chevron">▼</span></div>
+          <div class="lang-select">
+            ES <span class="chevron">▼</span>
+          </div>
           <ul class="lang-dropdown">
             <li>ES</li>
             <li>EN</li>
           </ul>
         </div>
 
-        <a href="https://homestaging.visitiacloud.com/" class="login-btn">Entrar</a>
-        <a href="https://homestaging.visitiacloud.com/" class="cta-btn">Pruébalo gratis</a>
+        <a
+          href="https://homestaging.visitiacloud.com/"
+          class="login-btn"
+        >
+          Entrar
+        </a>
+
+        <a
+          href="https://homestaging.visitiacloud.com/"
+          class="cta-btn"
+        >
+          Pruébalo gratis
+        </a>
       </div>
+
     </div>
   </header>
 
+  <!-- ==================================================
+     MAIN — AQUÍ VA TU CONTENIDO
+  =================================================== -->
+  <main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="container">
-
-
-
-
-
-
-<section class="proj-medida">
+  <section class="proj-medida">
     <div class="pm-badge">Personaliza tu proyecto</div>
 
     <div class="pm-box">
-        <p>
-            Al ser nuestro software completamente personalizable, es una herramienta ideal para 
-            <strong>publicitar nuevos desarrollos</strong> o proyectos ya existentes: 
-        </p>
+      <p>
+        Al ser nuestro software completamente personalizable, es una herramienta ideal para
+        <strong>publicitar nuevos desarrollos</strong> o proyectos ya existentes:
+      </p>
 
-        <ul>
-            <li>Grupos inmobiliarios</li>
-            <li>Desarrollos urbanísticos</li>
-            <li>Centros comerciales</li>
-            <li>Cruceros</li>
-            <li>Hoteles</li>
-            <li>Restaurantes</li>
-            <li>Proyectos industriales</li>
-            <li>Etc</li>
-        </ul>
+      <ul class="pm-list">
+        <li>Grupos inmobiliarios</li>
+        <li>Desarrollos urbanísticos</li>
+        <li>Centros comerciales</li>
+        <li>Cruceros</li>
+        <li>Hoteles</li>
+        <li>Restaurantes</li>
+        <li>Proyectos industriales</li>
+        <li>Etc</li>
+      </ul>
 
-
-      <!-- Dos imágenes (placeholders reales donde irán tus fotos) -->
-        <div class="pm-img-grid">
-            <div class="pm-img">
-                <img src="/images/Proyectos_a_medida_1.png" alt="Imagen referencia 1">
-            </div>
-
-            <div class="pm-img">
-                <img src="/images/Proyectos_a_medida_2.png" alt="Imagen referencia 2">
-            </div>
+      <div class="pm-img-grid">
+        <div class="pm-img">
+          <img src="/images/Proyectos_a_medida_1.png" alt="Imagen referencia 1">
         </div>
 
-        <p>
-            Si estás buscando una <strong>manera impactante</strong> de difundir tu proyecto, podemos ayudarte.  
-            Estas son algunas de las ideas que podemos ofrecerte, entre otras muchas:
-        </p>
-
-        <ul>
-            <li>
-                La creación de <strong>tour inmersivo personalizado</strong> para incorporar en tu página web 
-                y para difundir en redes sociales y medios de comunicación.
-            </li>
-            <li>
-                Tour inmersivo o <strong>experiencia interactiva en Realidad Virtual y Aumentada</strong> diseñada 
-                específicamente para tu proyecto.
-            </li>
-            <li>
-                La <strong>creación de experiencias</strong> dentro del tour virtual o recreaciones.
-            </li>
-            <li>
-                Tour guiado automatizado con <strong>Inteligencia Artificial.</strong>
-            </li>
-        </ul>
-
-       
-
-        <div class="pm-cta">
-            <a href="/index.html#contacto" class="cta-yellow">Contáctanos para una demo gratuita</a>
+        <div class="pm-img">
+          <img src="/images/Proyectos_a_medida_2.png" alt="Imagen referencia 2">
         </div>
+      </div>
+
+      <p>
+        Si estás buscando una <strong>manera impactante</strong> de difundir tu proyecto, podemos ayudarte.
+        Estas son algunas de las ideas que podemos ofrecerte, entre otras muchas:
+      </p>
+
+      <ul class="pm-list">
+        <li>
+          La creación de <strong>tour inmersivo personalizado</strong> para incorporar en tu página web
+          y para difundir en redes sociales y medios de comunicación.
+        </li>
+        <li>
+          Tour inmersivo o <strong>experiencia interactiva en Realidad Virtual y Aumentada</strong> diseñada
+          específicamente para tu proyecto.
+        </li>
+        <li>
+          La <strong>creación de experiencias</strong> dentro del tour virtual o recreaciones.
+        </li>
+        <li>
+          Tour guiado automatizado con <strong>Inteligencia Artificial.</strong>
+        </li>
+      </ul>
+
+      <div class="pm-cta">
+        <a href="/index.html#contacto" class="cta-yellow">Contáctanos para una demo gratuita</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  </main>
+
+  <!-- ==================================================
+     FOOTER (UNIFICADO)
+  =================================================== -->
+  <footer class="visitia-footer">
+    <div class="container footer-inner">
+
+      <ul class="footer-col">
+        <li>
+          <a class="footer-link-clean" href="/index.html#contacto">
+            Contáctanos
+          </a>
+        </li>
+      </ul>
+
+      <ul class="footer-col">
+        <li>
+          <a
+            class="footer-link-clean footer-title"
+            href="https://www.linkedin.com/company/visitia/?viewAsMember=true"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+
+      <ul class="footer-col">
+        <li>
+          <a
+            class="footer-link-clean footer-title"
+            href="/pages/privacy.html"
+          >
+            Política de privacidad
+          </a>
+        </li>
+        <li>
+          <a
+            class="footer-link-clean"
+            href="https://zyonia.com/"
+            target="_blank"
+          >
+            ZYONIA SL
+          </a>
+        </li>
+      </ul>
+
+      <ul class="footer-col">
+        <li>
+          <a
+            class="footer-link-clean footer-title"
+            href="/pages/terminos.html"
+          >
+            Términos y condiciones
+          </a>
+        </li>
+      </ul>
 
     </div>
-</section>
 
+    <div class="footer-bottom">
+      © 2025 Zyonia SL — Plataforma inmersiva para profesionales
+    </div>
+  </footer>
 
+  <!-- ==================================================
+     JS (SOLO LOS NECESARIOS)
+  =================================================== -->
+  <script src="/scripts/navMobile.js"></script>
+  <script src="/scripts/SelectorIdioma.js"></script>
 
-
-
-
-
-
-
-</div> <!-- cierre container -->
-
-
-<!-- ================= FOOTER SIMPLE ================= -->
-    <footer id="blog" class="visitia-footer">
-      <div class="container footer-inner">
-        <ul class="footer-col" data-reveal="fade-up">
-          <!-- <li class="footer-title">Suscríbete al newsletter</li> -->
-          <li><a class="footer-link-clean" href="/index.html#contacto">Contáctanos</a></li>
-        </ul>
-
-        <ul class="footer-col" data-reveal="fade-up">
-          <!--<li class="footer-title">Consulta nuestro blog</li>-->
-          <li><a class="footer-link-clean footer-title" href="https://www.linkedin.com/company/visitia/?viewAsMember=true">LinkedIn</a></li>
-        </ul>
-
-        <ul class="footer-col" data-reveal="fade-up">
-          <li><a class="footer-link-clean footer-title" href="/pages/privacy.html">Política de Privacidad</a></li>
-          <li><a class="footer-link-clean" href="https://zyonia.com/">ZYONIA SL</a></li>
-        </ul>
-
-        <ul class="footer-col" data-reveal="fade-up">
-          <li><a class="footer-link-clean footer-title" href="/pages/terminos.html">Términos y condiciones</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-bottom">
-        © 2025 Zyonia SL — Plataforma inmersiva para profesionales
-      </div>
-    </footer>
-
-
-
-    <script src="/scripts/navDinamico.js"></script>
-    <script src="/scripts/navMouse.js"></script>
-    <script src="/scripts/politicaprivacidad.js"></script>
 </body>
 </html>

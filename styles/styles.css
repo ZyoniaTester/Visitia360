@@ -2956,3 +2956,428 @@ body {
     opacity: 0.85;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------
+----------------------------------------------------------
+--------------------------------------------------------*/
+/* =========================================================
+   iPHONE 16 (y móviles 430px o menos) — FIX CONTENIDO
+   Pegar AL FINAL del CSS
+========================================================= */
+
+/* Asegura que no haya overflow lateral por sombras/grids */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Safe area notch (iPhone) */
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Container: reduce padding lateral en móvil */
+@media (max-width: 430px) {
+  .container {
+    width: calc(100% - 2rem);
+  }
+
+  /* =========================
+     HERO
+  ========================= */
+  .hero-glow {
+    padding: calc(110px + var(--safe-top)) 0 40px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+    padding: 0 16px !important;
+  }
+
+  .badge-pill-green {
+    font-size: 0.8rem;
+    padding: 7px 14px;
+    margin-bottom: 14px;
+  }
+
+  .hero-title-glow {
+    font-size: 1.85rem;
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+
+  .hero-lead {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .hero-highlight {
+    font-size: 1.15rem;
+    margin-bottom: 18px;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-primary-glow,
+  .btn-secondary-glow {
+    width: 100%;
+    text-align: center;
+    padding: 14px 18px;
+  }
+
+  .hero-features {
+    gap: 10px;
+  }
+
+  .feature-item {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 12px 14px;
+  }
+
+  .hero-right .hero-card {
+    border-radius: 22px;
+  }
+
+  /* =========================
+     VISOR ÚNICO (single visual)
+  ========================= */
+  .single-visual-section {
+    margin: 34px 0;
+  }
+
+  .single-visual-wrapper {
+    padding: 0 16px;
+  }
+
+  .single-visual-frame {
+    min-height: 300px;
+    border-radius: 24px;
+  }
+
+  .single-visual-overlay {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    max-width: none;
+  }
+
+  .single-visual-overlay h3 {
+    font-size: 20px;
+    letter-spacing: 0.2px;
+  }
+
+  .single-visual-overlay p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* =========================
+     SECCIONES BASE
+  ========================= */
+  .section {
+    padding: 28px 0 34px;
+  }
+
+  .pill-title {
+    font-size: 26px;
+    line-height: 1.1;
+  }
+
+  .section-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 100%;
+  }
+
+  /* =========================
+     SOLUCIONES (sector-mini-grid)
+  ========================= */
+  .sector-section {
+    padding: 10px 0;
+  }
+
+  .sector-title {
+    font-size: 1.6rem;
+  }
+
+  .sector-desc {
+    font-size: 1rem;
+    margin: 12px auto 26px;
+    padding: 0 10px;
+  }
+
+  .sector-mini-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+    margin-bottom: 28px;
+  }
+
+  .sector-mini {
+    padding: 18px 10px;
+    border-radius: 20px;
+  }
+
+  .mini-icon-img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .mini-text {
+    font-size: 0.92rem;
+  }
+
+  .sector-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 18px;
+  }
+
+  /* =========================
+     PROYECTOS A MEDIDA (bloque oscuro)
+  ========================= */
+  .glowup-proyectos {
+    width: calc(100% - 2rem);
+    padding: 52px 18px;
+    border-radius: 24px;
+  }
+
+  .proyectos-wrapper {
+    padding: 0;
+  }
+
+  .proyectos-title {
+    font-size: 1.55rem;
+    padding-left: 16px;
+    margin-bottom: 20px;
+  }
+
+  .proyectos-title::before {
+    height: 20px;
+    top: 4px;
+  }
+
+  .proyectos-text {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .btn-contacto {
+    width: 100%;
+    padding: 14px 18px;
+  }
+
+  /* =========================
+     TOOLS
+  ========================= */
+  .tools-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tools-note {
+    max-width: 100%;
+  }
+
+  .tools-icons {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 14px !important;
+  }
+
+  .tools-icons img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .tool-card {
+    padding: 18px 16px;
+    border-radius: 18px;
+  }
+
+  /* =========================
+     PLANES
+  ========================= */
+  .section--plans {
+    padding: 30px 0;
+  }
+
+  .plans-layout {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .plans-subtitle {
+    font-size: 1rem;
+  }
+
+  .plan-card {
+    padding: 16px 16px;
+    border-radius: 18px;
+  }
+
+  .cta-pill {
+    width: 100%;
+    text-align: center;
+    padding: 14px 18px;
+  }
+
+  .plans-video-frame {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .plans-video-embed {
+    border-radius: 16px;
+  }
+
+  .plans-video-embed iframe {
+    border-radius: 16px;
+  }
+
+  /* =========================
+     CONTACTO
+  ========================= */
+  .contact-section {
+    padding: 40px 0 40px;
+  }
+
+  .contact-wrapper {
+    width: calc(100% - 2rem);
+    padding: 30px 18px;
+    border-radius: 24px;
+  }
+
+  .contact-header h2 {
+    font-size: 22px;
+    letter-spacing: 0.8px;
+  }
+
+  .contact-header p {
+    font-size: 14px;
+  }
+
+  .contact-btn {
+    width: 100%;
+    padding: 15px 18px;
+  }
+
+  /* =========================
+     FAQ
+  ========================= */
+  .faq-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .faq-question {
+    padding: 16px 16px;
+    font-size: 15px;
+  }
+
+  .faq-answer {
+    padding: 0 16px;
+  }
+
+  .faq-answer.open {
+    padding: 14px 16px 18px;
+  }
+
+  /* =========================
+     TRUST LOGOS
+  ========================= */
+  .trust-logos {
+    margin-top: 40px;
+  }
+
+  .trust-logos-title {
+    font-size: 0.85rem;
+    margin-bottom: 18px;
+  }
+
+  .trust-logos-grid {
+    gap: 22px;
+  }
+
+  .trust-logos-grid img {
+    height: 44px;
+  }
+
+  /* =========================
+     FOOTER
+  ========================= */
+  .visitia-footer {
+    padding: 44px 0 calc(24px + var(--safe-bottom));
+    border-radius: 24px 24px 0 0;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    padding: 0 16px;
+    text-align: left;
+  }
+
+  .footer-bottom {
+    padding: 18px 16px 0;
+  }
+}
+
+/* Extra: ultra pequeño (<= 360px) por si acaso */
+@media (max-width: 360px) {
+  .sector-mini-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

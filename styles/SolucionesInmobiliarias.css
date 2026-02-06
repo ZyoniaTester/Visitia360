@@ -54,255 +54,6 @@ body {
 
 
 
-/* ============================
-   NAVBAR — DOS BLOQUES
-============================ */
-
-.site-header {
-  position: fixed;
-  top: 20px;
-  width: 100%;
-  z-index: 1000;
-}
-
-/* LOS DOS BLOQUES EN UNA SOLA LÍNEA */
-.nav-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* BLOQUES REDONDEADOS */
-.nav-block {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #f3f2f0;
-  padding: 10px 10px;
-  border-radius: 50px;
-  box-shadow: 0px 4px 12px rgba(47, 82, 72, 0.15);
-}
-
-/* BLOQUE IZQUIERDO */
-.nav-left {
-  padding-right: 10px;
-}
-
-.logo-img {
-  height: 100px;
-}
-
-/* MENÚ */
-.main-nav {
-  display: flex;
-  gap: 6px;
-}
-
-.nav-btn {
-  text-decoration: none;
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: transparent;
-  color: #3f5146;
-  font-weight: 600;
-  font-size: 0.88rem;
-  transition: 0.25s ease;
-}
-
-.nav-btn:hover {
-  background: #2e7a69;
-  color: white;
-}
-
-.nav-btn--active {
-  background: #5f9f8e;
-  color: white;
-}
-
-/* BLOQUE DERECHO */
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-/* SELECTOR IDIOMA */
-.lang-wrapper {
-  position: relative;
-}
-
-.lang-select {
-  background: transparent;
-  padding: 10px 14px;
-  border-radius: 999px;
-  font-weight: 600;
-  color: #3f5146;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  transition: 0.25s ease;
-}
-
-.lang-select:hover {
-  background: #2e7a69;
-  color: white;
-}
-
-.lang-dropdown {
-  position: absolute;
-  top: 46px;
-  left: 0;
-  background: #f3f2f0;
-  width: 110%;
-  border-radius: 14px;
-  padding: 8px 0;
-  list-style: none;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-8px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  transition: 0.25s ease;
-  z-index: 1000;
-}
-
-.lang-wrapper.active .lang-dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.lang-dropdown li {
-  padding: 10px 14px;
-  font-weight: 600;
-  color: #3f5146;
-  cursor: pointer;
-}
-
-.lang-dropdown li:hover {
-  background: #2e7a69;
-  color: white;
-}
-
-/* ENTRAR */
-.login-btn {
-  padding: 10px 16px;
-  border-radius: 999px;
-  background: transparent;
-  font-weight: 600;
-  color: #3f5146;
-  transition: 0.25s ease;
-  text-decoration: none;
-}
-
-.login-btn:hover {
-  background: #2e7a69;
-  color: white;
-}
-
-/* CTA */
-.cta-btn {
-  padding: 10px 20px;
-  background: #2e7a69;
-  color: white;
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
-  box-shadow: 0px 4px 10px rgba(46, 122, 105, 0.25);
-  transition: 0.25s ease;
-}
-
-.cta-btn:hover {
-  background: #266a5b;
-  transform: translateY(-2px);
-}
-
-/* ==============================
-   DROPDOWNS DEL NAV
-============================== */
-.nav-item-dropdown {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.nav-dropdown {
-  position: absolute;
-  top: 46px;
-  left: 0;
-  background: #f3f2f0;
-  border-radius: 16px;
-  padding: 10px 0;
-  min-width: 210px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(8px);
-  transition: 0.25s ease;
-  z-index: 2000;
-  border: 1px solid rgba(0,0,0,0.08);
-}
-
-.nav-dropdown a {
-  display: block;
-  padding: 10px 18px;
-  font-weight: 600;
-  color: #3f5146;
-  text-decoration: none;
-  transition: 0.2s ease;
-  font-size: 0.9rem;
-}
-
-.nav-dropdown a:hover {
-  background: #2e7a69;
-  color: white;
-}
-
-/* Mostrar dropdown al hover */
-.nav-item-dropdown:hover .nav-dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-
-
-
-/* NAV OCULTO EN SCROLL */
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  transition: transform .35s ease, opacity .35s ease;
-}
-
-/* Oculto (scroll down) */
-.site-header.hide-nav {
-  transform: translateY(-100%);
-  opacity: 0;
-}
-
-/* Visible (scroll up o top) */
-.site-header.show-nav {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ===========================
    HERO INMOBILIARIAS — CONTENEDOR
 =========================== */
@@ -545,7 +296,7 @@ body {
   
   font-size: 40px;
   font-weight: 800;
-  margin-top: 180px;
+  margin-top: 110px;
   text-align: center;
   
   color: #2f423c;
@@ -1544,160 +1295,6 @@ body {
 
 
 
-/* =========================================================
-   FOOTER VISITIA — Premium
-========================================================= */
-
-.visitia-footer {
-  background: #1e2926;
-  color: #f5f3f0;
-  padding: 60px 0 30px;
-  margin-top: 90px;
-  border-radius: 30px 30px 0 0;
-  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.15);
-}
-
-.footer-inner {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 50px;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.footer-col {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-col li {
-  margin-bottom: 10px;
-  opacity: 0.9;
-  font-size: 0.95rem;
-}
-
-.footer-title {
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 14px;
-  font-size: 1rem;
-  opacity: 1;
-}
-
-/* Hover elegante */
-.footer-col li:hover {
-  color: #ffffff;
-  cursor: pointer;
-  opacity: 1;
-}
-
-/* Línea inferior */
-.footer-bottom {
-  margin-top: 50px;
-  text-align: center;
-  font-size: 0.9rem;
-  opacity: 0.7;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding-top: 20px;
-}
-
-.footer-link-clean {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* Imagen del footer */
-.footer-image {
-  margin-top: 14px;
-  opacity: 0.9;
-}
-
-.footer-image img {
-  max-width: 160px;
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: 0.3s ease;
-}
-
-.footer-image img:hover {
-  transform: translateY(-2px);
-}
-
-
-
-
-
-/* ===== MODAL PRIVACIDAD ===== */
-.privacy-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-  z-index: 9999;
-  backdrop-filter: blur(4px);
-  animation: fadeIn .25s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.privacy-modal-content {
-  background: #fff;
-  width: min(600px, 90%);
-  padding: 35px 40px;
-  border-radius: 18px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.20);
-  position: relative;
-  animation: popIn .28s ease;
-  max-height: 80vh;
-  overflow-y: auto;
-}
-
-@keyframes popIn {
-  from { transform: scale(.92); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-/* BOTÓN CLOSE */
-.privacy-close {
-  position: absolute;
-  top: 14px;
-  right: 16px;
-  font-size: 30px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #333;
-  transition: .2s ease;
-}
-
-.privacy-close:hover {
-  transform: scale(1.15);
-  color: #1d7a67;
-}
-
-/* TEXTO */
-.privacy-modal-content h2 {
-  margin-bottom: 20px;
-  color: #1d7a67;
-  font-size: 26px;
-  font-weight: 800;
-}
-
-.privacy-text p {
-  margin-bottom: 14px;
-  line-height: 1.6;
-  color: #333;
-}
-
 
 
 
@@ -1709,41 +1306,6 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .nav-container {
-    width: 90%;
-    justify-content: space-between;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background: #f3f0eb;
-    border-radius: 26px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
-    padding: 8px 0;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    display: none;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-item {
-    width: 100%;
-    text-align: center;
-    border-radius: 0;
-    padding: 10px 0;
-  }
-
-  .nav-toggle {
-    display: flex;
-  }
-
   .page-wrap {
     margin-top: 120px;
     padding: 0 16px 50px;
@@ -1767,10 +1329,6 @@ body {
 
   .comparison-table-wrap {
     margin-top: 20px;
-  }
-
-  .footer-container {
-    padding: 0 20px 10px;
   }
 }
 
@@ -3044,6 +2602,7 @@ body {
 =============================== */
 .tutorials-header {
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .tutorials-section {
@@ -3181,40 +2740,6 @@ body {
     0 8px 20px rgba(0,0,0,0.35),
     inset 0 0 0 1px rgba(255,255,255,0.18);
 }
-
-/* ========= FLECHAS ========= */
-.tutorial-nav {
-  position: absolute;
-  top: 95%;
-  transform: translateY(-20%);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: rgba(15,15,15,0.55);
-  backdrop-filter: blur(6px);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-  transition: 0.35s ease;
-  opacity: 0;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-  border: none;
-}
-
-.tutorial-nav:hover {
-  background: rgba(15,15,15,0.75);
-  transform: translateY(-50%) scale(1.18);
-}
-
-.tutorial-block:hover .tutorial-nav {
-  opacity: 1;
-}
-
-.tutorial-nav.left { left: 20px; }
-.tutorial-nav.right { right: 20px; }
 
 /* ===============================
    MODAL PDF (EMBED)
@@ -3379,45 +2904,6 @@ body {
     font-size: 28px;
   }
 }
-
-/* ========= CONTENEDOR DE FLECHAS ABAJO ========= */
-
-.tutorial-nav-wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 30px;
-}
-
-/* ========= FLECHAS LIMPIAS ABAJO ========= */
-
-.tutorial-nav {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #1d7a67, #2e9b84);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 5;
-  transition: 0.35s ease;
-  box-shadow: 0 10px 24px rgba(29,122,103,0.35);
-  border: none;
-}
-
-.tutorial-nav:hover {
-  transform: scale(1.2);
-  box-shadow: 0 16px 36px rgba(29,122,103,0.55);
-}
-
-.tutorial-nav.dark {
-  background: linear-gradient(135deg, #111, #333);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.45);
-}
-
-
 
 /* ===============================
    UNIFICADOR VISUAL DE LA SECCIÓN
@@ -3959,17 +3445,6 @@ body {
    TABLET (≤ 1024px)
 ====================== */
 @media (max-width: 1024px) {
-
-  /* NAVBAR */
-  .logo-img {
-    height: 72px;
-  }
-
-  .nav-btn {
-    font-size: 0.82rem;
-    padding: 8px 12px;
-  }
-
   /* HERO */
   .hero-inmo {
     margin-top: 140px;
@@ -4008,77 +3483,12 @@ body {
   .plan-detail-video iframe {
     height: 300px;
   }
-
-  /* FOOTER */
-  .footer-inner {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
 }
 
 /* ======================
    MOBILE (≤ 768px)
 ====================== */
 @media (max-width: 768px) {
-
-  /* ===== NAVBAR MOBILE ===== */
-  .site-header {
-    top: 0;
-  }
-
-  .nav-wrapper {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .nav-left,
-  .nav-right {
-    display: none;
-  }
-
-  .mobile-menu-btn {
-    display: flex;
-  }
-
-  .main-nav {
-    position: fixed;
-    top: 90px;
-    left: 16px;
-    right: 16px;
-    background: #f3f2f0;
-    border-radius: 26px;
-    padding: 20px;
-    flex-direction: column;
-    gap: 10px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-    display: none;
-    z-index: 2000;
-  }
-
-  .main-nav.show {
-    display: flex;
-  }
-
-  .nav-item-dropdown {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .nav-dropdown {
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    box-shadow: none;
-    background: transparent;
-    padding: 0;
-  }
-
-  .nav-dropdown a {
-    padding: 6px 0;
-    font-size: 0.85rem;
-  }
-
   /* ===== HERO ===== */
   .hero-inmo {
     margin-top: 120px;
@@ -4244,14 +3654,593 @@ body {
   .custom-block.featured p {
     font-size: 14.5px;
   }
+}
 
-  /* ===== FOOTER ===== */
-  .footer-inner {
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   RESPONSIVE — iPhone 16 (≈390px) / Mobile First overrides
+   PEGAR AL FINAL DEL CSS
+========================================================= */
+
+/* Ayuda a evitar desbordes por 100vw + transforms */
+html, body{
+  overflow-x: hidden;
+}
+
+/* iPhone 16 base: 390px ancho aprox */
+@media (max-width: 420px){
+
+  /* ---------------------------
+     CONTENEDOR GLOBAL
+  ---------------------------- */
+  .container{
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  body{
+    font-size: 16px;
+  }
+
+  /* Logos un poquito más compactos */
+  .logo-inline{
+    width: 66px;
+    height: 18px;
+  }
+  .logo-title{
+    width: 70px;
+    height: 34px;
+    margin-left: -4px;
+  }
+
+  /* ---------------------------
+     HERO
+  ---------------------------- */
+  .hero-inmo{
+    max-width: 100%;
+    margin: 110px auto 26px;
+    padding-left: 18px;
+    padding-right: 18px;
+    display: block;
+  }
+
+  .hero-pill,
+  .pill-title{
+    font-size: 16px;
+    letter-spacing: 0.8px;
+  }
+
+  /* ---------------------------
+     STEPS SECTION
+  ---------------------------- */
+  .steps-section{
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin: 0 auto 60px;
+  }
+
+  .steps-section h2{
+    font-size: 26px;
+    margin-top: 80px;
+    margin-bottom: 12px;
+  }
+
+  .steps-intro{
+    font-size: 15px;
+    margin-bottom: 22px;
+  }
+
+  /* Viewer: altura flexible, no fija gigante */
+  .steps-viewer{
+    max-width: 100%;
+    height: 260px;
+    border-radius: 22px;
+    margin-bottom: 18px;
+  }
+
+  .steps-overlay{
+    padding: 16px 16px;
+  }
+
+  .steps-overlay span{
+    font-size: 18px;
+    line-height: 1.15;
+  }
+
+  /* Miniaturas: de 6 a 3 columnas */
+  .steps-thumbnails{
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .steps-thumbnails img{
+    height: 64px;
+    border-radius: 12px;
+  }
+
+  /* ---------------------------
+     BENEFITS
+  ---------------------------- */
+  .benefits-section{
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin: 0 auto 70px;
+  }
+
+  .benefits-section .hero-subtitle{
+    font-size: 26px;
+    margin-top: 110px;
+    line-height: 1.1;
+  }
+
+  .subti{
+    font-size: 26px;
+    padding-bottom: 26px;
+    line-height: 1.1;
+  }
+
+  .benefits-grid{
     grid-template-columns: 1fr;
-    text-align: center;
+    gap: 16px;
   }
 
-  .footer-col {
-    align-items: center;
+  .benefit-card{
+    padding: 26px 18px 22px;
+    border-radius: 20px;
   }
+
+  .benefit-icon{
+    width: 56px;
+    height: 56px;
+  }
+
+  .benefit-card p{
+    font-size: 14.5px;
+    line-height: 1.55;
+  }
+
+  /* ---------------------------
+     PRICING HEADER / PILLS
+  ---------------------------- */
+  .pricing-section{
+    padding-left: 18px;
+    padding-right: 18px;
+    margin: 44px auto 70px;
+  }
+
+  .pricing-header-pill{
+    padding: 18px 18px;
+    max-width: 100%;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .pricing-eyebrow-pill{
+    font-size: 20px;
+  }
+
+  .pricing-title-pill{
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+  .pricing-title{
+    font-size: 24px;
+  }
+  .pricing-subtitle{
+    font-size: 15px;
+  }
+
+  /* Billing toggle: que no se desborde */
+  .billing-toggle{
+    width: 100%;
+    justify-content: space-between;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .billing-option{
+    flex: 1;
+    justify-content: center;
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+
+  .billing-option .save{
+    display: none; /* en móvil estorba, se ve más limpio */
+  }
+
+  /* ---------------------------
+     PLANES (CARDS)
+  ---------------------------- */
+  .plans-grid{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .plan-card{
+    border-radius: 20px;
+    padding: 18px 16px 18px;
+  }
+
+  .plan-header{
+    min-height: auto;
+    padding: 14px 12px;
+    border-radius: 14px;
+  }
+
+  .plan-tag, .plan-name{
+    font-size: 14px;
+  }
+
+  .plan-price{
+    font-size: 14px;
+  }
+
+  /* Quitamos offsets raros que te rompen móvil */
+  .plan-sub{
+    margin-left: 0 !important;
+    min-height: auto;
+    font-size: 13px;
+  }
+
+  .plan-features{
+    padding-left: 18px;
+    margin: 10px 0 0 0;
+  }
+
+  .plan-features li{
+    font-size: 13.5px;
+  }
+
+  .plan-highlight{
+    min-height: auto;
+    font-size: 13px;
+    padding: 10px 12px;
+    border-radius: 12px;
+  }
+
+  .plan-note{
+    min-height: auto;
+    font-size: 12.5px;
+  }
+
+  /* Botón: centrado real, sin margin-left 50 */
+  .plan-btn{
+    width: 100%;
+    max-width: 320px;
+    margin-left: 0 !important;
+    padding: 12px 16px;
+    font-size: 14px;
+    align-self: center;
+  }
+
+  /* Badge flotante premium: que no tape y que quepa */
+  .plan-vr{
+    padding-top: 54px; /* compensa badge */
+  }
+
+  .premium-float-badge{
+    top: -34px;
+    max-width: calc(100% - 18px);
+    width: calc(100% - 18px);
+    padding: 10px 12px;
+    border-radius: 16px;
+  }
+
+  .premium-float-badge__icon{
+    width: 54px;
+  }
+
+  .premium-float-badge__text{
+    font-size: 12px;
+    line-height: 1.1;
+  }
+
+  /* ---------------------------
+     TABLA COMPARATIVA
+  ---------------------------- */
+  .comparison-table-wrap{
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 26px;
+  }
+
+  .comparison-table{
+    width: 100% !important;
+    margin-left: 0 !important;
+    font-size: 12.5px;
+    border-radius: 16px;
+    min-width: 720px; /* permite scroll horizontal real */
+  }
+
+  .comparison-table th,
+  .comparison-table td{
+    padding: 10px 8px;
+  }
+
+  .comparison-table thead th{
+    font-size: 13px;
+  }
+
+  /* ---------------------------
+     PLAN DETAIL SECTION (TEXT+VIDEO)
+  ---------------------------- */
+  .plan-detail-section{
+    max-width: 100%;
+    padding: 34px 16px;
+    border-radius: 24px;
+    margin: 50px 0;
+  }
+
+  .plan-editorial-header{
+    margin-bottom: 22px;
+  }
+
+  .plan-editorial-header h2{
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .plan-editorial-header p{
+    font-size: 12px;
+    letter-spacing: 0.8px;
+  }
+
+  .plan-detail-layout{
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+
+  .plan-detail-text{
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+
+  .plan-detail-text p{
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+
+  .plan-detail-text ul{
+    font-size: 14px;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .plan-detail-text li{
+    padding-left: 18px;
+  }
+
+  /* Video */
+  .video-frame{
+    max-width: 100%;
+    border-radius: 18px;
+  }
+
+  .plan-detail-video .video-panel,
+  .plan-detail-video .video-panel iframe{
+    border-radius: 18px;
+  }
+
+  /* ---------------------------
+     TIMELINE (lo pasamos a vertical)
+  ---------------------------- */
+  .steps-row-heading{
+    font-size: 12px;
+    margin-top: 24px;
+    margin-bottom: 14px;
+  }
+
+  .visitia-timeline-horizontal{
+    flex-direction: column;
+    gap: 18px;
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .visitia-timeline-track{
+    display: none; /* en vertical estorba */
+  }
+
+  .visitia-timeline-item{
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 14px;
+    text-align: left;
+  }
+
+  .visitia-timeline-dot{
+    width: 44px;
+    height: 44px;
+    font-size: 15px;
+    flex: 0 0 44px;
+  }
+
+  .visitia-timeline-title{
+    margin-top: 2px;
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  /* Hover card info (ya la tienes estática), ajustamos para móvil */
+  .visitia-timeline-hover-card{
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px 12px;
+    border-radius: 14px;
+    box-shadow: 0 14px 32px rgba(0,0,0,0.18);
+  }
+
+  .visitia-timeline-hover-card p{
+    font-size: 13px;
+  }
+
+  /* ---------------------------
+     CTA FINAL
+  ---------------------------- */
+  .plan-detail-cta{
+    margin-top: 22px;
+  }
+
+  .plan-detail-cta .plan-btn{
+    width: 100%;
+    max-width: 340px;
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
+  /* ---------------------------
+     TUTORIALES — Carruseles
+  ---------------------------- */
+  .tutorials-section{
+    margin: 20px 0;
+  }
+
+  .tutorials-note{
+    font-size: 14px;
+    margin: 18px auto 50px;
+    padding: 0 8px;
+  }
+
+  .tutorial-block{
+    margin-bottom: 80px;
+    padding-bottom: 60px;
+  }
+
+  .tutorial-block h3{
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .tutorial-block h3::after{
+    width: 60px;
+    margin-top: 10px;
+  }
+
+  /* Carrusel full width sin desbordar feo */
+  .tutorial-carousel{
+    gap: 14px;
+    padding: 22px 16px 26px 16px;
+    width: 100%;
+    left: 0;
+    transform: none;
+    justify-content: flex-start;
+  }
+
+  .tutorial-slide{
+    flex: 0 0 78%;
+    height: 210px;
+    border-radius: 22px;
+  }
+
+  .tutorial-slide span{
+    font-size: 16px;
+    padding: 16px 16px 18px 16px;
+    border-radius: 0 0 22px 22px;
+  }
+
+  /* ---------------------------
+     MODAL PDF
+  ---------------------------- */
+  .pdf-modal__dialog{
+    width: calc(100% - 18px);
+    height: 84vh;
+    margin: 6vh auto 0 auto;
+    border-radius: 14px;
+  }
+
+  .pdf-modal__header{
+    padding: 10px 10px;
+  }
+
+  .pdf-modal__title{
+    font-size: 12px;
+    letter-spacing: 0.6px;
+  }
+
+  .pdf-modal__close{
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .pdf-modal__body{
+    padding: 8px;
+    padding-bottom: 14px;
+  }
+
+  /* ---------------------------
+     PROYECTO A MEDIDA / FAQ
+  ---------------------------- */
+  .custom-project-section{
+    margin: 90px auto;
+    gap: 70px;
+    padding: 0 18px;
+  }
+
+  .custom-block.featured{
+    padding: 40px 18px;
+    border-radius: 22px;
+  }
+
+  .custom-block.featured .pill-title{
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .custom-block.featured p{
+    font-size: 15px;
+    margin-bottom: 22px;
+  }
+
+  .custom-cta{
+    width: 100%;
+    max-width: 320px;
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+
+  .custom-card.simple{
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+
+  .faq-link{
+    font-size: 14px;
+  }
+
+  /* ---------------------------
+     MISC
+  ---------------------------- */
+  .primer-card{
+    margin-bottom: 40px;
+  }
+}
+
+/* iPhone muy chico (SE / 360-375) por si acaso */
+@media (max-width: 375px){
+  .steps-viewer{ height: 240px; }
+  .tutorial-slide{ flex: 0 0 86%; }
+  .pricing-eyebrow-pill{ font-size: 18px; }
+  .pricing-title-pill{ font-size: 17px; }
 }
