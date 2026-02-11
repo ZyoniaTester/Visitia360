@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visitia</title>
+  <link rel="stylesheet" href="/styles/styles.css" />
+  <link rel="icon" type="image/png" href="/images/Visitia-Favicon.png" />
+</head>
+
+<body>
+  <!-- ================= HEADER / NAVBAR ================= -->
+  <header class="site-header" data-reveal="fade-down">
+    <div class="container nav-wrapper">
+      <!-- HAMBURGER BUTTON (mobile only) -->
+      <div class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span><span></span><span></span>
+      </div>
+
+      <!-- LOGO -->
+      <div>
+        <a href="/pages/EN/en-index.html">
+          <img src="/images/Logo-con-claim sin-fondo.png" class="logo-img" alt="Visitia" />
+        </a>
+      </div>
+
+      <!-- LEFT BLOCK -->
+      <div class="nav-block nav-left">
+        <nav class="main-nav" id="mainNav">
+
+          <a href="/pages/EN/en-index.html" class="nav-btn nav-btn--active">Home</a>
+
+          <!-- REAL ESTATE -->
+          <div class="nav-item-dropdown">
+            <a href="/pages/EN/en-SolucionesInmobiliarias.html" class="nav-btn">Real Estate</a>
+            <div class="nav-dropdown">
+              <a href="/pages/EN/en-SolucionesInmobiliarias.html#beneficios">Benefits</a>
+              <a href="/pages/EN/en-SolucionesInmobiliarias.html#precios">Pricing</a>
+              <a href="/pages/EN/en-SolucionesInmobiliarias.html#plan-basico">Free trial</a>
+              <a href="/pages/EN/en-SolucionesInmobiliarias.html#planes">Our plans</a>
+              <a href="/pages/EN/en-SolucionesInmobiliarias.html#proyecto-a-medida">Custom project</a>
+              <a href="/pages/EN/en-SolucionesInmobiliarias.html#tutoriales">Tutorials</a>
+            </div>
+          </div>
+
+          <!-- NEW DEVELOPMENTS -->
+          <div class="nav-item-dropdown">
+            <a href="/pages/EN/en-ObraNueva.html" class="nav-btn">New Developments</a>
+            <div class="nav-dropdown">
+              <a href="/pages/EN/en-ObraNueva.html#promotoras">Developers</a>
+              <a href="/pages/EN/en-ObraNueva.html#arquitectura">Architecture studios</a>
+              <a href="/pages/EN/en-ObraNueva.html#reformas-interiorismo">Renovations</a>
+              <a href="/pages/EN/en-ObraNueva.html#reformas-interiorismo">Interior Design</a>
+              <a href="/pages/EN/en-ObraNueva.html#proyecto-a-medida">Custom project</a>
+            </div>
+          </div>
+
+          <!-- OTHER INDUSTRIES -->
+          <div class="nav-item-dropdown">
+            <a href="/pages/EN/en-OtrosSectores.html" class="nav-btn">Other Industries</a>
+            <div class="nav-dropdown">
+              <a href="/pages/EN/en-OtrosSectores.html#nautica">Nautical</a>
+              <a href="/pages/EN/en-OtrosSectores.html#turismo">Tourism</a>
+              <a href="/pages/EN/en-OtrosSectores.html#industria">Industry</a>
+              <a href="/pages/EN/en-OtrosSectores.html#proyecto-a-medida">Custom project</a>
+              <!-- <a href="blog.html" class="nav-btn">Blog</a> -->
+            </div>
+          </div>
+
+          <a href="/pages/EN/en-proyectosamedida.html" class="nav-btn">Custom Projects</a>
+          <a href="https://homestaging.visitiacloud.com/" class="nav-btn">Client Area</a>
+          <!-- <a href="blog.html" class="nav-btn">Blog</a> -->
+
+        </nav>
+
+      </div>
+
+      <!-- RIGHT BLOCK -->
+      <div class="nav-right" id="navRight">
+        <div class="lang-wrapper" id="langSwitcher">
+          <div class="lang-select" id="langCurrent">EN <span class="chevron">▼</span></div>
+          <ul class="lang-dropdown">
+            <li data-lang="ES">ES</li>
+            <li data-lang="EN">EN</li>
+          </ul>
+        </div>
+
+        <a href="https://homestaging.visitiacloud.com/" class="login-btn">Log in</a>
+        <a href="https://homestaging.visitiacloud.com/" class="cta-btn">Try it free</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO / VISITIA ================= -->
+    <section id="inicio" class="hero-glow">
+      <div class="container hero-grid">
+        <!-- LEFT -->
+        <div class="hero-left" data-reveal="fade-up">
+          <h1 class="hero-title-glow">
+            The new generation of<br />
+            <span>virtual tours</span>
+          </h1>
+
+          <p class="hero-lead">
+            <span class="logo-inline"></span> is a cutting-edge platform for creating
+            next-generation virtual walkthroughs: from essential 360° tours
+            to fully immersive Virtual Reality experiences.
+          </p>
+
+          <p class="hero-highlight">
+            We make the future of 360° tours accessible
+          </p>
+
+          <div class="hero-ctas">
+            <!--<a href="#" class="btn-primary-glow">Try it free</a>-->
+            <a href="https://homestaging.visitiacloud.com/" class="btn-secondary-glow">Try it free</a>
+          </div>
+
+          <!-- MINI FEATURES -->
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="hero-right" data-reveal="fade-up" data-reveal-delay="150">
+          <div class="hero-card hero-carousel">
+            <img src="/images/gv1.webp" class="active" alt="360 Tour Preview" />
+            <img src="/images/gv7.webp" alt="360 Tour Preview" />
+            <img src="/images/gv4.webp" alt="360 Tour Preview" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SOLUTIONS BY INDUSTRY ================= -->
+    <section id="soluciones" class="sector-section">
+      <div class="container">
+
+        <h2 class="sector-title" data-reveal="fade-up">
+          A versatile platform with solutions for every industry
+        </h2>
+
+        <p class="sector-desc" data-reveal="fade-up" data-reveal-delay="120">
+
+        </p>
+
+        <div class="sector-mini-grid">
+
+          <a href="/pages/EN/en-SolucionesInmobiliarias.html" class="sector-mini">
+            <img src="/images/Inmobiliarias.png" alt="Real Estate" class="mini-icon-img">
+          </a>
+
+          <a href="/pages/EN/en-ObraNueva.html#arquitectura" class="sector-mini">
+            <img src="/images/Arquitectura.png" alt="Architecture" class="mini-icon-img">
+          </a>
+
+          <a href="/pages/EN/en-ObraNueva.html" class="sector-mini">
+            <img src="/images/ObraNueva.png" alt="New Developments" class="mini-icon-img">
+          </a>
+
+          <a href="/pages/EN/en-OtrosSectores.html#nautica" class="sector-mini">
+            <img src="/images/Nautica.png" alt="Nautical" class="mini-icon-img">
+          </a>
+
+          <a href="/pages/EN/en-OtrosSectores.html#turismo" class="sector-mini">
+            <img src="/images/Turismo.png" alt="Tourism" class="mini-icon-img">
+          </a>
+
+          <a href="/pages/EN/en-OtrosSectores.html#industria" class="sector-mini">
+            <img src="/images/Industria.png" alt="Industry" class="mini-icon-img">
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PLANS ================= -->
+    <section id="area-cliente" class="section section--plans">
+      <div class="container plans-layout">
+
+        <!-- LEFT COLUMN -->
+        <div class="plans-left" data-reveal="fade-up">
+          <h2 class="section-title">CHOOSE YOUR PLAN</h2>
+
+          <p class="plans-subtitle">
+            We offer you the most advanced solutions on the market
+            at the most affordable price
+          </p>
+
+          <div class="plans-list">
+
+            <a href="/pages/EN/en-SolucionesInmobiliarias.html#plan-basico" class="plan-link">
+              <div class="plan-card plan-card--highlight">
+                <h3>360° Express Tour + AI Home Staging</h3>
+                <p class="plan-desc">
+                  Ideal for a 360° tour with strong visual impact.
+                </p>
+              </div>
+            </a>
+
+            <a href="/pages/EN/en-SolucionesInmobiliarias.html#plan-pro" class="plan-link">
+              <div class="plan-card">
+                <h3>360° Tour with 3D Maps</h3>
+                <p class="plan-desc">
+                  A 360° tour integrated into a 3D environment of your area.
+                </p>
+              </div>
+            </a>
+
+            <a href="/pages/EN/en-SolucionesInmobiliarias.html#plan-online" class="plan-link">
+              <div class="plan-card">
+                <h3>Agent-guided 360° Tour</h3>
+                <p class="plan-desc">
+                  A guided tour integrated into a 3D environment of your area.
+                </p>
+              </div>
+            </a>
+
+            <a href="/pages/EN/en-SolucionesInmobiliarias.html#plan-vr" class="plan-link">
+              <div class="plan-card">
+                <h3>Immersive 360° Tour in Virtual Reality</h3>
+                <p class="plan-desc">
+                  The most advanced experience for VR headsets.
+                </p>
+              </div>
+            </a>
+
+            <a href="/pages/EN/en-proyectosamedida.html" class="plan-link">
+              <div class="plan-card">
+                <h3>Your custom project</h3>
+                <p class="plan-desc">
+                  Unique solutions tailored to your business.
+                </p>
+              </div>
+            </a>
+
+          </div>
+
+          <a href="https://homestaging.visitiacloud.com/" class="cta-pill">TRY IT FREE</a>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="plans-right" data-reveal="fade-up" data-reveal-delay="150">
+
+          <!-- PREMIUM VIDEO BLOCK -->
+          <div class="columna-video-escoge">
+            <div class="plans-video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/tmhVD6CicQU?autoplay=1&mute=1&loop=1&playlist=tmhVD6CicQU&controls=0&modestbranding=1&rel=0"
+                title="Visitia showcase video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+              </iframe>
+            </div>
+
+            <p class="plans-copy">
+              <span>Grow with us</span> at the pace of technology
+            </p>
+          </div>
+
+        </div> <!-- /plans-right -->
+
+      </div> <!-- /plans-layout -->
+    </section>
+
+    <!-- ================= TOOLS ================= -->
+    <section id="otros-sectores" class="section section--tools">
+      <div class="container">
+        <div class="tools-header" data-reveal="fade-up">
+          <h2 class="pill-title">EXPLORE OUR TOOLS</h2>
+        </div>
+
+        <div class="tools-grid">
+          <article class="tool-card" data-reveal="fade-up">
+            <img src="/images/Tour360.png" alt="360 Tour" />
+            <h3>Instantly generated online 360° tour</h3>
+            <p>
+              With our platform you can generate a 360° tour instantly.
+              <a href="https://homestaging.visitiacloud.com/" class="inline-link">Try it here</a>
+            </p>
+          </article>
+
+          <article class="tool-card" data-reveal="fade-up">
+            <img src="/images/Video360.png" alt="360 Video" />
+            <h3>Shareable 360° tour link</h3>
+            <p>You'll get a link to the generated tour to share with your clients.</p>
+          </article>
+
+          <article class="tool-card" data-reveal="fade-up">
+            <img src="/images/HomeStaging.png" alt="Home staging" />
+            <h3>AI Home Staging</h3>
+            <p>
+              Virtually style 360° photos instantly with the help of
+              Artificial Intelligence.
+              <a href="https://homestaging.visitiacloud.com/" class="inline-link">Try it here</a>
+            </p>
+          </article>
+
+          <article class="tool-card" data-reveal="fade-up">
+            <img src="/images/VisitaGuiada.png" alt="Guided tour" />
+            <h3>Plan an online guided 360° tour</h3>
+            <p>
+              With our immersive platform you can run an online 360° visit
+              and guide clients through the area and the property.
+            </p>
+          </article>
+
+          <article class="tool-card" data-reveal="fade-up">
+            <img src="/images/Mapa3D.png" alt="3D Map" />
+            <h3>3D mapping of the area, city, or surroundings</h3>
+            <p>
+              We integrate your city or area of interest in 3D inside our platform
+              so you can locate the property and provide a richer virtual tour.
+            </p>
+          </article>
+
+          <article class="tool-card" data-reveal="fade-up">
+            <img src="/images/FirmaDigital.png" alt="Digital signature" />
+            <h3>Digital signature for online visit reports</h3>
+            <p>
+              We include a digital signature tool and online visit reports
+              with automatic logging of visited properties.
+            </p>
+          </article>
+
+          <article class="tool-card" data-reveal="fade-up">
+            <img src="/images/RealidadVirtual.png" alt="Virtual Reality" />
+            <h3>360° tours in Virtual Reality and Augmented Reality</h3>
+            <p>
+              We provide our own Virtual and Augmented Reality software. All 360° tours created in
+              <span class="logo-inline"></span> can be viewed through VR headsets.
+            </p>
+          </article>
+
+          <article class="tool-card" data-reveal="fade-up">
+            <img src="/images/Personalizacion.png" alt="Customization" />
+            <h3>Customizable elements</h3>
+            <p>
+              Our platform is customizable. We can add additional languages,
+              points of interest on the map, text, photos, videos, and more.
+            </p>
+          </article>
+
+          <article class="tool-card" data-reveal="fade-up">
+            <img src="/images/Academia360.png" alt="360 Academy" />
+            <h3>Training: using a 360 camera and VR headsets</h3>
+            <p>
+              We offer training to learn how to use 360 cameras and VR headsets.
+              <a href="/pages/EN/en-SolucionesInmobiliarias.html#tutoriales" class="inline-link">
+                Access our tutorial here
+              </a>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CUSTOM SERVICES ================= -->
+    <section id="obra-nueva" class="section glowup-proyectos" data-reveal="fade-up">
+      <div class="container proyectos-wrapper">
+        <h2 class="proyectos-title">Custom projects</h2>
+
+        <p class="proyectos-text">
+          Since our <strong>software is fully customizable</strong>, it’s the ideal tool
+          to showcase new developments as well as projects that require a more impactful solution.
+        </p>
+
+        <p class="proyectos-text">
+          We create <strong>custom virtual tours and immersive spaces</strong>,
+          both online and in Virtual Reality. We design tailor-made experiences,
+          build automated tours powered by Artificial Intelligence,
+          interactive Virtual Reality experiences, and much more.
+        </p>
+
+        <div class="proyectos-cta">
+          <a href="#contacto" class="btn-contacto">Contact us</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+      <div class="container contact-wrapper">
+
+        <!-- EDITORIAL TITLE -->
+        <div class="contact-header" data-reveal="fade-up">
+          <h2>Contact</h2>
+          <p>We’re here to help you with your project</p>
+        </div>
+
+        <!-- FORM -->
+        <form id="visitia-contact-form" class="contact-form" action="https://formspree.io/f/mnndlzza" method="POST"
+          data-reveal="fade-up">
+
+          <!-- NAME -->
+          <div class="form-group">
+            <label for="name">Full name *</label>
+            <input type="text" id="name" name="name" placeholder="Write your name" required />
+          </div>
+
+          <!-- EMAIL -->
+          <div class="form-group">
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required />
+          </div>
+
+          <!-- PHONE -->
+          <div class="form-group">
+            <label for="phone">Phone (optional)</label>
+            <input type="text" id="phone" name="phone" placeholder="Your contact number" />
+          </div>
+
+          <!-- MESSAGE -->
+          <div class="form-group">
+            <label for="mensaje">Message *</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Tell us what you need or which service you're interested in"
+              required></textarea>
+          </div>
+
+          <!-- GDPR CHECKBOX -->
+          <div class="form-check">
+            <input type="checkbox" id="privacy" name="privacy_acceptance" value="I accept the privacy policy"
+              required />
+            <label for="privacy">
+              I accept the <a href="/pages/EN/en-privacy.html">Privacy Policy</a> *
+            </label>
+          </div>
+
+          <!-- SUCCESS MESSAGE -->
+          <p id="form-success" class="form-success hidden">
+            Your message has been sent successfully. Thank you for contacting us.
+          </p>
+
+          <!-- BUTTON -->
+          <button type="submit" class="contact-btn">Send message</button>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section id="faq" class="section faq-section">
+      <div class="container">
+        <h2 class="section-title" data-reveal="fade-up">Frequently asked questions</h2>
+
+        <div class="faq-list">
+          <article class="faq-item" data-reveal="fade-up">
+            <button class="faq-question">
+              How long does it take to create a virtual tour with Visitia?
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Creating the 360° tour is instant and fully automated. You only need to upload the photos and,
+                in seconds, you’ll get:
+              </p>
+              <ul>
+                <li>a link ready to share with your clients,</li>
+                <li>an embed code to place it on your website, and</li>
+                <li>a highlight video summary of the 360° tour.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="faq-item" data-reveal="fade-up">
+            <button class="faq-question">
+              What’s the difference between a basic 360° tour, an immersive 3D tour, and a Virtual Reality tour?
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <ul>
+                <li>
+                  <strong>Basic 360° tour:</strong> connected 360° photos that form a simple walkthrough.
+                  <a href="/pages/EN/en-SolucionesInmobiliarias.html#plan-basico" class="inline-link">Learn more.</a>
+                </li>
+                <li>
+                  <strong>Immersive 3D tour:</strong> places 360° tours inside a custom 3D map, enabling a guided virtual visit.
+                  <a href="/pages/EN/en-SolucionesInmobiliarias.html#plan-pro" class="inline-link">Learn more.</a>
+                </li>
+                <li>
+                  <strong>Virtual Reality tour:</strong> a fully immersive experience combining the 3D map and the 360° tour
+                  so it can be explored using a VR headset.
+                  <a href="/pages/EN/en-SolucionesInmobiliarias.html#plan-vr" class="inline-link">Learn more.</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="faq-item" data-reveal="fade-up">
+            <button class="faq-question">
+              I like the idea, but what are your prices?
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Our motivation has always been to democratize access to high-end technology — and we’ve done it!
+                You can subscribe to our simplest tours from €19.95/month and the most advanced plans (with VR)
+                from €99.95/month.
+                <a href="/pages/EN/en-SolucionesInmobiliarias.html#precios" class="inline-link">More information here</a>.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item" data-reveal="fade-up">
+            <button class="faq-question">
+              Do I need to buy a 360 camera to use Visitia?
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, you need a 360 camera to capture the images.
+                You can find our recommendations and usage guide
+                <a href="/pages/EN/en-SolucionesInmobiliarias.html#tutoriales" class="inline-link">here.</a>
+              </p>
+              <p>
+                You also have complete tutorials to learn how to use the
+                <a href="/pages/EN/en-SolucionesInmobiliarias.html#tutoriales" class="inline-link">camera.</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item" data-reveal="fade-up">
+            <button class="faq-question">
+              How long does home staging take with Visitia?
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                The process is instant thanks to Artificial Intelligence.
+                You can download the edited images immediately or integrate them into the tour.
+              </p>
+              <p>
+                You can also generate multiple styles per property: rustic, modern, timeless, etc.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item" data-reveal="fade-up">
+            <button class="faq-question">
+              Is there any commitment period?
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                No. Visitia has no minimum commitment. You can cancel your monthly subscription at any time.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item" data-reveal="fade-up">
+            <button class="faq-question">
+              Why tutorials?
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                <span class="logo-inline"></span> offers scalable solutions so you can choose what fits you best.
+                We guide you and train you
+                <a href="/pages/EN/en-SolucionesInmobiliarias.html#tutoriales" class="inline-link">every step of the way.</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item" data-reveal="fade-up" id="diferencia">
+            <button class="faq-question">
+              What’s the difference between Virtual Reality and Augmented Reality?
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                <strong>Virtual Reality</strong> (VR) lets you experience the home as if you were inside it.
+                It’s extremely useful to <strong>feel present in a property without traveling</strong>.
+              </p>
+
+              <p>
+                <strong>Augmented Reality</strong> (AR) lets you see digitally generated elements while you’re still
+                viewing the real home in front of you. It’s ideal for instantly visualizing renovations or virtual
+                changes in a real property, as well as seeing how it would look furnished.
+              </p>
+
+              <p>
+                In other words, <strong>Virtual Reality</strong> is a fully immersive visit using a VR headset that makes
+                you feel like you’re inside the home, while <strong>Augmented Reality</strong> allows you to
+                <strong>add digital elements to a real space</strong> in front of you, showing digital content while still
+                letting you see the real environment.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-logos">
+      <div class="container trust-logos-inner" data-reveal="fade-up">
+
+        <p class="trust-logos-title">
+          Backed by institutions and innovation programs
+        </p>
+
+        <div class="trust-logos-grid">
+          <img src="/images/f2.png" alt="Deusto Emprende">
+          <img src="/images/SELLO_WEB_fiveclm.webp" alt="Entrepreneurship program">
+          <img src="/images/bat-horizontal-alta-1.webp" alt="Zyonia">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= FOOTER SIMPLE ================= -->
+    <footer id="blog" class="visitia-footer">
+      <div class="container footer-inner">
+        <ul class="footer-col" data-reveal="fade-up">
+          <li><a class="footer-link-clean" href="/pages/EN/en-index.html#contacto">Contact us</a></li>
+        </ul>
+
+        <ul class="footer-col" data-reveal="fade-up">
+          <li><a class="footer-link-clean footer-title"
+              href="https://www.linkedin.com/company/visitia/?viewAsMember=true">LinkedIn</a></li>
+        </ul>
+
+        <ul class="footer-col" data-reveal="fade-up">
+          <li><a class="footer-link-clean footer-title" href="/pages/EN/en-privacy.html">Privacy Policy</a></li>
+          <li><a class="footer-link-clean" href="https://zyonia.com/">ZYONIA SL</a></li>
+        </ul>
+
+        <ul class="footer-col" data-reveal="fade-up">
+          <li><a class="footer-link-clean footer-title" href="/pages/EN/en-terminos.html">Terms & Conditions</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        © 2025 Zyonia SL — C/Gran Vía Don Diego López de Haro 1, 6, Bilbao (48001)
+      </div>
+    </footer>
+  </main>
+
+  <!-- ================= COOKIE BANNER ================= -->
+  <div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+      <h4>We use cookies</h4>
+      <p>
+        We use our own and third-party cookies to improve your experience,
+        analyze traffic, and personalize content.
+        You can accept all, reject them, or configure your preferences.
+      </p>
+    </div>
+
+    <div class="cookie-actions">
+      <button id="cookie-reject" class="cookie-btn reject">Reject</button>
+      <button id="cookie-settings" class="cookie-btn settings">Settings</button>
+      <button id="cookie-accept" class="cookie-btn accept">Accept all</button>
+    </div>
+  </div>
+
+  <!-- ================= COOKIE SETTINGS (2nd LAYER) ================= -->
+  <div id="cookie-settings-modal" class="cookie-settings-modal">
+    <div class="cookie-settings-content">
+      <button class="cookie-settings-close">&times;</button>
+
+      <h3>Cookie settings</h3>
+      <p>You can accept or reject cookies by category.</p>
+
+      <div class="cookie-options">
+
+        <!-- REQUIRED -->
+        <div class="cookie-option">
+          <div class="cookie-option-text">
+            <span>Essential cookies</span>
+            <small>
+              These cookies are necessary for the basic operation of the website.
+              They enable navigation, access to secure areas, and the management
+              of privacy preferences. They cannot be disabled.
+            </small>
+          </div>
+          <input type="checkbox" checked disabled>
+        </div>
+
+        <!-- PREFERENCES -->
+        <div class="cookie-option">
+          <div class="cookie-option-text">
+            <span>Preferences</span>
+            <small>
+              These cookies remember information that changes how the website behaves
+              or looks, such as your language or the region you access from.
+            </small>
+          </div>
+          <input type="checkbox" id="cookies-preferences">
+        </div>
+
+        <!-- ANALYTICS -->
+        <div class="cookie-option">
+          <div class="cookie-option-text">
+            <span>Analytics</span>
+            <small>
+              These cookies help us understand how users interact with the website,
+              collecting anonymous information to improve the experience and site performance.
+            </small>
+          </div>
+          <input type="checkbox" id="cookies-analytics">
+        </div>
+
+        <!-- MARKETING -->
+        <div class="cookie-option">
+          <div class="cookie-option-text">
+            <span>Marketing</span>
+            <small>
+              These cookies are used to show relevant, personalized ads,
+              measure the effectiveness of advertising campaigns, and offer content
+              aligned with your interests.
+            </small>
+          </div>
+          <input type="checkbox" id="cookies-marketing">
+        </div>
+
+      </div>
+
+      <div class="cookie-settings-actions">
+        <button id="cookie-save-settings" class="cookie-btn accept">
+          Save preferences
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="/scripts/cookie.js"></script>
+  <script src="/scripts/AnimacionCarga.js"></script>
+  <script src="/scripts/SelectorIdioma.js"></script>
+  <script src="/scripts/FAQ.js"></script>
+  <script src="/scripts/ResponsiveNav.js"></script>
+  <script src="/scripts/MenuHamburguesa.js"></script>
+  <script src="/scripts/DropdownHamburguesa.js"></script>
+  <script src="/scripts/navDinamico.js"></script>
+  <script src="/scripts/navMouse.js"></script>
+  <script src="/scripts/politicaprivacidad.js"></script>
+  <script src="/scripts/formContacto.js"></script>
+  <script src="/scripts/carruselGIF.js"></script>
+</body>
+
+</html>

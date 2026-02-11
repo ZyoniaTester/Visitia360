@@ -11,11 +11,11 @@
   <link rel="stylesheet" href="/styles/styles.css" />
   <link rel="stylesheet" href="/styles/nav.css" />
 
-  <link rel="stylesheet" href="/styles/proyectosamedida.css" />
+  <link rel="stylesheet" href="prefab.css" />
 
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="/images/Visitia-Favicon.png" />
+  <link rel="icon" type="image/png" href="/Visitia-Favicon.png" />
 </head>
 
 <body>
@@ -52,47 +52,47 @@
 
           <!-- INMOBILIARIAS -->
           <div class="nav-item-dropdown">
-            <a href="/pages/SolucionesInmobiliarias.html" class="nav-btn">
+            <a href="/pages/ES/SolucionesInmobiliarias.html" class="nav-btn">
               Inmobiliarias
             </a>
             <div class="nav-dropdown">
-              <a href="/pages/SolucionesInmobiliarias.html#beneficios">Beneficios</a>
-              <a href="/pages/SolucionesInmobiliarias.html#precios">Precios</a>
-              <a href="/pages/SolucionesInmobiliarias.html#plan-basico">Prueba gratis</a>
-              <a href="/pages/SolucionesInmobiliarias.html#planes">Nuestros planes</a>
-              <a href="/pages/SolucionesInmobiliarias.html#proyecto-a-medida">Proyecto a medida</a>
-              <a href="/pages/SolucionesInmobiliarias.html#tutoriales">Tutoriales</a>
+              <a href="/pages/ES/SolucionesInmobiliarias.html#beneficios">Beneficios</a>
+              <a href="/pages/ES/SolucionesInmobiliarias.html#precios">Precios</a>
+              <a href="/pages/ES/SolucionesInmobiliarias.html#plan-basico">Prueba gratis</a>
+              <a href="/pages/ES/SolucionesInmobiliarias.html#planes">Nuestros planes</a>
+              <a href="/pages/ES/SolucionesInmobiliarias.html#proyecto-a-medida">Proyecto a medida</a>
+              <a href="/pages/ES/SolucionesInmobiliarias.html#tutoriales">Tutoriales</a>
             </div>
           </div>
 
           <!-- OBRA NUEVA -->
           <div class="nav-item-dropdown">
-            <a href="/pages/ObraNueva.html" class="nav-btn">
+            <a href="/pages/ES/ObraNueva.html" class="nav-btn">
               Obra nueva
             </a>
             <div class="nav-dropdown">
-              <a href="/pages/ObraNueva.html#promotoras">Promotoras</a>
-              <a href="/pages/ObraNueva.html#arquitectura">Arquitectura</a>
-              <a href="/pages/ObraNueva.html#reformas-interiorismo">Reformas</a>
-              <a href="/pages/ObraNueva.html#interiorismo">Interiorismo</a>
-              <a href="/pages/ObraNueva.html#proyecto-a-medida">Proyecto a medida</a>
+              <a href="/pages/ES/ObraNueva.html#promotoras">Promotoras</a>
+              <a href="/pages/ES/ObraNueva.html#arquitectura">Arquitectura</a>
+              <a href="/pages/ES/ObraNueva.html#reformas-interiorismo">Reformas</a>
+              <a href="/pages/ES/ObraNueva.html#interiorismo">Interiorismo</a>
+              <a href="/pages/ES/ObraNueva.html#proyecto-a-medida">Proyecto a medida</a>
             </div>
           </div>
 
           <!-- OTROS SECTORES -->
           <div class="nav-item-dropdown">
-            <a href="/pages/OtrosSectores.html" class="nav-btn">
+            <a href="/pages/ES/OtrosSectores.html" class="nav-btn">
               Otros sectores
             </a>
             <div class="nav-dropdown">
-              <a href="/pages/OtrosSectores.html#nautica">Náutica</a>
-              <a href="/pages/OtrosSectores.html#turismo">Turismo</a>
-              <a href="/pages/OtrosSectores.html#industria">Industria</a>
-              <a href="/pages/OtrosSectores.html#proyecto-a-medida">Proyecto a medida</a>
+              <a href="/pages/ES/OtrosSectores.html#nautica">Náutica</a>
+              <a href="/pages/ES/OtrosSectores.html#turismo">Turismo</a>
+              <a href="/pages/ES/OtrosSectores.html#industria">Industria</a>
+              <a href="/pages/ES/OtrosSectores.html#proyecto-a-medida">Proyecto a medida</a>
             </div>
           </div>
 
-          <a href="/pages/proyectosamedida.html" class="nav-btn nav-btn--active">
+          <a href="/pages/ES/proyectosamedida.html" class="nav-btn">
             Proyectos a medida
           </a>
 
@@ -105,16 +105,13 @@
 
       <!-- BLOQUE DERECHO -->
       <div class="nav-right" id="navRight">
-        <div class="lang-wrapper">
-          <div class="lang-select">
-            ES <span class="chevron">▼</span>
-          </div>
-          <ul class="lang-dropdown">
-            <li>ES</li>
-            <li>EN</li>
-          </ul>
-        </div>
-
+        <div class="lang-wrapper" id="langSwitcher">
+  <div class="lang-select" id="langCurrent">ES <span class="chevron">▼</span></div>
+  <ul class="lang-dropdown">
+    <li data-lang="ES">ES</li>
+    <li data-lang="EN">EN</li>
+  </ul>
+</div>
         <a
           href="https://homestaging.visitiacloud.com/"
           class="login-btn"
@@ -347,7 +344,7 @@
         <li>
           <a
             class="footer-link-clean footer-title"
-            href="/pages/privacy.html"
+            href="/pages/ES/privacy.html"
           >
             Política de privacidad
           </a>
@@ -367,7 +364,7 @@
         <li>
           <a
             class="footer-link-clean footer-title"
-            href="/pages/terminos.html"
+            href="/pages/ES/terminos.html"
           >
             Términos y condiciones
           </a>
@@ -377,14 +374,14 @@
     </div>
 
     <div class="footer-bottom">
-      © 2025 Zyonia SL — C/Gran Vía Don Diego López de Haro 1, 6, Bilbao (48001)
+      © 2025 Zyonia SL — Plataforma inmersiva para profesionales
     </div>
   </footer>
 
   <!-- ==================================================
      JS (SOLO LOS NECESARIOS)
   =================================================== -->
-  <script src="/scripts/navMobile.js"></script>
+  <script src="navMobile.js"></script>
   <script src="/scripts/SelectorIdioma.js"></script>
 
 </body>
