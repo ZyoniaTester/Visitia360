@@ -21,6 +21,17 @@
   <meta property="og:description"
     content="Experiencias inmersivas 360 para vender propiedades más rápido y diferenciar tu inmobiliaria." />
   <meta property="og:locale" content="es_ES" />
+  <!-- Imagen -->
+  <meta property="og:image" content="https://visitia.es/images/gv8.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/webp" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tour Virtual 360 para Inmobiliarias | Visitia" />
+  <meta name="twitter:description" content="Experiencias inmersivas 360 para vender propiedades más rápido y diferenciar tu inmobiliaria." />
+  <meta name="twitter:image" content="https://visitia.es/images/gv8.webp" />
 
   <!-- Autoridad / Branding -->
   <meta name="author" content="Visitia - Zyonia, S.L." />
@@ -28,18 +39,24 @@
   <meta name="theme-color" content="#0A2342" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/images/Visitia-Favicon.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="Visitia">
 
   <!-- CSS -->
   <link rel="stylesheet" href="/styles/styles.css" />
 
-  <!-- Schema.org (solo en index) -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Visitia",
     "url": "https://visitia.es",
+    "logo": "https://visitia.es/favicon/favicon-96x96.png",
     "sameAs": [
       "https://www.linkedin.com/company/visitia/?viewAsMember=true",
       "https://www.youtube.com/@VisitiaOficial",
@@ -52,6 +69,70 @@
     }
   }
   </script>
+
+  <!-- Schema Website -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Visitia",
+  "url": "https://visitia.es/"
+}
+</script>
+
+  <!-- Schema Service + OfferCatalog -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Visitia - Tours virtuales 360 para inmobiliarias",
+  "provider": {
+    "@type": "Organization",
+    "name": "Visitia",
+    "url": "https://visitia.es"
+  },
+  "areaServed": { "@type": "Country", "name": "ES" },
+  "serviceType": "Tours virtuales 360, home staging con IA y experiencias inmersivas",
+  "offers": {
+    "@type": "OfferCatalog",
+    "name": "Planes de suscripción Visitia",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Plan Free",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "url": "https://visitia.es/#planes",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Plan Básico",
+        "price": "19.95",
+        "priceCurrency": "EUR",
+        "url": "https://visitia.es/#planes",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Plan Pro",
+        "price": "39.95",
+        "priceCurrency": "EUR",
+        "url": "https://visitia.es/#planes",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Plan Premium",
+        "price": "69.95",
+        "priceCurrency": "EUR",
+        "url": "https://visitia.es/#planes",
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  }
+}
+</script>
 </head>
 
 <body>
@@ -244,6 +325,7 @@
         }
 
         .visitia-embed-header h2 {
+          font-family: "Helvetica", "Arial", sans-serif;
           font-size: 2rem;
           font-weight: 800;
           color: #2e7a69;
@@ -252,6 +334,7 @@
         }
 
         .visitia-embed-header p {
+          font-family: "Helvetica", "Arial", sans-serif;
           margin-top: 8px;
           margin-bottom: 25px;
           font-weight: 600;
@@ -335,7 +418,8 @@
         <div class="visitia-embed-header">
           <h2>VISUALIZA LA DEMO DEL PLAN PRO </h2>
           <p>
-            Esta demo es un ejemplo de un tour 360 con mapas 3D. Podrás explorar el mapa y visualizar el tour 360 haciendo click en la etiqueta <strong>"Piso piloto"</strong>.
+            Esta demo es un ejemplo de un tour 360 con mapas 3D. Podrás explorar el mapa y visualizar el tour 360
+            haciendo click en la etiqueta <strong>"Piso piloto"</strong>.
           </p>
         </div>
 
