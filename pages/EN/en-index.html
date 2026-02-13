@@ -4,9 +4,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Visitia</title>
-  <link rel="stylesheet" href="/styles/styles.css" />
+  <meta name="language" content="en" />
+  <meta name="robots" content="index, follow" />
+
+  <title>360 Virtual Tours for Real Estate | Visitia</title>
+  <meta name="description" content="Create professional 360 virtual tours for real estate. Visitia helps agencies sell faster with immersive and interactive experiences." />
+
+  <link rel="canonical" href="https://visitia.es/pages/EN/en-index.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Visitia" />
+  <meta property="og:url" content="https://visitia.es/pages/EN/en-index.html" />
+  <meta property="og:title" content="360 Virtual Tours for Real Estate | Visitia" />
+  <meta property="og:description" content="Professional 360 virtual tours to showcase properties and close deals faster." />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="author" content="Visitia - Zyonia, S.L." />
+  <meta name="publisher" content="Visitia" />
+  <meta name="theme-color" content="#0A2342" />
+
   <link rel="icon" type="image/png" href="/images/Visitia-Favicon.png" />
+
+  <link rel="stylesheet" href="/styles/styles.css" />
 </head>
 
 <body>
@@ -176,6 +196,140 @@
 
       </div>
     </section>
+
+
+
+<section class="visitia-embed-section">
+  <style>
+    .visitia-embed-section {
+      margin: 60px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .visitia-embed-wrapper {
+      width: 100%;
+      max-width: 90%;
+      padding: 0 24px;
+    }
+
+    .visitia-embed-header {
+      max-width: 820px;
+      margin-bottom: 32px;
+    }
+
+    .visitia-embed-header h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #2e7a69;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .visitia-embed-header p {
+      margin-top: 8px;
+      margin-bottom: 25px;
+      font-weight: 600;
+      color: #496356;
+      font-size: 20px;
+    }
+
+    .visitia-embed-frame {
+      position: relative;
+      width: 100%;
+      height: min(80vh, 900px);
+      min-height: 420px;
+      border-radius: 34px;
+      overflow: hidden;
+
+      background: transparent;
+      box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.35),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    }
+
+    .visitia-embed-frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .visitia-embed-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      z-index: 0;
+    }
+
+    .visitia-embed-frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      border-radius: 34px;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+    }
+
+    @media (max-width: 768px) {
+      .visitia-embed-wrapper {
+        padding: 0 16px;
+      }
+
+      .visitia-embed-frame {
+        height: 65vh;
+        min-height: 300px;
+        border-radius: 24px;
+      }
+
+      .visitia-embed-frame::before {
+        border-radius: 24px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .visitia-embed-frame {
+        height: 62vh;
+        min-height: 320px;
+        border-radius: 24px;
+      }
+
+      .visitia-embed-frame::before {
+        border-radius: 24px;
+      }
+    }
+  </style>
+
+  <div class="visitia-embed-wrapper">
+
+    <div class="visitia-embed-header">
+      <h2>VIEW THE PRO PLAN DEMO</h2>
+      <p>
+        This demo is an example of a 360° virtual tour combined with 3D maps.
+        You can explore the map and access the 360° tour by clicking on the
+        <strong>"Pilot Apartment"</strong> label.
+      </p>
+    </div>
+
+    <div class="visitia-embed-frame">
+      <iframe
+        src="https://homestaging.visitiacloud.com/publicTour?share=2118f9ac2995afb7410349415f35f7d0a84b3e7f0ec426bd6a275bbc6d821a9b"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allow="fullscreen; xr-spatial-tracking; gyroscope; accelerometer; clipboard-read; clipboard-write"
+        allowfullscreen
+        title="Visitia | 360° Virtual Tour">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- ================= PLANS ================= -->
     <section id="area-cliente" class="section section--plans">

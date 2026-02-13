@@ -386,3 +386,223 @@ body{
   .two-cols{ grid-template-columns: 1fr; }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   RESPONSIVE 95% + SAFE AREA + LANDSCAPE (PRIVACIDAD)
+========================================================= */
+
+/* 1) Anti overflow lateral (sombras + grids) */
+html, body { overflow-x: hidden; }
+
+/* 2) Safe-area iPhone notch */
+:root{
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  /* Layout tuning */
+  --header-h: 64px;
+  --toc-top: calc(var(--header-h) + 22px + var(--safe-top));
+}
+
+/* Header: respeta notch */
+.legal-header{
+  padding-top: var(--safe-top);
+}
+
+/* Container: consistente en anchos raros */
+.container{
+  width: min(1150px, calc(100% - 2.5rem));
+}
+
+/* Grid: TOC fluido (no fuerza 360px fijo) */
+.grid{
+  grid-template-columns: minmax(280px, 360px) 1fr;
+  gap: clamp(16px, 2vw, 22px);
+}
+
+/* TOC sticky: considera safe-area */
+.toc{
+  top: var(--toc-top);
+}
+
+/* Tipografía/espaciados: clamps suaves */
+.hero-card{ padding: clamp(20px, 3vw, 32px); }
+.doc{ padding: clamp(18px, 3vw, 28px); }
+
+.doc h2{ font-size: clamp(20px, 2.2vw, 22px); }
+.doc p{ font-size: clamp(15px, 1.2vw, 16px); }
+.toc-links a{ font-size: clamp(13px, 1.1vw, 14px); }
+
+/* Chips: tamaño consistente */
+.chip{
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+/* Rights: mejor balance en pantallas medianas */
+.rights-grid{
+  gap: clamp(12px, 2vw, 14px);
+}
+
+/* =========================================================
+   BREAKPOINT <= 1024px (tablet pro)
+========================================================= */
+@media (max-width: 1024px){
+  :root{ --header-h: 60px; }
+
+  .container{
+    width: min(1150px, calc(100% - 2rem));
+  }
+
+  .grid{
+    grid-template-columns: minmax(260px, 320px) 1fr;
+  }
+
+  .toc{
+    top: calc(var(--header-h) + 18px + var(--safe-top));
+  }
+}
+
+/* =========================================================
+   BREAKPOINT <= 768px (tablet)
+========================================================= */
+@media (max-width: 768px){
+  :root{ --header-h: 58px; }
+
+  .header-inner{
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+
+  .mini-title{
+    font-size: 14px;
+  }
+
+  .grid{
+    grid-template-columns: 1fr;
+  }
+
+  /* TOC: deja de ser sticky para no robar viewport */
+  .toc{
+    position: relative;
+    top: 0;
+  }
+
+  /* TOC links: 2 columnas en tablet */
+  .toc-links{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .toc-links a{
+    background: #fff;
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 18px rgba(0,0,0,.05);
+  }
+}
+
+/* =========================================================
+   BREAKPOINT <= 600px (mobile grande)
+========================================================= */
+@media (max-width: 600px){
+  .container{
+    width: calc(100% - 1.5rem);
+  }
+
+  .hero-meta{ gap: 8px; }
+
+  .chip{
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+
+  .toc-links{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   BREAKPOINT <= 480px (mobile)
+========================================================= */
+@media (max-width: 480px){
+  :root{ --header-h: 56px; }
+
+  .header-inner{ gap: 10px; }
+
+  .hero-card{ border-radius: 22px; }
+  .doc{ border-radius: 22px; }
+
+  .doc h3{ font-size: 15px; }
+  .doc h4{ font-size: 13px; }
+
+  .list, .ol{ margin-left: 18px; }
+
+  .footer-inner{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* =========================================================
+   LANDSCAPE MOBILE (height <= 430px)
+========================================================= */
+@media (max-height: 430px) and (orientation: landscape){
+  :root{ --header-h: 54px; }
+
+  .header-inner{
+    padding: 10px 0;
+  }
+
+  .legal-hero{
+    padding: 18px 0 8px;
+  }
+
+  .hero-card{
+    padding: 18px;
+  }
+
+  .legal-main{
+    padding: 16px 0 40px;
+  }
+
+  /* TOC nunca sticky aquí */
+  .toc{
+    position: relative;
+    top: 0;
+  }
+
+  .hero-meta{
+    margin-top: 10px;
+  }
+}

@@ -245,3 +245,152 @@
     text-align: center;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   PROYECTOS A MEDIDA — RESPONSIVE 95% + SAFE AREA + LANDSCAPE
+========================================================= */
+
+html, body { overflow-x: hidden; }
+
+:root{
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* 1) Espaciado superior más elástico (evita “bloque gigante” en algunos móviles) */
+.proj-medida{
+  margin-top: clamp(90px, 10vw, 150px);
+  padding-top: var(--safe-top);
+}
+
+/* 2) Tipografía escalable sin saltos */
+.pm-badge{
+  font-size: clamp(24px, 5vw, 40px);
+  letter-spacing: 0.6px;
+  padding-inline: 12px;
+}
+
+.pm-box{
+  width: min(900px, calc(100% - 2rem));
+  padding: clamp(22px, 4vw, 45px) clamp(18px, 4.5vw, 50px);
+  border-radius: clamp(20px, 3vw, 28px);
+}
+
+/* Texto */
+.pm-box p{
+  font-size: clamp(14px, 1.4vw, 17px);
+  line-height: 1.65;
+}
+
+.pm-list li{
+  font-size: clamp(14px, 1.3vw, 16px);
+  margin-bottom: 14px;
+}
+
+/* 3) Grid imágenes: flex estable y wrap por si hay widths raros */
+.pm-img-grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(12px, 2.4vw, 25px);
+  margin: clamp(18px, 4vw, 40px) 0;
+}
+
+.pm-img{
+  flex: 1 1 320px;     /* ✅ evita que se rompa antes de 768 */
+  width: auto;         /* anula el 50% cuando el wrap entra */
+  min-width: 0;        /* evita overflow por imágenes */
+  border-radius: 14px;
+}
+
+/* Asegura altura consistente cuando hay wrap */
+.pm-img img{
+  height: 100%;
+}
+
+/* 4) Hover “premium” sin overflow raro en móvil (y respeta gente con reduced motion) */
+@media (hover: none), (pointer: coarse){
+  .pm-box:hover{ transform: none; }
+  .pm-box:hover .pm-img img{ transform: none; }
+  .pm-img:hover{ box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.05); }
+  .pm-img:hover img{ transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .pm-box,
+  .pm-box::before,
+  .pm-img,
+  .pm-img img,
+  .cta-yellow{
+    transition: none !important;
+  }
+}
+
+/* 5) CTA escalable */
+.cta-yellow{
+  font-size: clamp(15px, 1.6vw, 18px);
+  padding: 14px clamp(16px, 4.5vw, 40px);
+}
+
+/* =========================================================
+   BREAKPOINTS OBLIGATORIOS (complemento)
+========================================================= */
+
+/* <= 1024px (tablet pro) */
+@media (max-width: 1024px){
+  .pm-box{ width: min(900px, calc(100% - 2rem)); }
+}
+
+/* <= 600px (mobile grande) */
+@media (max-width: 600px){
+  .pm-box{ width: calc(100% - 1.5rem); }
+}
+
+/* <= 480px (mobile) */
+@media (max-width: 480px){
+  .proj-medida{ margin-top: 92px; } /* mantiene tu intención pero sin exagerar */
+  .cta-yellow{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Landscape mobile (height <= 430px) */
+@media (max-height: 430px) and (orientation: landscape){
+  .proj-medida{
+    margin-top: 70px;
+  }
+  .pm-img{
+    aspect-ratio: 16 / 9;
+  }
+}

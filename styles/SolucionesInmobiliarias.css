@@ -4244,3 +4244,408 @@ html, body{
   .pricing-eyebrow-pill{ font-size: 18px; }
   .pricing-title-pill{ font-size: 17px; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   PAGE INMOBILIARIAS — RESPONSIVE 95% + SAFE AREA + LANDSCAPE
+========================================================= */
+
+/* ---------- 0) Base safety: overflow + safe-area ---------- */
+:root{
+  --pad-x: clamp(18px, 4vw, 80px);
+  --pad-y: clamp(16px, 3vw, 40px);
+
+  /* Safe area (iOS notch) fallback 0 */
+  --sat: env(safe-area-inset-top, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+}
+
+html, body{
+  overflow-x: hidden;
+}
+
+/* Evita que 100vw + transform te cree scroll lateral fantasma */
+body{
+  padding-left: var(--sal);
+  padding-right: var(--sar);
+}
+
+/* Tipografía base escalable sin “saltos” */
+body{
+  font-size: clamp(15px, 1.6vw, 16px);
+  line-height: 1.45;
+}
+
+/* ---------- 1) Contenedores: consistencia ---------- */
+.container,
+.hero-inmo,
+.steps-section,
+.benefits-section,
+.pricing-section{
+  padding-left: var(--pad-x);
+  padding-right: var(--pad-x);
+}
+
+/* ---------- 2) Headings: clamp para evitar gigantismo o enanismo ---------- */
+.steps-section h2{
+  font-size: clamp(22px, 3.2vw, 36px);
+  margin-top: clamp(70px, 10vw, 120px);
+}
+
+.benefits-section .hero-subtitle,
+.subti{
+  font-size: clamp(24px, 3.6vw, 40px);
+}
+
+.pricing-title{
+  font-size: clamp(22px, 3.2vw, 34px);
+}
+
+.pricing-subtitle{
+  font-size: clamp(15px, 2.1vw, 26px);
+}
+
+/* ---------- 3) Viewer / overlays: alturas fluidas + legibilidad ---------- */
+.steps-viewer{
+  height: clamp(240px, 52vw, 540px);
+  border-radius: clamp(18px, 4vw, 34px);
+}
+
+.steps-overlay{
+  padding: clamp(14px, 3.6vw, 30px) clamp(14px, 3.8vw, 34px);
+}
+
+.steps-overlay span{
+  font-size: clamp(16px, 3.2vw, 28px);
+  line-height: 1.15;
+}
+
+/* Thumbnails: colapsa suave sin romper layout */
+.steps-thumbnails{
+  gap: clamp(10px, 2.4vw, 16px);
+}
+.steps-thumbnails img{
+  height: clamp(60px, 13vw, 86px);
+  border-radius: clamp(10px, 2.6vw, 14px);
+}
+
+/* ---------- 4) Benefits: grid estable ---------- */
+.benefits-grid{
+  gap: clamp(16px, 3.2vw, 32px);
+}
+.benefit-card{
+  border-radius: clamp(18px, 3.2vw, 26px);
+  padding: clamp(22px, 4.6vw, 40px) clamp(16px, 3.6vw, 28px) clamp(18px, 4vw, 36px);
+}
+
+/* ---------- 5) Pricing cards: elimina offsets que rompen en móvil ----------
+   (sin cambiar estética, solo consistencia) */
+.plan-sub{
+  margin-left: 0 !important; /* tenías margin-left:50 en varios lugares */
+}
+.plan-btn{
+  margin-left: 0 !important; /* idem */
+}
+
+/* Badge flotante VR: evitar recortes */
+.plan-vr{
+  overflow: visible;
+}
+
+/* ---------- 6) Comparison table: scroll real en móvil/tablet ----------
+   Tu wrap ya tiene overflow-x:auto; esto asegura un min-width para que funcione */
+.comparison-table{
+  width: 100% !important;
+  margin-left: 0 !important;
+  min-width: 720px; /* permite scroll horizontal en <420, <600 */
+}
+
+/* ---------- 7) Carrusel tutorial: controla 100vw + translate en móviles ----------
+   En desktop se mantiene tu full-bleed. En mobile se vuelve 100% limpio */
+@media (max-width: 600px){
+  .tutorial-carousel{
+    width: 100% !important;
+    left: 0 !important;
+    transform: none !important;
+    padding: 22px 16px 28px 16px;
+    justify-content: flex-start;
+  }
+}
+
+/* ---------- 8) PDF modal: más usable en móvil sin cortar ---------- */
+.pdf-modal__dialog{
+  border-radius: clamp(12px, 2.6vw, 18px);
+}
+.pdf-modal__body{
+  padding: clamp(8px, 2.4vw, 10px);
+  padding-bottom: calc(clamp(12px, 3vw, 18px) + var(--sab));
+}
+
+/* ---------- BREAKPOINTS OBLIGATORIOS ---------- */
+
+/* =========================================================
+   <= 1024px (Tablet Pro)
+========================================================= */
+@media (max-width: 1024px){
+
+  .hero-inmo{
+    margin-top: calc(140px + var(--sat));
+    justify-content: center;
+  }
+
+  .steps-viewer{
+    height: clamp(300px, 48vw, 460px);
+  }
+
+  .steps-thumbnails{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .benefits-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .plan-detail-layout{
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+/* =========================================================
+   <= 768px (Tablet)
+========================================================= */
+@media (max-width: 768px){
+
+  .hero-inmo{
+    margin-top: calc(120px + var(--sat));
+    display: block;
+  }
+
+  .steps-viewer{
+    height: clamp(240px, 56vw, 360px);
+  }
+
+  .steps-thumbnails{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefits-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-header-pill{
+    width: 100%;
+    max-width: 100%;
+    padding: 22px 28px;
+    border-radius: 32px;
+    align-items: flex-start;
+  }
+
+  .billing-toggle{
+    width: 100%;
+  }
+
+  .plans-grid{
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .comparison-table-wrap{
+    margin-top: 20px;
+  }
+
+  /* Timeline a vertical para evitar cortes */
+  .visitia-timeline-horizontal{
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    gap: 18px;
+  }
+  .visitia-timeline-track{ display:none; }
+
+  .visitia-timeline-item{
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 14px;
+    text-align: left;
+  }
+  .visitia-timeline-title{
+    margin-top: 2px;
+    margin-left: 0;
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+  .visitia-timeline-hover-card{
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  /* CTA full width friendly */
+  .plan-detail-cta .plan-btn{
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+/* =========================================================
+   <= 600px (Mobile grande)
+========================================================= */
+@media (max-width: 600px){
+
+  .container,
+  .hero-inmo,
+  .steps-section,
+  .benefits-section,
+  .pricing-section{
+    padding-left: calc(18px + var(--sal));
+    padding-right: calc(18px + var(--sar));
+  }
+
+  .steps-section h2{
+    margin-top: clamp(70px, 14vw, 100px);
+  }
+
+  .steps-thumbnails{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .billing-toggle{
+    padding: 8px;
+    gap: 8px;
+  }
+  .billing-option{
+    padding: 12px 10px;
+    font-size: 14px;
+    justify-content: center;
+  }
+  .billing-option .save{ display:none; }
+
+  .plan-card{
+    border-radius: 20px;
+    padding: 18px 16px;
+  }
+
+  .plan-btn{
+    width: 100%;
+    max-width: 320px;
+    align-self: center;
+  }
+
+  /* Badge VR no tapa contenido */
+  .plan-vr{ padding-top: 54px; }
+  .premium-float-badge{
+    top: -34px;
+    width: calc(100% - 18px);
+    max-width: calc(100% - 18px);
+  }
+
+  /* Tutorial slides */
+  .tutorial-slide{
+    flex: 0 0 78%;
+    height: 210px;
+    border-radius: 22px;
+  }
+  .tutorial-slide span{
+    font-size: 16px;
+    padding: 16px 16px 18px 16px;
+    border-radius: 0 0 22px 22px;
+  }
+}
+
+/* =========================================================
+   <= 480px (Mobile)
+========================================================= */
+@media (max-width: 480px){
+
+  /* Extra compact sin perder premium */
+  .logo-inline{ width: 66px; height: 18px; }
+  .logo-title{ width: 70px; height: 34px; }
+
+  .steps-viewer{
+    height: clamp(230px, 62vw, 320px);
+  }
+
+  .steps-overlay span{
+    font-size: clamp(16px, 4.6vw, 20px);
+  }
+
+  .benefits-section .hero-subtitle,
+  .subti{
+    font-size: clamp(24px, 6.2vw, 30px);
+  }
+
+  /* Tabla: fuerza scroll (ya con min-width) y reduce paddings */
+  .comparison-table th,
+  .comparison-table td{
+    padding: 10px 8px;
+  }
+
+  /* Modal PDF: ocupa más pantalla sin cortar */
+  .pdf-modal__dialog{
+    width: calc(100% - 18px);
+    height: calc(84vh - var(--sat));
+    margin-top: calc(6vh + var(--sat));
+  }
+}
+
+/* =========================================================
+   LANDSCAPE: mobile landscape (height <= 430px)
+   - Evita hero/embeds gigantes
+========================================================= */
+@media (max-height: 430px) and (orientation: landscape){
+
+  /* Reduce top spacing, respeta notch */
+  .hero-inmo{
+    margin-top: calc(90px + var(--sat));
+  }
+
+  .steps-section h2{
+    margin-top: 60px;
+  }
+
+  /* Viewer y video más bajos para que no “se coma” la pantalla */
+  .steps-viewer{
+    height: 220px;
+  }
+
+  .video-frame{
+    aspect-ratio: 16 / 10; /* un pelín menos alto en landscape */
+  }
+
+  /* Carrusel: menos padding vertical */
+  .tutorial-carousel{
+    padding-top: 18px;
+    padding-bottom: 22px;
+  }
+
+  /* Modal PDF: maximiza área útil */
+  .pdf-modal__dialog{
+    height: calc(92vh - var(--sat) - var(--sab));
+    margin-top: calc(4vh + var(--sat));
+  }
+}
